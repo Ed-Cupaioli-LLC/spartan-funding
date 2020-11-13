@@ -1,21 +1,177 @@
-html,
+* {
+	box-sizing: inherit;
+	margin: 0;
+  	padding: 0;
+}
+html{
+	font-size: 62.5%; 
+  	box-sizing: border-box;
+}
 body {
-	margin:0;
-	padding:0;
 	overflow-x: hidden;
-	font-family: $body-font;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	color: $text_color;
 }
-* {
-	box-sizing: border-box; 
-}
+
 //Default Fonts
 h1, h2, h3, h4, h5 {
 	font-family: $header-font;
-	margin-top: 0;
-	margin-bottom: 1rem;
+	margin: 0;
 }
+/* Character Styles */
+.title {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 8rem;
+	line-height:9rem;
+	letter-spacing:0;
+	color: $steel-blue;
+	}
+	.h1 {
+	font-style: normal;
+	font-weight: bold;
+	font-size:5rem;
+	line-height:6rem;
+	letter-spacing:0;
+	color: $aa-gray;
+	}
+	.mobile-title {
+	font-family: var(--unnamed-font-family-open-sans);
+	font-style: var(--unnamed-font-style-normal);
+	font-weight: var(--unnamed-font-weight-bold);
+	font-size: var(--unnamed-font-size-40);
+	line-height: var(--unnamed-line-spacing-50);
+	letter-spacing: var(--unnamed-character-spacing-0);
+	color: var(--unnamed-color-5387a2);
+	}
+	h2 {
+	font-style:normal;
+	font-weight:normal;
+	font-size: 3.5rem;
+	line-height: 4.7rem;
+	letter-spacing: 0.35rem;
+	color: $charcoal-blue;
+	text-transform: uppercase;
+	}
+	.h3 {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 3rem;
+	line-height: 4.1rem;
+	color: $charcoal-blue;
+	}
+	.mobile-h2 {
+	font-family: var(--unnamed-font-family-open-sans);
+	font-style: var(--unnamed-font-style-normal);
+	font-weight: var(--unnamed-font-weight-normal);
+	font-size: var(--unnamed-font-size-25);
+	line-height: var(--unnamed-line-spacing-34);
+	letter-spacing: var(--unnamed-character-spacing-2-5);
+	color: var(--unnamed-color-2d474f);
+	text-transform: var(--unnamed-text-transform-uppercase);
+	}
+	.mobile-h3 {
+	font-family: var(--unnamed-font-family-open-sans);
+	font-style: var(--unnamed-font-style-normal);
+	font-weight: var(--unnamed-font-weight-bold);
+	font-size: var(--unnamed-font-size-22);
+	line-height: var(--unnamed-line-spacing-32);
+	letter-spacing: var(--unnamed-character-spacing-0);
+	color: var(--unnamed-color-2d474f);
+	}
+	.h4 {
+	font-weight:bold;
+	font-size: 22rem;
+	line-height: 3.5rem;
+	color: $slate;
+	}
+	.text-link {
+	font-weight: bold;
+	font-size: 2rem;
+	line-height: 3.6rem;
+	color: $charcoal-blue;
+	
+	}
+	a.currentlyActive
+	{
+		text-decoration: underline;
+		color: $charcoal-blue;
+	}
+	.h5 {
+
+	font-weight: bold;
+	font-size: 2rem;
+	line-height: 3.5rem;
+	color: $aa-gray;
+	}
+	.large-body-bold {
+	font-weight: bold;
+	font-size: 2rem;
+	line-height: 3.5rem;
+	color: $charcoal-blue;
+	}
+	.large-body {
+	font-weight: normal;
+	font-size: 2rem;
+	line-height: 3.5rem;
+	color: $charcoal-blue;
+	}
+	.small-body-bold {
+	font-weight: bold;
+	font-size: 1.8rem;
+	line-height: 3.5rem;
+	color: $charcoal-blue;
+	}
+	.small-body {
+		font-weight: normal;
+		font-size: 1.8rem;
+		line-height: 3.5rem;
+		color: $charcoal-blue;
+	}
+	.mobile-text-link {
+	font-weight: bold;
+	font-size: 1.8rem;
+	line-height: 3.3rem;
+	color: $charcoal-blue;
+	text-decoration: underline;
+	}
+	.mobile-h4 {
+	font-family: var(--unnamed-font-family-open-sans);
+	font-style: var(--unnamed-font-style-normal);
+	font-weight: var(--unnamed-font-weight-bold);
+	font-size: var(--unnamed-font-size-18);
+	line-height: var(--unnamed-line-spacing-31);
+	letter-spacing: var(--unnamed-character-spacing-0);
+	color: var(--unnamed-color-2d474f);
+	}
+	.mobile-body-bold {
+	font-family: var(--unnamed-font-family-open-sans);
+	font-style: var(--unnamed-font-style-normal);
+	font-weight: var(--unnamed-font-weight-bold);
+	font-size: var(--unnamed-font-size-18);
+	line-height: var(--unnamed-line-spacing-33);
+	letter-spacing: var(--unnamed-character-spacing-0);
+	color: var(--unnamed-color-2d474f);
+	}
+	.mobile-h5 {
+	font-family: var(--unnamed-font-family-open-sans);
+	font-style: var(--unnamed-font-style-normal);
+	font-weight: var(--unnamed-font-weight-bold);
+	font-size: var(--unnamed-font-size-16);
+	line-height: var(--unnamed-line-spacing-26);
+	letter-spacing: var(--unnamed-character-spacing-0);
+	color: var(--unnamed-color-5f5f5f);
+	}
+	.mobile-body {
+	font-family: var(--unnamed-font-family-open-sans);
+	font-style: var(--unnamed-font-style-normal);
+	font-weight: var(--unnamed-font-weight-normal);
+	font-size: var(--unnamed-font-size-16);
+	line-height: var(--unnamed-line-spacing-31);
+	letter-spacing: var(--unnamed-character-spacing-0);
+	color: var(--unnamed-color-2d474f);
+	}
 
 //Links
 a {

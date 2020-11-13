@@ -1,11 +1,15 @@
 //Color Variables
-$charcoal: #333;
-$white: #fff;
-$blue: #3e73cb;
+$aa-gray: #5F5F5F;
+$white: #FFFFFF;
+$pearl: #EDEDED;
+$iron: #939598;
+$steel-blue: #5387A2;
+$charcoal-blue: #2D474F;
+$slate: #33464E;
 //Theme colors
-$text_color: $charcoal;
-$primary_color: $blue;
-$secondary_color: $white;
+$text_color: $charcoal-blue;
+$primary_color: $white;
+$secondary_color: $charcoal-blue;
 //Mobile Breakpoints
 $size-x-large: 1280px;
 $size-large: 1024px;
@@ -14,5 +18,5 @@ $size-small: 568px;
 //Transition
 $transition_duration: .5s;
 //Fonts
-$header-font: 'Helvetica', sans-serif;
-$body-font: 'Helvetica', sans-serif;
+$header-font: 'Open Sans', sans-serif;;
+$body-font: 'Open Sans', sans-serif;;

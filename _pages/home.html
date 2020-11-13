@@ -3,4 +3,42 @@ title: Home Page
 layout: default
 permalink: /
 css: home
----
+
+hero:
+  heading1: Are you
+  heading2: Spartan?
+  text: 'Do you like things simple, with no frills and smooth transactions? Then you are a Spartan. We work with clients who are ready to attack their goals with our straightforward process. If you want to be Spartan and get your coins in a row, we’re here to help you as well.'
+
+options: 
+ list:
+ - 
+  what: i'd like to
+  type: Purchase
+  img: '/img/home/'
+ - 
+  what: i'd like to
+  type: Refinance
+--- 
+<div id="home">
+  <div class='hero'>
+    <div class='text'>
+      <h2 class='intro'>{{ page.hero.heading1 }}</h2>
+      <h1 class='title'>{{ page.hero.heading2 }}</h1>
+      <p class='large-body'>{{ page.hero.text }}</p>
+      <button class='text-link'>APPLY TODAY</button>
+
+    </div>
+    <div class='image'>
+      <img src='/img/home/Mask Group 1.png'>
+    </div>
+  </div>
+  <div class= 'options'>
+    {% for item in page.options.list %}
+    <div class='type'>
+      <h2>{{ item.what }}</h2>
+      <h1 class='title'>{{ item.type }}</h1>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+  

@@ -1,2 +1,60 @@
 @import "vars.scss";
 @import "mixins.scss";
+
+#home{
+    max-width: 164.5rem;
+    margin: 0 auto;
+    padding: 0 7.292vw;
+    box-sizing: content-box;
+    .hero{
+        display: flex;
+        flex-direction: row;
+        height: 69.457rem;
+        .text{
+            padding-top: 12.350rem;
+            .intro{
+                line-height: unset;
+            }
+            .title{
+                font-size: 12rem;
+                line-height: .9;
+                @include bp-x-large{
+                    font-size:6rem;
+                }
+    
+            }
+            .large-body{
+                max-width: 59rem;
+                padding-top: 4rem;
+            }
+            button{
+                width: 21.1rem;
+                height: 6.1rem;
+                margin-top: 2.7rem;
+            }
+        }
+        .image{
+            padding-top: 5.37rem;
+            width: 60vw;
+            position: relative;
+            left: 10rem;
+        
+           
+    
+        }
+    }
+    .options{
+        position: relative;
+        z-index:1;
+        display: flex;
+        flex-direction: row;
+        height: 65rem;
+        .type{
+            width: 82rem;
+            text-align: center;
+            padding-top: 15.5rem;
+        }
+
+    }
+
+}
