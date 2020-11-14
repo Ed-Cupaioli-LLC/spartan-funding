@@ -20,6 +20,17 @@ h1, h2, h3, h4, h5 {
 	margin: 0;
 }
 /* Character Styles */
+.button{
+	border: $steel-blue 2px solid;
+	padding: 1.6rem 3.6rem;;
+
+}
+.button-text{
+	font-weight: bold;
+	font-size: 2rem;
+	line-height: 2.7rem;
+	text-transform: uppercase;
+}
 .title {
 	font-style: normal;
 	font-weight: bold;

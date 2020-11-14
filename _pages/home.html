@@ -10,14 +10,19 @@ hero:
   text: 'Do you like things simple, with no frills and smooth transactions? Then you are a Spartan. We work with clients who are ready to attack their goals with our straightforward process. If you want to be Spartan and get your coins in a row, we’re here to help you as well.'
 
 options: 
+ loan: See what loan options are available to you.
  list:
  - 
   what: i'd like to
   type: Purchase
-  img: '/img/home/'
+  img: '/img/home/house.png'
  - 
   what: i'd like to
   type: Refinance
+  img: '/img/home/signature.png'
+review: “Eric did a fantastic job on our recent home purchase. Closed faster than the contract date and he also fixed an item on our credit that we had been trying to remedy for months. Highly recommend!”
+
+contact: Are you ready to talk to a Spartan?
 --- 
 <div id="home">
   <div class='hero'>
@@ -25,20 +30,44 @@ options:
       <h2 class='intro'>{{ page.hero.heading1 }}</h2>
       <h1 class='title'>{{ page.hero.heading2 }}</h1>
       <p class='large-body'>{{ page.hero.text }}</p>
-      <button class='text-link'>APPLY TODAY</button>
+      <button class='button-text button'>APPLY TODAY</button>
 
     </div>
     <div class='image'>
       <img src='/img/home/Mask Group 1.png'>
     </div>
   </div>
-  <div class= 'options'>
+  <div id= 'options'>
+    <div class='options'>
     {% for item in page.options.list %}
     <div class='type'>
-      <h2>{{ item.what }}</h2>
-      <h1 class='title'>{{ item.type }}</h1>
+      <h2 class='item'>{{ item.what }}</h2>
+      <h1 class='title item'>{{ item.type }}</h1>
+      <button class='button-text button'>Learn More</button>
     </div>
     {% endfor %}
+  </div>
+    <div class='loan'>
+      <p class='text-link'>{{ page.options.loan }}</p>
+      <img  class='arrow' src='/img/home/Arrow.png'>
+    </div>
+  </div>
+  <div class='rating'>
+      <div class='stars'>
+        <img src='/img/home/stars.png'>
+
+      </div>
+      <div class='reviews'>
+        <p class='large-body'>{{ page.review}}</p>
+
+      </div>
+  </div>
+  <div id='contact'>
+    <div class='contact'>
+    
+       <h1>{{ page.contact }}</h1>
+       <button class='button-text button'>contact us</button>
+      </div>
   </div>
 </div>
   

@@ -12,7 +12,7 @@
     position: relative;
 
     .logo{
-        width: 384.86px;
+        width: 20.05vw;
         img{
             width: 100%;
         }
@@ -46,7 +46,9 @@
                 position: absolute;
                 top: 3.5rem;
                 width: 30.5rem;
-                margin-left: 6rem;
+                padding-bottom: 3.5em;
+                padding-left: 6rem;
+                z-index: 1;
             }
             &:hover .arrow{
                 transform: rotate(-180deg);

@@ -1,0 +1,95 @@
+#footer{
+    max-width: 192rem;
+    height: 60.1rem;
+    background-color: $charcoal-blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 7.292vw;
+    position: relative;
+    margin: 0 auto;
+    .company{
+        margin-top: 10.7rem;
+        margin-bottom: 10.3rem;
+        display: flex;
+        flex-direction: column;
+        .img{
+            max-width: 10.25vw;
+            img{
+                margin: 0;
+            }
+        }
+        .text{
+            padding-top: 7.916rem;
+            padding-left: 0.208vw;
+            .large-body{
+                color: $white;
+                max-width: 70.1rem;
+                font-size: 2.6rem;
+                line-height: 4rem;
+                .large-body-bold{
+                    color: $white;
+                    font-size: 2.6rem;
+                    line-height: 4rem;
+                }
+
+            }
+            .italic{
+                font-size: 2.3rem;
+                font-style: italic;
+                line-height: 4rem;;
+            }
+        }
+        
+    }
+    .list{
+        .links{
+            display: flex;
+            flex-direction: row;
+            padding-top: 14rem;
+
+            .text-link{
+                color: $white;
+                text-transform: uppercase;
+                padding-left: 5rem;
+            }
+        }
+        .address{
+            display: flex;
+            flex-direction: column;
+            padding-top: 5rem;
+            p{
+                color: $white;
+                font-size: 2.3rem;
+                text-align: right;
+                line-height: 3.6rem;
+
+            }
+        }
+        .phone{
+            p{
+                font-size: 2rem;
+                line-height: 2.7rem;
+                text-transform: uppercase;
+                color: $white;
+                padding-top:5.3rem;
+                text-align: right;
+                letter-spacing: .2rem;
+                .text-link{
+                    color: $white;
+
+                }
+            }
+        }
+        .social{
+            display: flex;
+            flex-direction: row;
+            padding-top: 6.5rem;
+            justify-content: flex-end;
+            img{
+                margin:0;
+                padding-left: 3.6rem;
+            }
+        }
+    }
+}
