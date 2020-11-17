@@ -11,16 +11,16 @@ options: How the Home Loan Process Works
 type:
  list:
   -
-    img:
+    img: /img/purchase/1.png
     blurb: Complete your request for a pre-approval letter for your mortgage.
   - 
-   img:
+   img: /img/purchase/2.png
    blurb: Receive options and recommendations unique to you.
   - 
-   img:
+   img: /img/purchase/3.png
    blurb: Compare mortgage interest rates and terms.
   - 
-   img:
+   img: /img/purchase/4.png
    blurb: Let us help you choose the offer that is right for you.
 
 
@@ -37,11 +37,15 @@ type:
         </div>
         <div class='options'>
             {% for item in page.type.list %}
-            <div>
-                <img scr='{{ item.img }}'>
+            <div class='content'>
+                <img src="{{ item.img }}">
+           
+                <p class='large-text'>{{ item.blurb }}</p>
             </div>
-            <p>{{ item.blurb }}</p>
             {% endfor %}
         </div>
+    </div>
+    <div class='cta'>
+        <button class='button button-text'>qualify now</button>
     </div>
 </div>
