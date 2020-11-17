@@ -1,0 +1,77 @@
+@import "vars.scss";
+@import "mixins.scss";
+
+#about{
+    position: relative;
+    padding: 0 15vw;
+    margin: 0 auto;
+    max-width: 192rem;
+    .spartan{
+    position: absolute;
+     padding-top: 5.138rem;
+     overflow: hidden;
+     right: 0;
+    img{
+     position: relative;
+     left: 30%;
+}
+    
+    
+    }
+    .title{
+        padding-top:8.6rem;
+        text-align: center;
+       
+    }
+    .content{
+    
+    .person{
+        padding-top:5rem;
+        padding-bottom: 7.3rem;
+        max-width: 108.8rem;
+        margin: 0 auto;
+        text-align: center;
+        border-bottom: 1px solid gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        .img{
+            max-width: 48rem;
+            width: 25vw;
+            align-self: center;
+        }
+        h2{
+            padding-top: 4.3rem;
+    
+        }
+        .large-body-bold{
+            padding-top:1.4rem;
+        }
+        .pos{
+            font-size: 3rem;
+           
+        }
+
+        .large-body{
+            padding-top: 3.2rem;
+        }
+    }
+}
+.contact{
+    padding-top: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    .pos{
+        font-size: 3rem; 
+        text-align: center;
+    }
+    .button{
+        
+        max-width: 21.1rem;
+        margin: 2.4rem auto 15.3rem;
+    }
+}
+}

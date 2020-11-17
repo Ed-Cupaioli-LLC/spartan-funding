@@ -8,11 +8,28 @@
     padding: 0 7.292vw;
     position: relative;
     margin: 0 auto;
+    position: relative;
+    #float{
+        position: absolute;
+        right: 0;
+        object-fit: contain;
+        overflow: hidden;
+        height: 100%;
+        .float{
+            overflow: hidden;
+            position: relative;
+            top: -5rem;
+        
+        }
+
+    }
+  
     .company{
         margin-top: 10.7rem;
         margin-bottom: 10.3rem;
         display: flex;
         flex-direction: column;
+        position: relative;
         .img{
             max-width: 10.25vw;
             img{
@@ -43,6 +60,7 @@
         
     }
     .list{
+        position: relative;
         .links{
             display: flex;
             flex-direction: row;

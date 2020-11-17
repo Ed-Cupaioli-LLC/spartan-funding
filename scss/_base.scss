@@ -22,12 +22,20 @@ h1, h2, h3, h4, h5 {
 /* Character Styles */
 .button{
 	border: $steel-blue 2px solid;
-	padding: 1.6rem 3.6rem;;
+	padding: 0.83vw 1.875vw;
+	background-color: unset;
+
+}
+.round-button{
+	border-radius: 21px;
+    padding: 0 1.5vw;
+    text-align: center;
+    box-sizing: border-box;
 
 }
 .button-text{
 	font-weight: bold;
-	font-size: 2rem;
+	font-size:clamp(1.5rem, 1.042vw, 2rem);
 	line-height: 2.7rem;
 	text-transform: uppercase;
 }
@@ -99,7 +107,7 @@ h1, h2, h3, h4, h5 {
 	}
 	.text-link {
 	font-weight: bold;
-	font-size: 2rem;
+	font-size:  2rem;
 	line-height: 3.6rem;
 	color: $charcoal-blue;
 	

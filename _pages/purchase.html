@@ -1,0 +1,47 @@
+---
+title: Purchase
+layout: default
+permalink: /purchase/
+css: purchase
+
+header: Welcome home, Spartan!
+text: Now that you have discovered the piece of the California property you want to conquer, we want to help you attack your goals and bring the dream to life. We have many loan options available to you. Whether you are an experienced investor, first time home buyer, or upgrading for your growing family, we will find a loan to meet your needs.
+
+options: How the Home Loan Process Works
+type:
+ list:
+  -
+    img:
+    blurb: Complete your request for a pre-approval letter for your mortgage.
+  - 
+   img:
+   blurb: Receive options and recommendations unique to you.
+  - 
+   img:
+   blurb: Compare mortgage interest rates and terms.
+  - 
+   img:
+   blurb: Let us help you choose the offer that is right for you.
+
+
+---
+
+<div id='purchase'>
+    <div class='intro'>
+        <h1 class='title'>{{ page.header }}</h1>
+        <p class='large-body'>{{ page.text }}</p>
+    </div>
+    <div class='type'>
+        <div>
+            <h3>{{ page.options }}</h3>
+        </div>
+        <div class='options'>
+            {% for item in page.type.list %}
+            <div>
+                <img scr='{{ item.img }}'>
+            </div>
+            <p>{{ item.blurb }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
