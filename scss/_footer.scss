@@ -86,7 +86,7 @@
                 font-style: italic;
                 line-height: 4rem;
                 @include bp-large{
-                    font-size: 1.8rem;
+                    font-size: 1.6rem;
                 }
             }
         }
@@ -109,7 +109,7 @@
                 padding-left: 5rem;
                 @include bp-large{
                     padding-left: unset;
-                    font-size: 1.8rem;
+                    font-size: 1.6rem;
                     padding-bottom: 3.7rem;
                 }
             }
