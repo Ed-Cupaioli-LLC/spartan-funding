@@ -1,0 +1,179 @@
+#footer{
+    max-width: 192rem;
+    height: 60.1rem;
+    background-color: $charcoal-blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 7.292vw;
+    position: relative;
+    margin: 0 auto;
+    position: relative;
+    @include bp-large{
+        flex-direction: column;
+        height: 99.4rem;
+        justify-content: unset;
+        padding: unset;
+        padding-left: 5.675vw;
+    }
+    @include bp-small{
+        padding-right: 19.565vw;
+    }
+    #float{
+        position: absolute;
+        right: 0;
+        object-fit: contain;
+        overflow: hidden;
+        height: 100%;
+        .float{
+            overflow: hidden;
+            position: relative;
+            top: -5rem;
+            @include bp-large{
+                top: 55%;
+                left: 33%;
+            }
+        }
+
+    }
+  
+    .company{
+        margin-top: 10.7rem;
+        margin-bottom: 10.3rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        @include bp-large{
+            margin-top: 6.2rem;
+            margin-bottom: 4.5rem;
+        }
+        .img{
+            max-width: 10.25vw;
+            @include bp-large{
+                width: 14.890vw;
+            }
+            img{
+                margin: 0;
+            }
+        }
+        .text{
+            padding-top: 7.916rem;
+            padding-left: 0.208vw;
+            @include bp-large{
+                padding-top: 4.417rem;
+                padding-left: unset;
+            }
+            .large-body{
+                color: $white;
+                max-width: 70.1rem;
+                font-size: 2.6rem;
+                line-height: 4rem;
+                @include bp-large{
+                    font-size: 1.8rem;
+                }
+                .large-body-bold{
+                    color: $white;
+                    font-size: 2.6rem;
+                    line-height: 4rem;
+                    @include bp-large{
+                        font-size: 1.8rem;
+                    }
+                }
+
+            }
+            .italic{
+                font-size: 2.3rem;
+                font-style: italic;
+                line-height: 4rem;
+                @include bp-large{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+        
+    }
+    .list{
+        position: relative;
+        .links{
+            display: flex;
+            flex-direction: row;
+            padding-top: 14rem;
+            @include bp-large{
+                padding-top: 0;
+                flex-direction: column;
+            }
+
+            .text-link{
+                color: $white;
+                text-transform: uppercase;
+                padding-left: 5rem;
+                @include bp-large{
+                    padding-left: unset;
+                    font-size: 1.8rem;
+                    padding-bottom: 3.7rem;
+                }
+            }
+        }
+        .address{
+            display: flex;
+            flex-direction: column;
+            padding-top: 5rem;
+            @include bp-large{
+                padding-top: 1.9rem;
+            }
+            p{
+                color: $white;
+                font-size: 2.3rem;
+                text-align: right;
+                line-height: 3.6rem;
+                @include bp-large{
+                    font-size: 1.8rem;
+                    text-align: left;
+                }
+
+            }
+        }
+        .phone{
+
+            p{
+                font-size: 2rem;
+                line-height: 2.7rem;
+                text-transform: uppercase;
+                color: $white;
+                padding-top:5.3rem;
+                text-align: right;
+                letter-spacing: .2rem;
+                @include bp-large{
+                    text-align: left;
+                    font-size: 1.8rem;
+                    padding-top: 4.7rem;
+                }
+                .text-link{
+                    color: $white;
+
+                }
+            }
+        }
+        .social{
+            display: flex;
+            flex-direction: row;
+            padding-top: 6.5rem;
+            justify-content: flex-end;
+            @include bp-large{
+                padding-top: 5.7rem;
+                justify-content: flex-start;
+                padding-bottom: 9.8rem;
+          
+            }
+            img{
+                margin:0;
+                padding-left: 3.6rem;
+                @include bp-large{
+                    padding-right: 5.675vw;
+                    padding-left: unset;
+                }
+            }
+          
+        }
+    }
+}

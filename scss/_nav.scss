@@ -10,9 +10,15 @@
     align-items: center;
     box-sizing: content-box;
     position: relative;
+    @include bp-small{
+        padding-top: 1.714rem;
+        padding-left: 4.1rem;
+        padding-right: 3.6rem;
 
+    }
     .logo{
-        width: 384.86px;
+        width: 20.05vw;
+        min-width: 21.63rem;
         img{
             width: 100%;
         }
@@ -26,12 +32,8 @@
             
         }
         
-        .border{        
+        .round-button{        
             border: 2px solid #5387A2;
-            border-radius: 21px;
-            width: 12.4rem;
-            text-align: center;
-            box-sizing: border-box;
         }
         .services{
             display: flex;
@@ -46,7 +48,9 @@
                 position: absolute;
                 top: 3.5rem;
                 width: 30.5rem;
-                margin-left: 6rem;
+                padding-bottom: 3.5em;
+                padding-left: 6rem;
+                z-index: 1;
             }
             &:hover .arrow{
                 transform: rotate(-180deg);
@@ -69,5 +73,8 @@
             }
         }
         
+    }
+    .haburger-manu{
+        padding-right: 3.6rem;
     }
 }
