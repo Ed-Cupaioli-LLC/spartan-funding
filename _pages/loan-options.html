@@ -1,0 +1,85 @@
+---
+title: Loan Options
+layout: default
+permalink: /loan-options/
+css: loan-options
+
+header: Loan Options
+
+options: 
+  - title:  15 and 30 Year Fixed-Rate Mortgages
+    list:
+    - 
+        sub-title: We combine low rates with a quick and efficient process.
+        text: <span id='show'> The 30-year fixed-rate mortgage is the traditional approach, and has a consistent interest rate and monthly payments that never change throughout the life of the loan. If you plan to stay in your home for seven years or longer, this might be a good choice for you. For homeowners looking to move within seven years, adjustable-rate loans are potentially cheaper.</span>
+    - 
+        sub-title: We also offer a 15-year fixed rate. 
+        text: >
+    
+           This loan allows you to own your home twice as fast. The 15-year fixed rate mortgage has similar terms and conditions that you would expect with a 30-year loan, but with a lower interest rate. With a 15-year loan, you commit to a higher monthly payment over the course of fifteen years. Since forecasting future financial capabilities can be challenging, many borrowers opt out of a 30-year fixed-rate loan, and, instead, voluntarily make larger payments that will pay off their loan in 15 years.
+
+
+            Spartan Funding is here to guide you through the home loan process efficiently and with ease. Our team is with you every step of the way to answer any questions you may have. We will strive to get you superior rates and take advantage of the best loan programs to help save you money. 
+    
+
+            Whether you are an experienced investor, first time home buyer, or upgrading for your growing family, we look forward to helping you attack your home buying goals.
+    -
+        sub-title: Fixed-Rate Mortgage Process
+        type: 
+            - Complete our simple Fixed Rate Mortgage Qualifier
+            - Receive options based upon your unique criteria and scenario
+            - Compare mortgage interest rates and terms
+            - Choose the offer that best suits your needs
+
+  - title: Adjustable-Rate Mortgages
+    list: 
+    - 
+        sub-title: Variable rates that will fit your current and future financial needs.
+
+        text: >
+            While fixed-rate mortgages have an interest rate that stays the same throughout the life of the loan, the interest rate of an adjustable-rate mortgage (ARM)  will change periodically. With an ARM, the initial interest rate is typically lower than that of a fixed-rate mortgage, therefore making it a good option to consider if you plan on moving, are expecting an increase in income, or if current interest rates are too high.
+
+
+            Spartan Funding is here to guide you through the home loan process efficiently and with ease. Our team is with you every step of the way to answer any questions you may have. We will strive to get you superior rates and take advantage of the best loan programs to help save you money. 
+    
+
+            Whether you are an experienced investor, first time home buyer, or upgrading for your growing family, we look forward to helping you attack your home buying goals.
+    - 
+        sub-title: Adjustable-Rate Mortgage Process
+        type:
+            - Complete our simple Adjustable-Rate Mortgage Qualifier
+            - Receive options based upon your unique criteria and scenario
+            - Compare mortgage interest rates and terms
+            - Choose the offer that best suits your needs
+
+
+---
+
+<div id='loan-options'>
+    <div class='intro'>
+        <h1 class='title'>{{ page.header }}</h1>
+    </div>
+    <div class='options'>
+        
+       {% for option in page.options %}
+       <div class='option'>
+        <h3>{{ option.title }}</h3>
+            {% for item in option.list %}
+            <div><p>{{item.sub-title}}</p></div>
+            {% if item contains 'text' %}
+            <div><p class='large-body'>{{item.text | newline_to_br}}</p></div>
+            {% elsif item contains 'type' %}
+            <div><ul>
+                {% for list in item.type %}
+                <li>{{ list }}</li>
+                {% endfor %}
+            </ul></div>
+            {% endif %}
+        
+        {% endfor %}
+        <button class='expand'>Show more</button>
+    </div>
+       {% endfor %}
+    </div>
+</div>
+

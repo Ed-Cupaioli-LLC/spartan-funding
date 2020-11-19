@@ -1,0 +1,35 @@
+---
+title: Refinance
+layout: default
+permalink: /refinance/
+css: refinance
+
+header: Why Refinance?
+text: Rates are always changing, and the current rates are likely different than when you purchased your home. Take a look at how your payments could change or how much you could save by refinancing.
+
+type:
+ list:
+  - 
+    img: /img/refinance/graph.png
+    content: Rates are continuously changing, and there has never been a better time to refinance. We are seeing historically low rates that consumers are taking advantage of to save themselves thousands.
+  - 
+   img: /img/refinance/dollar.png
+   content: Refinancing can potentially help you reduce your rate, lower your monthly payments, or even put cash in your pocket from your home’s equity giving you a chance to maybe potentially another venture.
+---
+
+<div id='refinance'>
+    <div class='intro'>
+        <h1 class='title'>{{ page.header }}</h1>
+        <p class='large-body'>{{ page.text }}</p>
+    </div>
+    <div class='options'>
+        {% for item in page.type.list %}
+        <div class='item'>
+            <img src='{{ item.img }}'>
+            <p class='large-body'>{{ item.content }}</p>
+        </div>
+        {% endfor %}
+        <button class='button button-text'>view loan options</button>
+
+    </div>
+</div>

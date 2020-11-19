@@ -11,7 +11,7 @@
     position: relative;
     @include bp-large{
         flex-direction: column;
-        height: 99.4rem;
+        height: auto;
         justify-content: unset;
         padding: unset;
         padding-left: 5.675vw;
@@ -50,7 +50,8 @@
         .img{
             max-width: 10.25vw;
             @include bp-large{
-                width: 14.890vw;
+                
+                min-width: 14.48rem;
             }
             img{
                 margin: 0;
@@ -163,7 +164,9 @@
                 padding-top: 5.7rem;
                 justify-content: flex-start;
                 padding-bottom: 9.8rem;
-          
+           @include bp-small{
+               padding-bottom: 7rem;
+           }
             }
             img{
                 margin:0;
