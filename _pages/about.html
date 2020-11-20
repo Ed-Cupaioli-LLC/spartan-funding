@@ -71,15 +71,15 @@ talk: Are you ready to talk to a Spartan?
             <img src='{{ person.img }}'>
         </div>
         <h2>{{ person.name }}</h2>
-        <p class='large-body-bold pos'>{{ person.title }}</p>
-        <p class='large-body-bold'>{{ person.license }}</p>
-        <p class='large-body'>{{ person.text | newline_to_br  }}</p>
+        <h3>{{ person.title }}</h3>
+        <h5>{{ person.license }}</h5>
+        <p class='body'>{{ person.text | newline_to_br  }}</p>
     </div>
 
     {% endfor %}
 </div>
 <div class='contact'>
-    <p class='large-body-bold pos'>{{ page.talk }}</p>
+    <p class='body bold pos'>{{ page.talk }}</p>
     <button class=' button-text button'>contact us</button>
 </div>
 </div>

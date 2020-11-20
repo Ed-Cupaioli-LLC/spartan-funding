@@ -20,13 +20,13 @@ type:
 <div id='refinance'>
     <div class='intro'>
         <h1 class='title'>{{ page.header }}</h1>
-        <p class='large-body'>{{ page.text }}</p>
+        <p class='body'>{{ page.text }}</p>
     </div>
     <div class='options'>
         {% for item in page.type.list %}
         <div class='item'>
             <img src='{{ item.img }}'>
-            <p class='large-body'>{{ item.content }}</p>
+            <p class='body'>{{ item.content }}</p>
         </div>
         {% endfor %}
         <button class='button button-text'>view loan options</button>
