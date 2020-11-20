@@ -75,58 +75,59 @@
         
     }
     .hamburger-menu{
-        .mobile-menu{
-            display: none; 
-        }
-        .show{
+        
+    }
+    .show {
+        display: none;
+        width: 70vw;
+        right: 0;
+        height: 100vh;
+        color: white;
+        position: absolute;
+        top: 0;
+        background-color: $charcoal-blue;
+        z-index: 3;
+        flex-direction: column;
+        padding-top: 16.35vh;
+        @include bp-small{
             width: 100vw;
-            height: 100vh;
-            color: white;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: $charcoal-blue;
-            z-index: 3;
-            display: flex;
-            flex-direction: column;
-            padding-top: 16.35vh;
-            .text-link{
-                color: white;
-                font-size: 2rem;
-                line-height: 6rem;
-                padding-left: 8.696vw;
-                
-            }
-            .exit{
-                position: absolute;
-                width:6.234rem;
-                top: 4rem;
-                right: 2rem
-            }
-
-            .services{
-                .arrow{
-                    display: flex;
-                    flex-direction: row;
-                    .img{
-                        margin: auto 1rem;
-                        top: 2.183rem;
-                right: -2.283rem;
-                    }
-                }
-                .dropdown{
-                    display: none;
-                    flex-direction: column;
-                    border-left: 1px white solid;
-                    margin-left: 8.696vw;
-                    .text-link{
-                        margin-left:0;
-                    }
-                }
-                
-            }
-          
-           
         }
+        .text-link{
+            color: white;
+            font-size: 2rem;
+            line-height: 6rem;
+            padding-left: 8.696vw;
+            
+        }
+        .exit{
+            position: absolute;
+            width:6.234rem;
+            top: 2.5rem;
+            right: 2.5rem;
+        }
+
+        .mobile{
+            .arrow{
+                display: flex;
+                flex-direction: row;
+                .img{
+                    margin: auto 1rem;
+                    top: 2.183rem;
+                    right: -2.283rem;
+                }
+            }
+            .dropdown-mobile{
+                display: none;
+                flex-direction: column;
+                border-left: 1px white solid;
+                margin-left: 8.696vw;
+                .text-link{
+                    margin-left:0;
+                }
+            }
+            
+        }
+      
+       
     }
 }

@@ -24,10 +24,10 @@ $(function(){
   // Function for arrow display in mobile view 
     $('#nav .arrow').click(function(){
       if($(this).hasClass('0')){
-        $(" #nav .dropdown").attr("style", "display: flex")
+        $(" #nav .dropdown-mobile").attr("style", "display: flex")
         $(this).removeClass('0').addClass('1')
       } else {
-        $(" #nav .dropdown").attr("style", "display: none")
+        $(" #nav .dropdown-mobile").attr("style", "display: none")
         $(this).removeClass('1').addClass('0')
       }
       
@@ -39,7 +39,6 @@ $(function(){
         if (windowsize < 1025) {
             $('#nav .menu').attr("style", "display: none")
             $('#nav .hamburger-menu').attr("style", "display: block")
-
         } 
         else{
           $('#nav .menu').attr("style", "display: flex")
@@ -47,12 +46,16 @@ $(function(){
         }
       }
   
+      //open close for small window navigation
       $('#nav .hamburger-menu').click(function(){
-          $('#nav .mobile-menu').addClass('show').removeClass('mobile-menu')
-        
+          $('#nav .show').attr('style', 'display: flex');
+          console.log('im clicked')
       })
+      
       $('#nav .exit').click(function(){
-          $('#nav .show').hide()
+          $('#nav .show').attr('style', 'display: none');
+          $(" #nav .dropdown-mobile").attr("style", "display: none")
+          $('#nav .arrow').removeClass('1').addClass('0')
       })
 //Loan Options acordion logic
  
@@ -64,14 +67,17 @@ $(function(){
 
       $("#loan-options .expand").click(function(){
       $(this).siblings("div:gt(1)").slideToggle()
-      if($(this).text()==="Show more"){
+      if($(this).hasClass('0')){
         $(this).siblings('div:eq(1)').attr('style', 'height: unset; overflow: unset')
+        $(this).removeClass('0').addClass('1')
       } else {
-        $(this).siblings('div:eq(1)').attr('style', 'height: 15rem; overflow: hidden')
+        $(this).siblings('div:eq(1)').attr('style', 'height: 10rem; max-height:15rem; overflow: hidden')
+        $(this).removeClass('1').addClass('0')
       }
-     
       console.log($(this).text())
-      $(this).text($(this).text() === "Show more" ? "Show less" : "Show more");
+      $(this).text($(this).text() === "Read more" ? "Read less" : "Read more")
+    
+      
 });
     
 

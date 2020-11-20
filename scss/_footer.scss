@@ -64,7 +64,7 @@
                 padding-top: 4.417rem;
                 padding-left: unset;
             }
-            .large-body{
+            .body{
                 color: $white;
                 max-width: 70.1rem;
                 font-size: 2.6rem;
@@ -72,7 +72,7 @@
                 @include bp-large{
                     font-size: 1.8rem;
                 }
-                .large-body-bold{
+                .bold{
                     color: $white;
                     font-size: 2.6rem;
                     line-height: 4rem;
