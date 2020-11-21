@@ -1,7 +1,7 @@
 $(function(){
 
   //getting current heiht and width of user screen size 
-  $(document).ready(function() {
+  $(window).ready(function() {
     switchCSS($(this).width());
     console.log('hello')
     
@@ -60,7 +60,7 @@ $(function(){
 //Loan Options acordion logic
  
       $("#loan-options .option").each(function(){
-        $(this).children('div:eq(1)').attr('style', 'height: 10rem; max-height:15rem; overflow: hidden')
+        $(this).children('div:eq(1)').attr('style', 'height: 10rem; max-height:15rem; overflow: hidden; text-overflow: ellipsis;')
         $(this).children("div:gt(1)").hide();
        
       })
@@ -71,7 +71,7 @@ $(function(){
         $(this).siblings('div:eq(1)').attr('style', 'height: unset; overflow: unset')
         $(this).removeClass('0').addClass('1')
       } else {
-        $(this).siblings('div:eq(1)').attr('style', 'height: 10rem; max-height:15rem; overflow: hidden')
+        $(this).siblings('div:eq(1)').attr('style', 'height: 10rem; max-height:15rem; overflow: hidden; text-overflow: ellipsis;')
         $(this).removeClass('1').addClass('0')
       }
       console.log($(this).text())

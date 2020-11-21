@@ -27,6 +27,7 @@
         display: flex;
         flex-direction: row;
         position: relative;
+        width: 64rem;
         .text-link{
             margin-left: 6rem;
             
@@ -75,7 +76,7 @@
         
     }
     .hamburger-menu{
-        
+       display: none; 
     }
     .show {
         display: none;
@@ -88,7 +89,7 @@
         background-color: $charcoal-blue;
         z-index: 3;
         flex-direction: column;
-        padding-top: 16.35vh;
+        padding-top: 10.5rem;
         @include bp-small{
             width: 100vw;
         }
@@ -98,6 +99,10 @@
             line-height: 6rem;
             padding-left: 8.696vw;
             
+        }
+        .pop{
+            padding-left: 4vw;
+            padding-bottom: .3rem;
         }
         .exit{
             position: absolute;
@@ -126,6 +131,18 @@
                 }
             }
             
+        }
+        .button{
+            margin: 3rem;
+            border-color: $white;
+            margin-left: 8.696vw;
+            @include bp-large{
+                max-width: 34.2rem;
+            }
+            @include bp-small{
+                margin: 3rem auto 0;
+
+            }
         }
       
        

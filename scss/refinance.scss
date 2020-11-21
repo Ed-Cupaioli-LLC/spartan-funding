@@ -1,2 +1,70 @@
 @import "vars.scss";
 @import "mixins.scss";
+
+#refinance{
+    padding: 0 7.292vw;
+    padding-top: 9rem;
+    @include bp-large{
+        padding: 0 8.696vw;
+        padding-top: 5.362rem;
+    }
+    .intro{
+        .title{
+            text-align: center;
+            padding-bottom: 3.1rem;
+            @include bp-large{
+                padding-bottom: 2.3rem;
+            }
+        }
+        .body{
+            max-width: 108.8rem;
+            text-align: center;
+            margin: 0 auto;
+            padding-bottom: 7.2rem;
+            @include bp-large{
+                padding-bottom: 5.5rem;
+            }
+
+        }
+    }
+    .options{
+        display: flex;
+        flex-direction: row;
+        max-width: 164rem;
+        width: 73.5vw;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: space-between;
+        padding-bottom: 9.5rem;
+        @include bp-large{
+            flex-direction: column;
+            width: unset;
+            padding-bottom: unset;
+        }
+        .item{
+            width: 34.289vw;
+            @include bp-large{
+                width: 82.850vw;
+                margin: 0 auto;
+                padding-bottom: 5rem;
+            }
+            img{
+                padding-bottom: 1rem;
+            }
+           
+        }
+     
+       
+    }
+    .button{
+        width: 30.8rem;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        margin-bottom: 14.5rem;
+        @include bp-large{
+            margin-bottom: 9.5rem;
+        }
+    }
+    
+}

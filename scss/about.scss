@@ -6,11 +6,15 @@
     padding: 0 15vw;
     margin: 0 auto;
     max-width: 192rem;
+    @include bp-large{
+       padding: 0 8.696vw;
+    }
     .spartan{
-    position: absolute;
+     position: absolute;
      padding-top: 5.138rem;
      overflow: hidden;
      right: 0;
+    
     img{
      position: relative;
      left: 30%;
@@ -21,6 +25,9 @@
     .title{
         padding-top:8.6rem;
         text-align: center;
+        @include bp-large{
+            padding-top: 6rem;
+        }
        
     }
     .content{
@@ -36,14 +43,31 @@
         flex-direction: column;
         justify-content: center;
         align-content: center;
+        @include bp-large{
+            padding-top: 2.5rem;
+        }
         .img{
             max-width: 48rem;
             width: 25vw;
+            z-index: 1;
             align-self: center;
+            @include bp-large{
+                width: 61.594vw;
+            }
         }
         h2{
             padding-top: 4.3rem;
+            @include bp-large{
+                padding-top: 3rem;
+                font-size: 2.5rem;
+            }
     
+        }
+        h3{
+            padding-top: 1rem;
+        }
+        h5{
+            padding-top: 1rem;
         }
         .pos{
             font-size: 3rem;
@@ -51,7 +75,7 @@
         }
 
         .body{
-            padding-top: 3.2rem;
+            padding-top: 2.5rem;
         }
     }
 }
