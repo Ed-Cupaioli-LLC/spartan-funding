@@ -2,52 +2,77 @@
 @import "mixins.scss";
 
 #purchase{
+    padding: 0 7.292vw;
+    padding-top: 9rem;
+    @include bp-large{
+        padding: 0 8.696vw;
+        padding-top: 5.362rem;
+    }
     .intro{
-        
         h1{
             text-align: center;
-            padding-top: 9rem;
-            max-width: 85.417vw;
-            margin: 0 auto;
-
         }
         .body{
             max-width: 56.667vw;
             text-align: center;
             padding-top: 4rem;
             margin: 0 auto;
+            @include bp-large{
+                max-width: unset;
+                padding-top: 2.2rem;
+            }
         }
     }
     .type{
-        margin-top: 5.4rem;
-        padding: 0 8.333vw;
+        padding-top: 5.4rem;
         text-align: center;
+        @include bp-large{
+            padding-top: 4.7rem;
+        }
         .options{
             display: flex;
             flex-direction: row;
-            margin-top: 5.4rem;
+            justify-content: space-between;
+            padding-top: 5.4rem;
+            max-width: 164rem;
+            margin: 0 auto;
+            @include bp-large{
+                flex-direction: column;
+                padding-top: 3.2rem;
+                padding-bottom: 1.1rem;
+                justify-content: unset;
+
+            }
             .content{
                 display: flex;
                 flex-direction: column;
-                padding: 0 2vw;
+                max-width: 17vw;
+                @include bp-large{
+                    padding-bottom: 4.5rem;
+                    max-width: unset;
+                }
                 img{
                     margin-bottom: 0;
                     margin-top: 0;
                 }
                 .body{
                     max-width: 21vw;
-                    margin-top: 2.5rem;
+                    padding-top: 2.7rem;
+                    @include bp-large{
+                        padding-top: 1rem;
+                        max-width: unset;
+                    }
                 }
             }
 
         }
     }
     .cta{
-        padding: 6rem 0 10rem;
+        padding: 5.5rem 0 10rem 0 ;
         display: flex;
         justify-content: center;
-        .button{
-            width: 23.6rem;
+        @include bp-large{
+            padding: 0 0 8.5rem 0;
         }
     }
 }

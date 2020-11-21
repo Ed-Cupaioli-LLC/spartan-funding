@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5 {
 		padding: 1.95rem 0;
 		@include bp-small{
 			width: 82.609vw;
+			padding: 1.3rem 0;
 		}
 	}
 
@@ -49,6 +50,7 @@ h1, h2, h3, h4, h5 {
 	@include bp-large{
 		font-size: 1.9rem;
 		line-height: 2.6rem;
+		
 	}
 }
 .title {
