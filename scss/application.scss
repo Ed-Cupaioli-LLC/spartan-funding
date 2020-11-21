@@ -1,0 +1,53 @@
+@import "vars.scss";
+@import "mixins.scss";
+
+#application{
+    #purpose{
+        height: 6.1rem;
+        border: none;
+        overflow: hidden;
+      }
+      #purpose::-moz-focus-inner {
+        border: 0;
+      }
+      #purpose:focus {
+        outline: none;
+      }
+      #purpose option{
+        width: 35.104vw;
+        
+        padding: 10px 0;
+        text-align: center;
+        margin-right: 20px;
+        display: inline-block;
+        cursor: pointer;
+        border:gray solid 1px;
+        border-radius: 5px;
+        color: gray;
+      }
+
+
+      .buttons{
+        height: 6.1rem;
+        border: none;
+        overflow: hidden;
+      }
+      .buttons::-moz-focus-inner {
+        border: 0;
+      }
+      .buttons:focus {
+        outline: none;
+      }
+      .buttons option{
+        width: 17.240vw;
+        
+        padding: 10px 0;
+        text-align: center;
+        margin-right: 20px;
+        display: inline-block;
+        cursor: pointer;
+        border:gray solid 1px;
+        border-radius: 5px;
+        color: gray;
+      }
+}
