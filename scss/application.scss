@@ -27,18 +27,18 @@
       }
 
 
-      #loan{
+      .buttons{
         height: 6.1rem;
         border: none;
         overflow: hidden;
       }
-      #loan::-moz-focus-inner {
+      .buttons::-moz-focus-inner {
         border: 0;
       }
-      #loan:focus {
+      .buttons:focus {
         outline: none;
       }
-      #loan option{
+      .buttons option{
         width: 17.240vw;
         
         padding: 10px 0;
