@@ -2,63 +2,122 @@
 @import "mixins.scss";
 
 #application{
-    div.btn {
-        display: inline-block;
-        border: 2px solid #ccc;
-        margin-right: 5px;
-        padding: 2px 5px;
-        cursor: pointer;
-    }
-    div.btn.on {
-        background-color: #777;
-        color: white;
-    }
-    #purpose{
-        height: 6.1rem;
-        border: none;
-        overflow: hidden;
+  padding: 0 14.271vw;
+  @include bp-large{
+     padding: 0 8.696vw;
+  }
+  .title{
+      padding-top: 9rem;
+      padding-bottom: 4rem;
+      text-align: center;
+      @include bp-large{
+          padding-top: 5.362rem;
+          padding-bottom: 3.7rem;
       }
-      #purpose::-moz-focus-inner {
-        border: 0;
+      @include bp-small{
+          text-align: left;
       }
-      #purpose:focus {
-        outline: none;
+  }
+  .text{
+    max-width: 108.8rem;
+    margin: 0 auto;
+  }
+  .form{
+    max-width: 136.4rem;
+    margin: 0 auto;
+   
+    .form-field{
+      display: flex;
+      flex-direction: column;
+     
+      label{
+        margin-top: 5.1rem;
+        @include bp-large{
+          font-size: 1.8rem;
+          margin-bottom: 1.4rem;
+          margin-top: 3.3rem;
+        }
       }
-      #purpose option{
-        width: 35.104vw;
+      .loan-type{
+        display: flex;
+        flex-direction: row;
+        max-width: 69.740vw;
+        max-width: 136.4rem;
+        justify-content: space-between;
+        .option{
+          width:49.4%;
+          padding: 1.2rem 0;
+          border: 2px solid #BBBCBE;
+          border-radius: .7rem;
+          color: $aa-gray;
+          padding-left: 1.250vw;
+          text-align: center;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+            img{ 
+              margin:auto 0;
+              height: 2.1rem;
+              padding-right: .872rem;
+            }
+            
+          
+        }
+      }
+      .property-loc{
+        display: grid;
+        grid-template-columns: 49.4% 19.6% 14.5% 14.5%;
+        max-width: 133.9rem;
+        justify-content: space-between;
         
-        padding: 10px 0;
-        text-align: center;
-        margin-right: 20px;
-        display: inline-block;
-        cursor: pointer;
-        border:gray solid 1px;
-        border-radius: 5px;
-        color: gray;
+        input{
+          padding: 1.2rem 0;
+          border: 2px solid #BBBCBE;
+          border-radius: .7rem;
+          color: $aa-gray;
+          padding-left: 1.250vw;
+        }
       }
-
-
-      .buttons{
-        height: 6.1rem;
-        border: none;
-        overflow: hidden;
-      }
-      .buttons::-moz-focus-inner {
-        border: 0;
-      }
-      .buttons:focus {
-        outline: none;
-      }
-      .buttons option{
-        width: 17.240vw;
+      .down-pay{
+        display: flex;
+        flex-direction: row;
         
-        padding: 10px 0;
-        text-align: center;
-        margin-right: 20px;
-        display: inline-block;
-        cursor: pointer;
-        border:gray solid 1px;
-        border-radius: 5px;
-        color: gray;
+        justify-content: space-between;
+        input{
+          width:49.4%;
+          padding: 1.2rem 0;
+          border: 2px solid #BBBCBE;
+          border-radius: .7rem;
+          color: $aa-gray;
+          padding-left: 1.250vw;
+
+        }
       }
+      .button-options{
+        display: grid;
+        grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
+        max-width: 133.9rem;
+        justify-content: space-between;
+        .option{
+         
+          padding: 1.2rem 0;
+          border: 2px solid #BBBCBE;
+          border-radius: .7rem;
+          color: $aa-gray;
+          padding-left: 1.250vw;
+      }
+      }
+      .single-input{
+        max-width: 133.9rem;;
+       
+        padding: 1.2rem 0;
+          border: 2px solid #BBBCBE;
+          border-radius: .7rem;
+          color: $aa-gray;
+          padding-left: 1.250vw;
+      }
+    }
+
+ 
+  }
 }
