@@ -69,10 +69,13 @@ $(function() {
             data: $(form).serialize(),
             type: 'GET',
             dataType: 'json',
-            crossorigin:true,
-            success: function () {
-                alert('Its een sent')
-            }
+            crossorigin: true,
+            success: function(){  
+              $("#success").show();  
+            },
+            error: function(textStatus, errorThrown) { 
+              alert('Error submitting your request'); 
+          }     
         });
         return false; // required to block normal submit since you used ajax
     }
