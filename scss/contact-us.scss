@@ -2,6 +2,7 @@
 @import "mixins.scss";
 
 #contact-us{
+    
     padding: 0 7.292vw;
     @include bp-large{
        padding: 0 8.696vw;
@@ -67,7 +68,10 @@
                         label{
                             margin-top: 0;
                         }
-                        
+                        .error { 
+                            color: red;
+                            margin-top: .8rem;
+                         }
                       }
                     label{
                      margin-top: 4.2rem;
@@ -85,6 +89,7 @@
                         width: 56.5vw;
                         color: $aa-gray;
                         padding-left: 1.250vw;
+
                         @include bp-large{
                             width: 82.609vw;
                             margin: 0 auto;
@@ -92,6 +97,11 @@
 
                         }
                     }
+                    .error { 
+                        color: red;
+                        margin-top: .8rem;
+                        border-color: red;
+                     }
                   
                     
 
@@ -114,4 +124,5 @@
             }
         }
     }
+   
 }

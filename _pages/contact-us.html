@@ -3,6 +3,8 @@ title: Contact Us
 layout: default
 permalink: /contact-us/
 css: contact-us
+scripts: 
+- contact
 
 header: Contact Us
 
@@ -22,18 +24,18 @@ questions:
             <h2>{{ page.questions.cta }} <span class='bold'>{{ page.questions.num }}</span></h2>
         </div>
         <div class='form'>
-            <form id='contact'>
+            <form id='contact' name='contact' action="">
                 <div class='form-field'>
                     <label class='body bold'><span>*</span> Your Name</label>
-                    <input class='body' type='text' name= 'entry.1833635029' placeholder='Jane Doe' required>
+                    <input class='body' type='text' id='name' name='entry.1833635029' placeholder='Jane Doe' >
                 </div>
                 <div class='form-field'>
                     <label class='body bold'><span>*</span> Your Email</label>
-                    <input class='body' type='text' name='entry.2074440609' placeholder='janedoe@email.com'required>
+                    <input class='body' type='text'  id='email' name='entry.2074440609' placeholder='janedoe@email.com'>
                 </div>
                 <div class='form-field'>
                     <label class='body bold'><span>*</span> Phone Number</label>
-                    <input class='body' type='text' name='entry.1757091664' placeholder='555-555-5555' required >
+                    <input class='body' type='text'  id='phone' name='entry.1757091664' placeholder='555-555-5555' >
                 </div>
                 <div class='form-field'>
                     <label class='body bold'> <span> </span> Your Approximate Loan Value</label>
@@ -50,11 +52,11 @@ questions:
                 </div>
                 <div class='form-field text-area'>
                     <label class='body bold'> <span> </span> Your Message </label>
-                    <textarea  class='body' name="entry.2000995592" rows = "3"
+                    <textarea  class='body display-textarea' name="entry.2000995592" rows = "3"
                     cols = "80"> Enter your message here.</textarea>
                 </div>
                 <div class="submit-field">
-                    <button class="button button-text" id="submit-form" type="submit">Submit</button>
+                    <button class="button button-text" id="submit-form"  type="submit">Submit</button>
                 </div>
                 </div>
                 </div>
