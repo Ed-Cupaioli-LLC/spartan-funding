@@ -1,0 +1,66 @@
+---
+title: Contact Us
+layout: default
+permalink: /contact-us/
+css: contact-us
+scripts: 
+- contact
+
+header: Contact Us
+
+questions: 
+    title: Questions?
+    content: We’re here to help! Fill out this form and we’ll respond to you within 1 business day, or give us a call at our office Monday-Friday 8am-5pm.
+    cta: CALL OR TEXT 
+    num:  916.835.6084
+---
+
+<div id='contact-us'>
+    <div class='title'>{{ page.header }}</div>
+    <div class='page-content'>
+        <div class= 'questions'>
+            <h3>{{ page.questions.title }}</h3>
+            <p class='body'>{{ page.questions.content }}</p>
+            <h2>{{ page.questions.cta }} <span class='bold'>{{ page.questions.num }}</span></h2>
+        </div>
+        <div class='form'>
+            <form id='contact' name='contact' action="">
+                <div class='form-field'>
+                    <label class='body bold'><span>*</span> Your Name</label>
+                    <input class='body' type='text' id='name' name='entry.1833635029' placeholder='Jane Doe' >
+                </div>
+                <div class='form-field'>
+                    <label class='body bold'><span>*</span> Your Email</label>
+                    <input class='body' type='text'  id='email' name='entry.2074440609' placeholder='janedoe@email.com'>
+                </div>
+                <div class='form-field'>
+                    <label class='body bold'><span>*</span> Phone Number</label>
+                    <input class='body' type='text'  id='phone' name='entry.1757091664' placeholder='555-555-5555' >
+                </div>
+                <div class='form-field'>
+                    <label class='body bold'> <span> </span> Your Approximate Loan Value</label>
+                    <select class='body' id="loan-ammount" name='entry.789595876' placeholder='Select an Amount'>
+                        <option class='body' value="199.999"> Less than $199,999</option>
+                        <option class='body' value="200-300">$200,000-$299,999</option>
+                        <option class='body' value="300-400">$300,000-$399,999</option>
+                        <option class='body' value="400-500">$400,000-$499,999</option>
+                        <option class='body' value="500-600">$500,000-$599,999</option>
+                        <option class='body' value="800-700">$600,000-$699,999</option>
+                        <option class='body' value="700-800">$700,000-$799,999</option>
+                        <option class='body' value="800+">More than $800,000</option> 
+                      </select>
+                </div>
+                <div class='form-field text-area'>
+                    <label class='body bold'> <span> </span> Your Message </label>
+                    <textarea  class='body display-textarea' name="entry.2000995592" rows = "3"
+                    cols = "80"> Enter your message here.</textarea>
+                </div>
+                <div class="submit-field">
+                    <button class="button button-text" id="submit-form"  type="submit">Submit</button>
+                </div>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

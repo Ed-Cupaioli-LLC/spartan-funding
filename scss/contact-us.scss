@@ -1,0 +1,128 @@
+@import "vars.scss";
+@import "mixins.scss";
+
+#contact-us{
+    
+    padding: 0 7.292vw;
+    @include bp-large{
+       padding: 0 8.696vw;
+    }
+    .title{
+        padding-top: 9rem;
+        padding-bottom: 11rem;
+        text-align: center;
+        @include bp-large{
+            padding-top: 5.362rem;
+            padding-bottom: 3.7rem;
+        }
+        @include bp-small{
+            text-align: left;
+        }
+    }
+    .page-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include bp-large{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .questions{
+            display: flex;
+            flex-direction: column;
+            width: 21.563vw;
+            max-width: 41.4rem;
+            @include bp-large{
+                width: unset;
+                max-width: unset;
+            }
+            h3{
+                padding-bottom: .6rem;
+                @include bp-large{
+                    padding-bottom: 1.9rem;
+                    
+                }
+            }
+            h2{
+                font-size: 2rem;
+                line-height: 2.5rem;
+                padding-top: 3.2rem;
+                @include bp-large{
+                    padding-top: 2.5rem;
+                    padding-bottom: 4.2rem;
+                    letter-spacing: 1.6px;
+                }
+                @include bp-small{
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+                }
+            }
+        }
+        .form{
+            #contact{
+                .form-field{
+                    display: flex;
+                    flex-direction: column;
+                    &:first-child {
+                        label{
+                            margin-top: 0;
+                        }
+                        .error { 
+                            color: red;
+                            margin-top: .8rem;
+                         }
+                      }
+                    label{
+                     margin-top: 4.2rem;
+    
+                     @include bp-large{
+                         font-size: 1.8rem;
+                         margin-bottom: 1.4rem;
+                         margin-top: 3.3rem;
+                     }
+                    }
+                    input, textarea, select ,option{
+                        padding: 1.2rem 0;
+                        border: 2px solid #BBBCBE;
+                        border-radius: .7rem;
+                        width: 56.5vw;
+                        color: $aa-gray;
+                        padding-left: 1.250vw;
+
+                        @include bp-large{
+                            width: 82.609vw;
+                            margin: 0 auto;
+                            padding: 1rem 0 1rem 1.6rem;
+
+                        }
+                    }
+                    .error { 
+                        color: red;
+                        margin-top: .8rem;
+                        border-color: red;
+                     }
+                  
+                    
+
+                }
+                .submit-field{
+                    .button{
+                        background-color: $charcoal-blue;
+                        color: white;
+                        border: 1px $charcoal-blue solid;
+
+                        margin-top: 4.2rem;
+                        margin-bottom: 15.7rem;
+                        @include bp-large{
+                            margin-top: 5.878rem;
+                            margin-bottom: 8.7rem;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+   
+}

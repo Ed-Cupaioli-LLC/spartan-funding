@@ -3,7 +3,6 @@ $(function(){
   //getting current heiht and width of user screen size 
   $(window).ready(function() {
     switchCSS($(this).width());
-    console.log('hello')
     
     $(window).resize(function() {
       switchCSS($(this).width());
@@ -60,18 +59,21 @@ $(function(){
 //Loan Options acordion logic
  
       $("#loan-options .option").each(function(){
-        $(this).children('div:eq(1)').attr('style', 'height: 10rem; max-height:15rem; overflow: hidden; text-overflow: ellipsis;')
-        $(this).children("div:gt(1)").hide();
+        $(this).children('div:eq(1)').attr('style', 'max-height: calc(3.5rem*3); overflow: hidden; text-overflow: ellipsis;')
+        // $(this).children("div:gt(1)").hide();
+        $(this).children("div").slice(2).hide();
        
       })
 
       $("#loan-options .expand").click(function(){
-      $(this).siblings("div:gt(1)").slideToggle()
+        // $(this).siblings("div:gt(1)").slideToggle()
+        $(this).siblings("div").slice(2).slideToggle()
+        // $(this).slideToggle()
       if($(this).hasClass('0')){
         $(this).siblings('div:eq(1)').attr('style', 'height: unset; overflow: unset')
         $(this).removeClass('0').addClass('1')
       } else {
-        $(this).siblings('div:eq(1)').attr('style', 'height: 10rem; max-height:15rem; overflow: hidden; text-overflow: ellipsis;')
+        $(this).siblings('div:eq(1)').attr('style', 'max-height: calc(3.5rem*3); overflow: hidden; text-overflow: ellipsis;')
         $(this).removeClass('1').addClass('0')
       }
       console.log($(this).text())
@@ -79,16 +81,8 @@ $(function(){
     
       
 });
-$("select option").unwrap().each(function() {
-  var btn = $('<div class="btn">'+$(this).text()+'</div>');
-  if($(this).is(':checked')) btn.addClass('on');
-  $(this).replaceWith(btn);
-});
 
-$(document).on('click', '.btn', function() {
-  $('.btn').removeClass('on');
-  $(this).addClass('on');
-});
+
 
 });
 
