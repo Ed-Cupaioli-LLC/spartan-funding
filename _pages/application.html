@@ -3,6 +3,8 @@ title: Preliminary Application
 layout: default
 permalink: /apply/
 css: application
+scripts: 
+- application
 
 header: Preliminary Application
 text: The information provided in this application will allow us to help you attack your home buying and financial goals.
@@ -14,13 +16,15 @@ text: The information provided in this application will allow us to help you att
     <div class='title'> Preliminary Application</div>
     <p class='body text'>{{ page.text }}</p>
     <div class='form'>
-        <form id='application-form'>
+        <form id='application-form' name='application-form'>
             <div class="form-field radio-field">
                 <label class='body bold'>* Loan Purpose</label>
                     <div class="radio-options loan-type">
-                        <div class='option bold body'> <img src='/img/apply/home.png'>Purchase</div>
-                        <div class='option bold body'><img src='/img/apply/dollar.png'>Refinance</div>
-                  <input type="hidden" class="radio-input" name="entry.581741591"/>
+                        <!-- <div class='option bold body' type="radio"> <img src='/img/apply/home.png'>Purchase</div> -->
+                        <input style='display: none' type="radio" name="radio1" id="purchase" value="purchase"><label class='option bold body'  for="purchase"><img src='/img/apply/home.png'>Purchase</label> <label for="radio1" class="error" style="display: none;">Please select Loan Type</label>
+                       
+                        <input style='display: none' type="radio" name="radio1" id="refinance" value="refinance"><label class='option bold body'for="refinance"><img src='/img/apply/dollar.png'>Refinance</label>
+                        <!-- <div class='option bold body' type="radio"><img src='/img/apply/dollar.png'>Refinance</div> -->
                 </div>
               </div>
 
@@ -28,70 +32,108 @@ text: The information provided in this application will allow us to help you att
             <div class="form-field">
               <label class='body bold'>* Property Location</label>
                 <div class="property-loc">
-                    <input class='body' type='text' name= 'entry.1833635029' placeholder='Address' required>
-                    <input class='body' type='text' name= 'entry.1833635029' placeholder='City' required>
-                    <input class='body' type='text' name= 'entry.1833635029' placeholder='State' required>
-                    <input class='body' type='text' name= 'entry.1833635029' placeholder='Zip Code' required>
+                    <input class='body' type='text' name= 'address' placeholder='Address' >
+                    <input class='body' type='text' name= 'city' placeholder='City' >
+                    <select class='body' type='text' name= 'state' placeholder='State'>
+                        <option selected disabled>State</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District Of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>	
+                    <input class='body' type='text' name= 'zip' placeholder='Zip Code'>
                 </div>
             </div>
 
 
             <div class='form-field'>
                 <label class='body bold'>* Purchase Price</label>
-                <input class='body single-input' type='text' name= 'entry.1833635029' placeholder='$300,000' required>
+                <input class='body single-input' type='text' name= 'entry.1833635029' placeholder='$300,000'>
             </div>
 
             <div class='form-field'>
                 <label class='body bold'>* Down Payment</label>
                 <div class="down-pay">
-                    <input class='body' type='text' name= 'entry.1833635029' placeholder='20%' required>
-                    <input class='body' type='text' name= 'entry.1833635029' placeholder='$60,000' required>
+                    <input class='body' type='text' name= 'entry.1833635029' placeholder='20%'>
+                    <input class='body' type='text' name= 'entry.1833635029' placeholder='$60,000' >
                 </div>
             </div>
             <div class="form-field radio-field">
-                <label class='body bold'>* Loan Term</label>
+                <label class='body bold' for='Term'>* Loan Term</label>
                 <div class="radio-options button-options">
-                    <div class='option'>30 Years</div>
-                    <div class='option'>20 Years</div>
-                    <div class='option'>15 Years</div>
-                    <div class='option'>10 Years</div>
-                  <input type="hidden" class="radio-input" name="entry.581741591"/>
+                    <input style='display: none' type="radio" name="radio2" id="30" value="30"><label class='option bold body' for="30">30</label><label for="radio2" class="error" style="display: none;">Please select Loan Type</label>
+                    <input style='display: none' type="radio" name="radio2" id="20" value="20"><label class='option bold body' for="20">20</label>
+                    <input style='display: none' type="radio" name="radio2" id="15" value="15"><label class='option bold body' for="15">15</label>
+                    <input style='display: none' type="radio" name="radio2" id="10" value="10"><label class='option bold body' for="10">10</label>
                 </div>
                 
             </div>
             <div class="form-field radio-field">
-                <label class='body bold'>* Loan Program</label>
+                <label class='body bold' for="Program">* Loan Program</label>
                 <div class="radio-options button-options">
-                    <div class='option'>
-                        <div class="option-label">Conventional</div>
-                    </div>
-                    <div class='option'>
-                        <div class="option-label">FHA</div>
-                    </div>
-                    <div class='option'>
-                        <div class="option-label">VA</div>
-                    </div>
-                    <div class='option'>
-                        <div class="option-label">Other</div>
-                    </div>
-                  <input type="hidden" class="radio-input" name="entry.581741591"/>
+                <input style='display: none' type="radio" name="radio3" id="Conventional" value="Conventional"><label class='option bold body' for="Conventional">Conventional</label><label for="radio3" class="error" style="display: none;">Please select Loan Type</label>
+                <input style='display: none' type="radio" name="radio3" id="FHA" value="FHA"><label class='option bold body' for="FHA">FHA</label>
+                <input style='display: none' type="radio" name="radio3" id="VA" value="VA"><label class='option bold body' for="VA">VA</label>
+                <input style='display: none' type="radio" name="radio3" id="Other" value="Other"><label class='option bold body' for="Other">Other</label>
                 </div>
+    
             </div>
 
 
             <div class="form-field radio-field">
-                <label class='body bold'>* Property Use</label>
+                <label class='body bold' for='Property'>* Property Use</label>
                 <div class="radio-options button-options">
-                    <div class='option'>
-                        <div class="option-label">Primary</div>
-                    </div>
-                    <div class='option'>
-                        <div class="option-label">2nd</div>
-                    </div>
-                    <div class='option'>
-                        <div class="option-label">Investment</div>
-                    </div>
-                  <input type="hidden" class="radio-input" name="entry.581741591"/>
+                    <input style='display: none' type="radio" name="radio4" id="Primary" value="Primary"><label class='option bold body' for="Primary">Primary</label><label for="radio4" class="error" style="display: none;">Please select Loan Type</label>
+                    <input style='display: none' type="radio" name="radio4" id="Second" value="Second"><label class='option bold body' for="Second">2nd</label>
+                    <input style='display: none' type="radio" name="radio4" id="Investment" value="Investment"><label class='option bold body' for="Investment">Investment</label>
+                   
                 </div>
             </div>
 
@@ -99,36 +141,27 @@ text: The information provided in this application will allow us to help you att
             <div class="form-field radio-field">
                 <label class='body bold'>* Property Type</label>
                 <div class="radio-options button-options">
-                    <div class='option'>
-                        <div class="option-label">Home</div>
-                    </div>
-                    <div class='option'>
-                        <div class="option-label">Townhome</div>
-                    </div>
-                    <div class='option'>
-                        <div class="option-label">Condo</div>
-                    </div>
-                    <div class='option'>
-                        <div class="option-label">2-4 Units</div>
-                    </div>
-                  <input type="hidden" class="radio-input" name="entry.581741591"/>
+                    <input style='display: none' type="radio" name="radio5" id="Home" value="Home"><label class='option bold body' for="Home">Home</label><label for="radio5" class="error" style="display: none;">Please select Loan Type</label>
+                    <input style='display: none' type="radio" name="radio5" id="Townhome" value="Townhome"><label class='option bold body' for="Townhome">Townhome</label>
+                    <input style='display: none' type="radio" name="radio5" id="Condo" value="Condo"><label class='option bold body' for="Condo">Condo</label>
+                    <input style='display: none' type="radio" name="radio5" id="Multi" value="Multi"><label class='option bold body' for="Multi">2-4 Units</label>
                 </div>
-            </div>
+        </div>
 
             <div class='form-field'>
                 <label class='body bold'>* Your Name</label>
-                <input class='body single-input' type='text' name= 'entry.1833635029' placeholder='$300,000' required>
+                <input class='body single-input' type='text' name= 'entry.1833635029' placeholder='$300,000' >
             </div>
             <div class='form-field'>
                 <label class='body bold'>* Your Email</label>
-                <input class='body single-input' type='text' name= 'entry.1833635029' placeholder='$300,000' required>
+                <input class='body single-input' type='text' name= 'entry.1833635029' placeholder='$300,000' >
             </div>
             <div class='form-field'>
                 <label class='body bold'>* Phone Number</label>
-                <input class='body single-input' type='text' name= 'entry.1833635029' placeholder='$300,000' required>
+                <input class='body single-input' type='text' name= 'entry.1833635029' placeholder='$300,000'>
             </div>
             
-            
+            <button type='submit' class='button button-text'>Submit</button>
     </form>
 </div>
 </div>

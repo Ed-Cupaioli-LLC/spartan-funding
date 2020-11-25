@@ -9,6 +9,31 @@ $(function(){
     });
   });
 
+  var previousScroll = 0;
+
+
+  $(window).scroll(function(){
+    
+    var currentScroll = $(this).scrollTop();
+    if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()){
+      if (currentScroll > previousScroll){
+        window.setTimeout(hideNav, 500);
+      } else {
+        window.setTimeout(showNav, 300);
+      }
+      previousScroll = currentScroll;
+    }
+
+  });
+  function hideNav() {
+    $("[data-nav-status='toggle']").removeClass("is-visible").addClass("is-hidden");
+  }
+  function showNav() {
+    $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
+  }
+
+
+
   //function for underlining current links in the nav bar 
 
     $('#nav .text-link').click(function() {

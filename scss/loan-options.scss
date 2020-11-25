@@ -3,6 +3,10 @@
 
 #loan-options{
     padding: 0 7.292vw;
+    padding-top:13.921rem;
+    @include bp-large{
+        padding-top: 15.67rem;
+    }
     .intro{
         padding-top: 8rem;
         padding-bottom: 3.8rem;
