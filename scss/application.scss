@@ -74,10 +74,13 @@
           background-color: $charcoal-blue;
           color: white;
         }
-        label.error{
+        #error.error{
           color: red;
           position: absolute;
           top: 3rem;
+        }
+        .option.error{
+          border-color: red;
         }
       }
       .property-loc{
@@ -107,6 +110,7 @@
         
       }
       .down-pay{
+        position: relative;
         display: flex;
         flex-direction: row;
         
@@ -118,8 +122,16 @@
           border-radius: .7rem;
           color: $aa-gray;
           padding-left: 1.250vw;
-
         }
+        input.error{
+          border-color:red; 
+        }
+        label.error{
+          color: red;
+          position: absolute;
+          top: 3rem;
+         }
+
       }
       .button-options{
         display: grid;
@@ -134,28 +146,45 @@
         color: $aa-gray;
         padding-left: 1.250vw;
         margin-top: 0;
-    }
-    input:checked + label.option{
+     }
+     input:checked + label.option{
       border-color: $charcoal-blue;
       background-color: $charcoal-blue;
       color: white;
-    }
-    label.error{
+     }
+     label.error{
+       border-color: red;
+     }
+     #error.error{
       color: red;
       position: absolute;
       top: 3rem;
-    }
+     }
       }
-      .single-input{
-        max-width: 133.9rem;;
+     
+
+    }
+    #form-field{
+      position: relative;
+      input.single-input{
        
+        max-width: 133.9rem;;
         padding: 1.2rem 0;
-          border: 2px solid #BBBCBE;
-          border-radius: .7rem;
-          color: $aa-gray;
-          padding-left: 1.250vw;
-      }
-    }
+        border: 2px solid #BBBCBE;
+        border-radius: .7rem;
+        color: $aa-gray;
+        padding-left: 1.250vw;
+        }
+        input.error{
+          border-color: red;
+        }
+        label.error{
+          color: red;
+          position: absolute;
+          top: 12rem;
+        }
+
+     }
 
  
   }
