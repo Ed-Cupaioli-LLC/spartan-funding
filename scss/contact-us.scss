@@ -4,8 +4,10 @@
 #contact-us{
     
     padding: 0 7.292vw;
+    padding-top:13.921rem;
     @include bp-large{
        padding: 0 8.696vw;
+       padding-top: 15.67rem;
     }
     .title{
         padding-top: 9rem;
@@ -95,6 +97,11 @@
                             margin: 0 auto;
                             padding: 1rem 0 1rem 1.6rem;
 
+                        }
+                    }
+                    select{
+                        option{
+                            background-color: red !important;
                         }
                     }
                     .error { 

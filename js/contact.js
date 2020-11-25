@@ -35,6 +35,7 @@
 $(function() {
     // Initialize form validation on the registration form.
     // It has the name attribute "registration"
+    console.log($( "#loan-ammount option:selected" ).text())
     $("form[name='contact']").validate({
       // Specify validation rules
       rules: {
@@ -64,19 +65,25 @@ $(function() {
       // in the "action" attribute of the form when valid
       submitHandler: function (form) {
         alert('valid form submission'); // for demo
+        $( "#loan-ammount option:selected" ).text()
         $.ajax({
             url: "https://docs.google.com/forms/d/e/1FAIpQLScM7ypLv4wen7UzFS1CN9YuFSFmaWrFO0XJHoAyfbS6jnye6A/formResponse",
             data: $(form).serialize(),
             type: 'GET',
             dataType: 'json',
             crossorigin: true,
-            success: function(){  
-              $("#success").show();  
-            },
-            error: function(textStatus, errorThrown) { 
-              alert('Error submitting your request'); 
-          }     
-        });
+
+          //   success: function(){  
+          //     $("#success").show();  
+          //   },
+          //   error: function() { 
+          //     alert('Error submitting your request'); 
+          // }     
+        }).always(function(){
+          form.reset();
+          $('.success').show();
+        })
+        
         return false; // required to block normal submit since you used ajax
     }
 

@@ -9,13 +9,38 @@
     margin: 0 auto;
     align-items: center;
     box-sizing: content-box;
-    position: relative;
+    position: fixed;
+    height: 13.921rem;
+    width: 85.417vw;
+    background-color: white;
+    z-index: 1000;
+    @include bp-small{
+        width: 81.401vw;
+    }
+    &.is-hidden {
+        opacity: 0;
+        transform: translate(0,-60px);
+        transition: transform .2s;
+      }
+      
+      &.is-visible {
+        opacity: 1;
+        transform: translate(0,0);
+        transition: transform .2s;
+      }
+  
     @include bp-small{
         padding-top: 1.714rem;
-        padding-left: 4.1rem;
-        padding-right: 3.6rem;
+        padding-left: 9.903vw;
+        padding-right: 8.696vw;
+        
 
     }
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
     .logo{
         width: 20.05vw;
         min-width: 21.63rem;

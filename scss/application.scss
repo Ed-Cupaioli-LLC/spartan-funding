@@ -55,6 +55,7 @@
           display: flex;
           flex-direction: row;
           justify-content: center;
+          margin-top: 0;
             img{ 
               margin:auto 0;
               height: 2.1rem;
@@ -63,6 +64,11 @@
             
           
         }
+        input:checked + label{
+          border-color: $charcoal-blue;
+          background-color: $charcoal-blue;
+          color: white;
+        }
       }
       .property-loc{
         display: grid;
@@ -70,7 +76,7 @@
         max-width: 133.9rem;
         justify-content: space-between;
         
-        input{
+        input, select{
           padding: 1.2rem 0;
           border: 2px solid #BBBCBE;
           border-radius: .7rem;
@@ -98,14 +104,19 @@
         grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
         max-width: 133.9rem;
         justify-content: space-between;
-        .option{
-         
-          padding: 1.2rem 0;
-          border: 2px solid #BBBCBE;
-          border-radius: .7rem;
-          color: $aa-gray;
-          padding-left: 1.250vw;
-      }
+      .option{
+        padding: 1.2rem 0;
+        border: 2px solid #BBBCBE;
+        border-radius: .7rem;
+        color: $aa-gray;
+        padding-left: 1.250vw;
+        margin-top: 0;
+    }
+    input:checked + label{
+      border-color: $charcoal-blue;
+      background-color: $charcoal-blue;
+      color: white;
+    }
       }
       .single-input{
         max-width: 133.9rem;;
