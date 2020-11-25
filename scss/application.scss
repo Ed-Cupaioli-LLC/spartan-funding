@@ -2,6 +2,10 @@
 @import "mixins.scss";
 
 #application{
+  input{ 
+    position: relative;
+  }
+  
   padding: 0 14.271vw;
   @include bp-large{
      padding: 0 8.696vw;
@@ -44,6 +48,7 @@
         max-width: 69.740vw;
         max-width: 136.4rem;
         justify-content: space-between;
+        position: relative;
         .option{
           width:49.4%;
           padding: 1.2rem 0;
@@ -69,13 +74,21 @@
           background-color: $charcoal-blue;
           color: white;
         }
+        label.error{
+          color: red;
+          position: absolute;
+          top: 3rem;
+        }
       }
       .property-loc{
         display: grid;
         grid-template-columns: 49.4% 19.6% 14.5% 14.5%;
         max-width: 133.9rem;
         justify-content: space-between;
-        
+        position: relative;
+        select.error{
+          border-color: red;
+        }
         input, select{
           padding: 1.2rem 0;
           border: 2px solid #BBBCBE;
@@ -83,6 +96,15 @@
           color: $aa-gray;
           padding-left: 1.250vw;
         }
+        input.error{
+          border-color: red;
+        }
+        label.error{
+          position: absolute;
+          color: red;
+          top: 3rem;
+        }
+        
       }
       .down-pay{
         display: flex;
@@ -104,6 +126,7 @@
         grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
         max-width: 133.9rem;
         justify-content: space-between;
+        position: relative;
       .option{
         padding: 1.2rem 0;
         border: 2px solid #BBBCBE;
@@ -112,10 +135,15 @@
         padding-left: 1.250vw;
         margin-top: 0;
     }
-    input:checked + label{
+    input:checked + label.option{
       border-color: $charcoal-blue;
       background-color: $charcoal-blue;
       color: white;
+    }
+    label.error{
+      color: red;
+      position: absolute;
+      top: 3rem;
     }
       }
       .single-input{

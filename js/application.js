@@ -1,14 +1,18 @@
 $(function() {
-    // Initialize form validation on the registration form.
-    // It has the name attribute "registration"
-    console.log($( "#loan-ammount option:selected" ).text())
+
     $("form[name= 'application-form']").validate({
       // Specify validation rules
+      ignore:[],
       rules: {
          radio1:{ required:true },
          radio2:{ required:true },
          radio3:{ required:true },
-         radio4:{ required: true},
+         radio4:{ required:true },
+         radio5:{ required:true },
+         address:{ required: true },
+         city: { required: true },
+         state: { required: true },
+         zip: {required: true},
         },
 
       // Specify validation error messages
@@ -19,19 +23,25 @@ $(function() {
         },
         radio2:
         {
-          required:"Please select Term"
+          required:"Please select Loan Type"
         },
         radio3:
         {
-          required:"Please select Program"
+          required:"Please select Loan Type"
         },
         radio4:
         {
-          required:"Please select Propery"
+          required:"Please select Loan Type"
         },
-        
-      
-      },
+        radio4:
+        {
+          required:"Please select Loan Type"
+        },
+         address:{ required:"Please fill out all the highlightet fields " },
+         city: { required:""},
+         state: { required:"" },
+         zip: { required: ""}
+    },
       // Make sure the form is submitted to the destination defined
       // in the "action" attribute of the form when valid
       submitHandler: function (form) {
