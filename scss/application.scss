@@ -15,16 +15,16 @@
       padding-bottom: 4rem;
       text-align: center;
       @include bp-large{
-          padding-top: 5.362rem;
-          padding-bottom: 3.7rem;
-      }
-      @include bp-small{
-          text-align: left;
+          padding-top: 15rem;
+          padding-bottom: 2.2rem;
       }
   }
   .text{
     max-width: 108.8rem;
     margin: 0 auto;
+    @include bp-large{
+      text-align: center;
+    }
   }
   .form{
     max-width: 136.4rem;
@@ -33,22 +33,25 @@
     .form-field{
       display: flex;
       flex-direction: column;
-     
+  
       label{
         margin-top: 5.1rem;
         @include bp-large{
           font-size: 1.8rem;
-          margin-bottom: 1.4rem;
-          margin-top: 3.3rem;
+          margin-bottom: 1.6rem;
+          margin-top: 3.8rem;
         }
       }
       .loan-type{
         display: flex;
         flex-direction: row;
-        max-width: 69.740vw;
-        max-width: 136.4rem;
+        max-width: 133.9rem;
         justify-content: space-between;
         position: relative;
+        @include bp-medium{
+          flex-direction: column;
+          max-width: unset;
+        }
         .option{
           width:49.4%;
           padding: 1.2rem 0;
@@ -61,6 +64,9 @@
           flex-direction: row;
           justify-content: center;
           margin-top: 0;
+          @include bp-medium{
+            width: unset;
+          }
             img{ 
               margin:auto 0;
               height: 2.1rem;
@@ -74,10 +80,16 @@
           background-color: $charcoal-blue;
           color: white;
         }
-        label.error{
+        #error.error{
           color: red;
           position: absolute;
           top: 3rem;
+          @include bp-medium{
+            top:11rem;
+          }
+        }
+        .option.error{
+          border-color: red;
         }
       }
       .property-loc{
@@ -86,6 +98,34 @@
         max-width: 133.9rem;
         justify-content: space-between;
         position: relative;
+        @include bp-medium{
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+
+        
+          .one{
+            grid-column: 1 / span 3;
+            grid-row: 1 / 0;
+            margin-bottom: 1rem;
+          }
+          .two{
+            grid-column: 1 / span 3;
+            grid-row: 2 / 0;
+            margin-bottom: 1rem;
+
+          }
+          .three{
+            width: 98%;
+            height: 5.7rem;
+            
+          }
+          .four{
+            width: 98%;
+            height: 5.7rem;
+            justify-self: end;
+
+          }
+        }
         select.error{
           border-color: red;
         }
@@ -103,14 +143,22 @@
           position: absolute;
           color: red;
           top: 3rem;
+          @include bp-medium{
+            top:18rem;
+          }
+          
         }
         
       }
       .down-pay{
+        position: relative;
         display: flex;
         flex-direction: row;
-        
         justify-content: space-between;
+        max-width: 133.9rem;
+        @include bp-medium{
+          flex-direction: column;
+        }
         input{
           width:49.4%;
           padding: 1.2rem 0;
@@ -118,8 +166,29 @@
           border-radius: .7rem;
           color: $aa-gray;
           padding-left: 1.250vw;
-
+          @include bp-medium{
+            width: 100%;
+            
+          }
         }
+        input.one{
+          @include bp-medium{
+            margin-bottom: 1rem;
+          }
+            
+        }
+        input.error{
+          border-color:red; 
+        }
+        label.error{
+          color: red;
+          position: absolute;
+          top: 3rem;
+          @include bp-medium{
+            top: 10rem;
+          }
+         }
+
       }
       .button-options{
         display: grid;
@@ -127,6 +196,32 @@
         max-width: 133.9rem;
         justify-content: space-between;
         position: relative;
+        @include bp-medium{
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          .one{
+            width: 98%;
+
+          }
+          .two{
+            width: 98%;
+            justify-self: end;
+
+          }
+          .three{
+            width: 98%;
+            margin-bottom: unset;
+            height: 5.9rem;
+          }
+          .four{
+            width: 98%;
+            justify-self: end;
+            height: 5.9rem;
+            
+
+
+          }
+        }
       .option{
         padding: 1.2rem 0;
         border: 2px solid #BBBCBE;
@@ -134,29 +229,55 @@
         color: $aa-gray;
         padding-left: 1.250vw;
         margin-top: 0;
-    }
-    input:checked + label.option{
+        text-align: center;
+     }
+     input:checked + label.option{
       border-color: $charcoal-blue;
       background-color: $charcoal-blue;
       color: white;
-    }
-    label.error{
+     }
+     label.error{
+       border-color: red;
+     }
+     #error.error{
       color: red;
       position: absolute;
       top: 3rem;
-    }
+      @include bp-medium{
+        top: 11rem;
       }
-      .single-input{
-        max-width: 133.9rem;;
-       
-        padding: 1.2rem 0;
-          border: 2px solid #BBBCBE;
-          border-radius: .7rem;
-          color: $aa-gray;
-          padding-left: 1.250vw;
+     }
       }
-    }
+     
 
- 
+    }
+    #form-field{
+      position: relative;
+      input.single-input{
+       
+        max-width: 133.9rem;;
+        padding: 1.2rem 0;
+        border: 2px solid #BBBCBE;
+        border-radius: .7rem;
+        color: $aa-gray;
+        padding-left: 1.250vw;
+        }
+        input.error{
+          border-color: red;
+        }
+        label.error{
+          color: red;
+          position: absolute;
+          top: 12rem;
+        }
+
+     }
+
+     button{
+      margin: 6.5rem auto 14.7rem auto;
+      display: flex;
+      justify-content: center;
+     }
+
   }
 }
