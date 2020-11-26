@@ -11,7 +11,7 @@
      padding: 0 8.696vw;
   }
   .title{
-      padding-top: 9rem;
+      padding-top: 25rem;
       padding-bottom: 4rem;
       text-align: center;
       @include bp-large{
@@ -60,7 +60,7 @@
           color: $aa-gray;
           padding-left: 1.250vw;
           text-align: center;
-          display: flex;
+          display: flex !important;
           flex-direction: row;
           justify-content: center;
           margin-top: 0;
@@ -89,11 +89,11 @@
           }
         }
         .option.error{
-          border-color: red;
+          border-color: red !important;
         }
       }
       .property-loc{
-        display: grid;
+        display: grid !important;
         grid-template-columns: 49.4% 19.6% 14.5% 14.5%;
         max-width: 133.9rem;
         justify-content: space-between;
@@ -127,7 +127,7 @@
           }
         }
         select.error{
-          border-color: red;
+          border-color: red !important;
         }
         input, select{
           padding: 1.2rem 0;
@@ -191,7 +191,7 @@
 
       }
       .button-options{
-        display: grid;
+        display: grid !important;
         grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
         max-width: 133.9rem;
         justify-content: space-between;
@@ -230,6 +230,7 @@
         padding-left: 1.250vw;
         margin-top: 0;
         text-align: center;
+        display: inline !important;
      }
      input:checked + label.option{
       border-color: $charcoal-blue;
@@ -277,7 +278,17 @@
       margin: 6.5rem auto 14.7rem auto;
       display: flex;
       justify-content: center;
+      width: 30.9rem;
+      background-color: $charcoal-blue;
+      border-color: $charcoal-blue;
+      color: $white;
+      @include bp-medium{
+        width: 34.197rem;
+      }
      }
 
   }
+  .success{
+    display: none;
+}
 }
