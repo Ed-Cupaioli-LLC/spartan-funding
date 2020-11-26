@@ -30,9 +30,9 @@ text: The information provided in this application will allow us to help you att
             <div class="form-field">
               <label class='body bold'>* Property Location</label>
                 <div class="property-loc">
-                    <input class='body' type='text' name="entry.152925055" placeholder='Address' >
-                    <input class='body' type='text' name= "entry.758167786" placeholder='City' >
-                    <select class='body' type='text' name= 'entry.105311915' placeholder='State'>
+                    <input class='body one' type='text' name="entry.152925055" placeholder='Address' >
+                    <input class='body two' type='text' name= "entry.758167786" placeholder='City' >
+                    <select class='body three' type='text' name= 'entry.105311915' placeholder='State'>
                         <option selected disabled>State</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
@@ -86,40 +86,40 @@ text: The information provided in this application will allow us to help you att
                             <option value="WI">Wisconsin</option>
                             <option value="WY">Wyoming</option>
                         </select>	
-                    <input class='body' type='text' name="entry.279358715" placeholder='Zip Code'>
+                    <input class='body four' type='text' name="entry.279358715" placeholder='Zip Code'>
                 </div>
             </div>
 
 
             <div  id='form-field' class='form-field'>
                 <label class='body bold'>* Purchase Price</label>
-                <input class='body single-input' type='text' name="entry.784023676" placeholder='$300,000'>
+                <input class='body single-input' type='text' name="entry.784023676" data-placeholder='$' placeholder='$300,000'>
             </div>
 
             <div class='form-field'>
                 <label class='body bold'>* Down Payment</label>
                 <div class="down-pay">
-                    <input class='body' type='text' name="entry.1694289332" placeholder='20%'>
-                    <input class='body' type='text' name="entry.1889879909" placeholder='$60,000' >
+                    <input class='body one' type='text' name="entry.1694289332" placeholder='20%'>
+                    <input class='body two' type='text' name="entry.1889879909" placeholder='$60,000' >
                 </div>
             </div>
             <div class="form-field radio-field">
                 <label class='body bold' for='Term'>* Loan Term</label>
                 <div class="radio-options button-options">
-                    <input style='display: none' type="radio" name="entry.1004451045" id="30" value="30"><label class='option bold body' name="entry.1004451045" for="30">30</label><label for="entry.1004451045" id='error'  class="error" style="display: none;">Please select Loan Type</label>
-                    <input style='display: none' type="radio" name="entry.1004451045" id="20" value="20"><label class='option bold body'   name="entry.1004451045" for="20">20</label>
-                    <input style='display: none' type="radio" name="entry.1004451045" id="15" value="15"><label class='option bold body'  name="entry.1004451045" for="15">15</label>
-                    <input style='display: none' type="radio" name="entry.1004451045" id="10" value="10"><label class='option bold body'  name="entry.1004451045" for="10">10</label>
+                    <input style='display: none' type="radio" name="entry.1004451045" id="30" value="30"><label class='option bold body one' name="entry.1004451045" for="30">30 Years</label><label for="entry.1004451045" id='error'  class="error" style="display: none;">Please select Loan Type</label>
+                    <input style='display: none' type="radio" name="entry.1004451045" id="20" value="20"><label class='option bold body two'   name="entry.1004451045" for="20">20 Years</label>
+                    <input style='display: none' type="radio" name="entry.1004451045" id="15" value="15"><label class='option bold body three'  name="entry.1004451045" for="15">15 Years</label>
+                    <input style='display: none' type="radio" name="entry.1004451045" id="10" value="10"><label class='option bold body four'  name="entry.1004451045" for="10">10 Yars</label>
                 </div>
                 
             </div>
             <div class="form-field radio-field">
                 <label class='body bold' for="Program">* Loan Program</label>
                 <div class="radio-options button-options">
-                <input style='display: none' type="radio" name="entry.1969835035" id="Conventional" value="Conventional"><label class='option bold body'  name="entry.1969835035" for="Conventional">Conventional</label><label for="entry.1969835035" class="error" id='error' style="display: none;">Please select Loan Type</label>
-                <input style='display: none' type="radio" name="entry.1969835035" id="FHA" value="FHA"><label class='option bold body' name="entry.1969835035"  for="FHA">FHA</label>
-                <input style='display: none' type="radio" name="entry.1969835035" id="VA" value="VA"><label class='option bold body' name="entry.1969835035"   for="VA">VA</label>
-                <input style='display: none' type="radio" name="entry.1969835035" id="Other" value="Other"><label class='option bold body'   name="entry.1969835035" for="Other">Other</label>
+                <input style='display: none' type="radio" name="entry.1969835035" id="Conventional" value="Conventional"><label class='option bold body one'  name="entry.1969835035" for="Conventional">Conventional</label><label for="entry.1969835035" class="error" id='error' style="display: none;">Please select Loan Type</label>
+                <input style='display: none' type="radio" name="entry.1969835035" id="FHA" value="FHA"><label class='option bold body two'  name="entry.1969835035"  for="FHA">FHA</label>
+                <input style='display: none' type="radio" name="entry.1969835035" id="VA" value="VA"><label class='option bold body three' name="entry.1969835035"   for="VA">VA</label>
+                <input style='display: none' type="radio" name="entry.1969835035" id="Other" value="Other"><label class='option bold body four'   name="entry.1969835035" for="Other">Other</label>
                 </div>
     
             </div>
@@ -128,9 +128,9 @@ text: The information provided in this application will allow us to help you att
             <div class="form-field radio-field">
                 <label class='body bold' for='Property'>* Property Use</label>
                 <div class="radio-options button-options">
-                    <input style='display: none' type="radio" name="entry.1613886317" id="Primary" value="Primary"><label class='option bold body' name="entry.1613886317"  for="Primary">Primary</label><label for="entry.1613886317" class="error" id='error' style="display: none;">Please select Loan Type</label>
-                    <input style='display: none' type="radio" name="entry.1613886317" id="Second" value="Second"><label class='option bold body'  name="entry.1613886317" for="Second">2nd</label>
-                    <input style='display: none' type="radio" name="entry.1613886317" id="Investment" value="Investment"><label class='option bold body'  name="entry.1613886317" for="Investment">Investment</label>
+                    <input style='display: none' type="radio" name="entry.1613886317" id="Primary" value="Primary"><label class='option bold body one' name="entry.1613886317"  for="Primary">Primary</label><label for="entry.1613886317" class="error" id='error' style="display: none;">Please select Loan Type</label>
+                    <input style='display: none' type="radio" name="entry.1613886317" id="Second" value="Second"><label class='option bold body two'  name="entry.1613886317" for="Second">2nd</label>
+                    <input style='display: none' type="radio" name="entry.1613886317" id="Investment" value="Investment"><label class='option bold body three'  name="entry.1613886317" for="Investment">Investment</label>
                    
                 </div>
             </div>
@@ -139,10 +139,10 @@ text: The information provided in this application will allow us to help you att
             <div class="form-field radio-field">
                 <label class='body bold'>* Property Type</label>
                 <div class="radio-options button-options">
-                    <input style='display: none' type="radio" name="entry.860121282" id="Home" value="Home"><label class='option bold body' name="entry.860121282"  for="Home">Home</label><label for="entry.860121282" class="error" id='error' style="display: none;">Please select Loan Type</label>
-                    <input style='display: none' type="radio" name="entry.860121282" id="Townhome" value="Townhome"><label class='option bold body' name="entry.860121282"  for="Townhome">Townhome</label>
-                    <input style='display: none' type="radio" name="entry.860121282" id="Condo" value="Condo"><label class='option bold body' name="entry.860121282" for="Condo">Condo</label>
-                    <input style='display: none' type="radio" name="entry.860121282" id="Multi" value="Multi"><label class='option bold body' name="entry.860121282"  for="Multi">2-4 Units</label>
+                    <input style='display: none' type="radio" name="entry.860121282" id="Home" value="Home"><label class='option bold body one' name="entry.860121282"  for="Home">Home</label><label for="entry.860121282" class="error" id='error' style="display: none;">Please select Loan Type</label>
+                    <input style='display: none' type="radio" name="entry.860121282" id="Townhome" value="Townhome"><label class='option bold body two' name="entry.860121282"  for="Townhome">Townhome</label>
+                    <input style='display: none' type="radio" name="entry.860121282" id="Condo" value="Condo"><label class='option bold body three' name="entry.860121282" for="Condo">Condo</label>
+                    <input style='display: none' type="radio" name="entry.860121282" id="Multi" value="Multi"><label class='option bold body four' name="entry.860121282"  for="Multi">2-4 Units</label>
                 </div>
         </div>
 
