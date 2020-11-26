@@ -45,7 +45,7 @@
       .loan-type{
         display: flex;
         flex-direction: row;
-        max-width: 136.4rem;
+        max-width: 133.9rem;
         justify-content: space-between;
         position: relative;
         @include bp-medium{
@@ -155,6 +155,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        max-width: 133.9rem;
         @include bp-medium{
           flex-direction: column;
         }
@@ -272,6 +273,11 @@
 
      }
 
- 
+     button{
+      margin: 6.5rem auto 14.7rem auto;
+      display: flex;
+      justify-content: center;
+     }
+
   }
 }
