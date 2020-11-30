@@ -1,4 +1,28 @@
 $(function() {
+
+    $('#percent').on('keyup', function(){
+        var val = parseInt($(this).val().match(/\d+/),10);
+        var num= parseInt($('#cost').val().match(/\d+/),10);
+        if( isNaN(val)===true){
+        $('#dollar').val('$' + 0)
+        } else{
+         $('#dollar').val( '$' + Math.ceil(num*val/100)) 
+        }
+        
+        })
+        
+        $('#dollar').on('keyup', function(){
+        var val= parseInt($(this).val().match(/\d+/),10);
+        var num =  parseInt($('#cost').val().match(/\d+/),10);
+        /* console.log(val) */
+        if( isNaN(val)=== true){
+        $('#percent').val(0 + '%')
+        } else{
+        $('#percent').val(Math.ceil(val*100/num) + '%')
+        }
+         
+        })
+        
     $("form[name='application-form']").validate({
       ignore:[],
       rules: {
@@ -15,7 +39,6 @@ $(function() {
             minlength: 5,
             maxlength: 5,},
          "entry.784023676":  {required: true,
-                                digits: true,
                             },
          "entry.1694289332":  {required: true},
          "entry.1889879909":  {required: true},
