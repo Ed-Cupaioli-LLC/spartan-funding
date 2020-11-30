@@ -187,11 +187,16 @@
         .text-link{
             color:$white;
             font-size: 2rem;
+            position: relative;
 
         }
         .arrow{
             margin: 0;
             height: 2.5rem;
+            display: inline;
+            position: absolute;
+            margin-top: 1.5%;
+            margin-left: 1rem;
         }
     }
 }
