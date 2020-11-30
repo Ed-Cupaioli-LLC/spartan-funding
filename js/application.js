@@ -1,5 +1,20 @@
 $(function() {
 
+    $('#cost').on('keyup', function(){
+        var cost=parseInt($(this).val().match(/\d+/),10);
+        console.log(cost)
+        var percent=parseInt($('#percent').val().match(/\d+/),10);
+        var dollar=parseInt($('#dollar').val().match(/\d+/),10);
+        if(isNaN(cost) === true){
+        $("#percent").val(0 + '%')
+        $('#dollar').val('$' + 0)
+        }
+         else if(isNaN(percent)===false && isNaN(dollar)===false){
+        $("#percent").val(Math.ceil(dollar/cost) + "%")
+        $('#dollar').val("$" + Math.ceil(cost*percent))
+        } 
+        })
+
     $('#percent').on('keyup', function(){
         var val = parseInt($(this).val().match(/\d+/),10);
         var num= parseInt($('#cost').val().match(/\d+/),10);
