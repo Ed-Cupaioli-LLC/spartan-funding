@@ -14,7 +14,7 @@ $(function(){
     var currentScroll = $(this).scrollTop();
     if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()){
       if (currentScroll > previousScroll){
-        window.setTimeout(hideNav, 500);
+        window.setTimeout(hideNav, 300);
       } else {
         window.setTimeout(showNav, 300);
       }
@@ -66,6 +66,8 @@ $(function(){
       //open close for small window navigation
       $('#nav .hamburger-menu').click(function(){
           $('#nav .show').attr('style', 'display: flex');
+          $('body,html').css('position','fixed');
+
           console.log('im clicked')
       })
       
@@ -73,6 +75,7 @@ $(function(){
           $('#nav .show').attr('style', 'display: none');
           $(" #nav .dropdown-mobile").attr("style", "display: none")
           $('#nav .arrow').removeClass('1').addClass('0')
+          $('body,html').css('position','unset');
       })
 
 
