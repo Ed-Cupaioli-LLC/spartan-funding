@@ -85,9 +85,19 @@ $(function(){
         if($(document.body).scrollTop()>100 || $(document.documentElement).scrollTop()>100){
           $('#nav .logo').css({'width':'13.634vw', "min-width":'14.71rem'})
           $('#nav .hamburger-logo').css('width','2.312rem')
+          $('#nav').css({'box-shadow':'0px 3px 6px #00000029','padding-top':"1.3rem","padding-bottom":".76rem"})
         } else{
           $('#nav .logo').css({'width': '20.05vw', "min-width":'21.63rem'})
           $('#nav .hamburger-logo').css('width','3.4rem')
+          if($(window).width()>1000){
+            $('#nav').css({'box-shadow':'unset','padding-top':"3.02rem","padding-bottom":"unset" })
+
+          } 
+          else{
+            $('#nav').css({'box-shadow':'unset','padding-top':"1.714rem","padding-bottom":"unset" })
+
+          }
+          
         }
 
       })
