@@ -25,6 +25,11 @@ h1, h2, h3, h4, h5 {
 	width: 21.1rem;
 	padding: 1.75rem 0;
 	background-color: unset;
+	&:hover{
+		background-color: $charcoal-blue;
+		border-color: $charcoal-blue;
+		color: white;
+	}
 	@include bp-large{
 		width: 32.854vw;
 		padding: 1.95rem 0;
@@ -34,6 +39,26 @@ h1, h2, h3, h4, h5 {
 		}
 	}
 
+}
+.button-white{
+	border: $white 2px solid;
+	width: 21.1rem;
+	padding: 1.75rem 0;
+	background-color: unset;
+	color: $white;
+	&:hover{
+		background-color: $white;
+		border-color:$white;
+		color: $charcoal-blue;
+	}
+	@include bp-large{
+		width: 32.854vw;
+		padding: 1.95rem 0;
+		@include bp-small{
+			width: 82.609vw;
+			padding: 1.3rem 0;
+		}
+	}
 }
 .round-button{
 	border-radius: 21px;
@@ -116,10 +141,10 @@ h1, h2, h3, h4, h5 {
 	color: $charcoal-blue;
 	
 	}
-	a.currentlyActive
+	.currentlyActive
 	{
 		text-decoration: underline;
-		color: $charcoal-blue;
+		color: $aa-gray;
 	}
 	h5 {
 
