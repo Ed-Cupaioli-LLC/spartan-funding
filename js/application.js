@@ -1,5 +1,6 @@
 $(function() {
 
+    //relations between total cost, % and downpayment
     $('#cost').on('keyup', function(){
         var cost=parseInt($(this).val().match(/\d+/),10);
         console.log(cost)
