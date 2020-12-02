@@ -71,7 +71,7 @@
                             margin-top: 0;
                         }
                         .error { 
-                            color: red;
+                            color: $red;
                             margin-top: .8rem;
                          }
                       }
@@ -86,12 +86,12 @@
                     }
                     input, textarea, select ,option{
                         padding: 1.2rem 0;
-                        border: 2px solid #BBBCBE;
+                        border: 2px solid $form;
                         border-radius: .7rem;
                         width: 56.5vw;
                         color: $aa-gray;
                         padding-left: 1.250vw;
-
+                        background-color: unset;
                         @include bp-large{
                             width: 82.609vw;
                             margin: 0 auto;
@@ -99,15 +99,16 @@
 
                         }
                     }
-                    select{
-                        option{
-                            background-color: red !important;
-                        }
-                    }
+                    // .loan-ammount{
+                    //     option{
+
+                    //     }
+                        
+                    // }
                     .error { 
-                        color: red;
+                        color: $red;
                         margin-top: .8rem;
-                        border-color: red;
+                        border-color: $red;
                      }
                   
                     
