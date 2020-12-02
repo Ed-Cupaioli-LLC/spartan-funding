@@ -16,10 +16,12 @@ options:
   what: i'd like to
   type: Purchase
   img: '/img/home/house.png'
+  href: /purchase/
  - 
   what: i'd like to
   type: Refinance
   img: '/img/home/signature.png'
+  href: /refinance/
 review: “Eric did a fantastic job on our recent home purchase. Closed faster than the contract date and he also fixed an item on our credit that we had been trying to remedy for months. Highly recommend!”
 
 contact: Are you ready to talk to a Spartan?
@@ -30,7 +32,7 @@ contact: Are you ready to talk to a Spartan?
       <h2 class='intro'>{{ page.hero.heading1 }}</h2>
       <h1 class='title'>{{ page.hero.heading2 }}</h1>
       <p class='body'>{{ page.hero.text }}</p>
-      <button class='button-text button'>APPLY TODAY</button>
+      <a href='/apply/'><button class='button-text button'>APPLY TODAY</button></a>
 
     </div>
     <div class='image'>
@@ -43,12 +45,12 @@ contact: Are you ready to talk to a Spartan?
     <div class='type'>
       <h2 class='item'>{{ item.what }}</h2>
       <h1 class='title'>{{ item.type }}</h1>
-      <button class='button-text button-white'>Learn More</button>
+      <a href='{{item.href }}'><button class='button-text button-white'>Learn More</button></a>
     </div>
     {% endfor %}
   </div>
     <div class='loan'>
-      <p class='text-link'>{{ page.options.loan }} <img  class='arrow' src='/img/home/Arrow.png'></p>
+      <p class='text-link'>{{ page.options.loan }} <a href='/loan-options/'><img class='arrow' src='/img/home/Arrow.png'></a></p>
       
     </div>
   </div>
@@ -66,7 +68,7 @@ contact: Are you ready to talk to a Spartan?
     <div class='contact'>
     
        <h3>{{ page.contact }}</h3>
-       <button class='button-text button'>contact us</button>
+       <a href='/contact-us/'><button class='button-text button'>contact us</button></a>
       </div>
   </div>
 </div>

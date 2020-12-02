@@ -24,7 +24,7 @@ $(function(){
   var previousScroll = 0;
   $(window).scroll(function(){
     var currentScroll = $(this).scrollTop();
-    if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()){
+    if (currentScroll > 90 && currentScroll < $(document).height() - $(window).height()){
       if (currentScroll > previousScroll){
         window.setTimeout(hideNav, 500);
       } else {
@@ -91,7 +91,7 @@ $(function(){
 
       //Navigation Logo resize with scrolling
       $(window).scroll( function(){
-        if($(document.body).scrollTop()>100 || $(document.documentElement).scrollTop()>100){
+        if($(document.body).scrollTop()>110 || $(document.documentElement).scrollTop()>110){
           $('#nav .logo').css({'width':'13.634vw', "min-width":'14.71rem'})
           $('#nav .hamburger-logo').css('width','2.312rem')
           $('#nav').css({'box-shadow':'0px 3px 6px #00000029','padding-top':"1.3rem","padding-bottom":".76rem"})

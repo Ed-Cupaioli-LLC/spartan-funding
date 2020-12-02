@@ -9,7 +9,10 @@
     padding-top:17.5rem;
     @include bp-large{
         padding: 0;
-        padding-top: 15.67rem
+        padding-top: 15.67rem;
+    }
+    @include bp-small{
+        padding-top:10rem;
     }
     .hero{
         display: flex;
@@ -19,7 +22,7 @@
             flex-direction: column;
         }
         .text{
-            padding-top: 12.350rem;
+            padding-top: 11.50rem;
             @include bp-large{
                 padding-left: 9.584vw;
                 padding-top: 7.562rem;
@@ -60,17 +63,22 @@
                 }
                 @include bp-small{
                     width: 100%;
-                    padding-top: 1rem;
+                    padding-top: .5rem;
                 }
             
             }
-            .button{
-                margin-top: 2.7rem;
-                margin-bottom: 11rem;
-                @include bp-small{
-                   margin-bottom: unset;
+            a{
+                color:$charcoal-blue;
+                .button{
+                    margin-top: 2.7rem;
+                    margin-bottom: 11rem;
+                    @include bp-small{
+                       margin-bottom: unset;
+                    }
                 }
+
             }
+            
         }
         .image{
             padding-top: 5.3rem;
@@ -134,7 +142,7 @@
         .type{
             width: 82.2rem;
             text-align: center;
-            padding-top: 10%;
+            padding-top: 9.5%;
             padding-bottom: 10%;
             background-size: cover;
             background-image: linear-gradient(rgba(45, 71, 79, .9),rgba(45, 71, 79, .9)), url(/img/home/house.png);
@@ -177,14 +185,20 @@
         flex-direction: row;
         justify-content: center;   
         align-items: center;
-        padding: 3.1rem 24.460vw;
+        padding: 2.5rem 24.460vw;
         @include bp-large{
-            padding: 3rem 16.908vw;
+            padding: 2.9rem 16.908vw;
         }
         .text-link{
             color:$white;
             font-size: 2rem;
             position: relative;
+            @include bp-small{
+                font-size: 1.6rem;
+                text-align: center;
+                letter-spacing: .1rem;
+                line-height: 1.9;
+            }
 
         }
         .arrow{
@@ -194,6 +208,10 @@
             position: absolute;
             margin-top: 1.5%;
             margin-left: 1rem;
+            @include bp-small{
+                height:1.7rem;
+                margin-top:2%;
+            }
         }
     }
 }
@@ -206,10 +224,15 @@
         @include bp-small{
             padding-top: 5.2rem;
         }
+        img{
+            @include bp-small{
+                height: 2.9rem;
+            }
+        }
     }
     .reviews{
         max-width: 129.5rem;
-        padding: 3.1245rem 16.26vw 10.1rem 16.26vw;
+        padding: 3.124rem 0 10.1rem 0;
         text-align: center;
         margin: 0 auto;
         @include bp-large{
@@ -227,6 +250,7 @@
             line-height: 3.9rem;
             @include bp-large{
                 font-size: 1.6rem;
+                line-height: 3.1rem;
             }
         }
     }
@@ -262,11 +286,19 @@
                     margin: 0 auto;
                 }
             }
-            button{
-                min-width:21.1rem;
-                margin: 2.4rem auto 0;
-
+            a{
+                margin: 0 auto;
+                color:$charcoal-blue;
+                button{
+                    min-width:21.1rem;
+                    margin: 2.4rem auto 0;
+                    @include bp-small{
+                       margin: 3.3rem auto 0;
+                    }
+    
+                }
             }
+         
         }
     }
     

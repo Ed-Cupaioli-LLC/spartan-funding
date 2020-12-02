@@ -24,6 +24,7 @@
     margin: 0 auto;
     @include bp-large{
       text-align: center;
+      padding-bottom: 4.2rem;
     }
   }
   .form{
@@ -33,13 +34,11 @@
     .form-field{
       display: flex;
       flex-direction: column;
-  
-      label{
-        margin-top: 5.1rem;
-        @include bp-large{
+      .label{
+        @include bp-small{
+          padding-bottom: 1.4rem;
           font-size: 1.8rem;
-          margin-bottom: 1.6rem;
-          margin-top: 3.8rem;
+
         }
       }
       .loan-type{
@@ -51,11 +50,12 @@
         @include bp-medium{
           flex-direction: column;
           max-width: unset;
+          padding-bottom:2rem;
         }
         .option{
           width:49.4%;
           padding: 1.2rem 0;
-          border: 2px solid #BBBCBE;
+          border: 2px solid $form;
           border-radius: .7rem;
           color: $aa-gray;
           padding-left: 1.250vw;
@@ -66,6 +66,7 @@
           margin-top: 0;
           @include bp-medium{
             width: unset;
+            margin-bottom: 1rem;
           }
             img{ 
               margin:auto 0;
@@ -81,7 +82,7 @@
           color: white;
         }
         #error.error{
-          color: red;
+          color:$red;
           position: absolute;
           top: 3rem;
           @include bp-medium{
@@ -89,7 +90,7 @@
           }
         }
         .option.error{
-          border-color: red !important;
+          border-color: $red !important;
         }
       }
       .property-loc{
@@ -101,8 +102,7 @@
         @include bp-medium{
           grid-template-columns: 1fr 1fr;
           grid-template-rows: 1fr 1fr 1fr;
-
-        
+          margin-bottom: 2rem;
           .one{
             grid-column: 1 / span 3;
             grid-row: 1 / 0;
@@ -126,22 +126,25 @@
 
           }
         }
+        select{
+            background-color: unset; 
+        }
         select.error{
-          border-color: red !important;
+          border-color:$red!important;
         }
         input, select{
           padding: 1.2rem 0;
-          border: 2px solid #BBBCBE;
+          border: 2px solid $form;
           border-radius: .7rem;
           color: $aa-gray;
           padding-left: 1.250vw;
         }
         input.error{
-          border-color: red;
+          border-color: $red;
         }
         label.error{
           position: absolute;
-          color: red;
+          color: $red;
           top: 3rem;
           @include bp-medium{
             top:18rem;
@@ -158,11 +161,12 @@
         max-width: 133.9rem;
         @include bp-medium{
           flex-direction: column;
+          padding-bottom: 3rem;
         }
         input{
           width:49.4%;
           padding: 1.2rem 0;
-          border: 2px solid #BBBCBE;
+          border: 2px solid $form;
           border-radius: .7rem;
           color: $aa-gray;
           padding-left: 1.250vw;
@@ -178,10 +182,10 @@
             
         }
         input.error{
-          border-color:red; 
+          border-color:$red; 
         }
         label.error{
-          color: red;
+          color: $red;
           position: absolute;
           top: 3rem;
           @include bp-medium{
@@ -196,6 +200,7 @@
         max-width: 133.9rem;
         justify-content: space-between;
         position: relative;
+        margin-bottom: 2rem;
         @include bp-medium{
           grid-template-columns: 1fr 1fr;
           grid-template-rows: 1fr 1fr;
@@ -224,11 +229,12 @@
         }
       .option{
         padding: 1.2rem 0;
-        border: 2px solid #BBBCBE;
+        border: 2px solid $form;
         border-radius: .7rem;
         color: $aa-gray;
         padding-left: 1.250vw;
         margin-top: 0;
+        margin-bottom:1rem;
         text-align: center;
         display: inline !important;
      }
@@ -238,10 +244,10 @@
       color: white;
      }
      label.error{
-       border-color: red;
+       border-color: $red;
      }
      #error.error{
-      color: red;
+      color: $red;
       position: absolute;
       top: 3rem;
       @include bp-medium{
@@ -258,16 +264,16 @@
        
         max-width: 133.9rem;;
         padding: 1.2rem 0;
-        border: 2px solid #BBBCBE;
+        border: 2px solid $form;
         border-radius: .7rem;
         color: $aa-gray;
         padding-left: 1.250vw;
         }
         input.error{
-          border-color: red;
+          border-color: $red;
         }
         label.error{
-          color: red;
+          color: $red;
           position: absolute;
           top: 12rem;
         }
@@ -286,7 +292,11 @@
         width: 34.197rem;
       }
      }
-
+     .single-input{
+       @include bp-medium{
+         margin-bottom: 3rem;
+       }
+     }
   }
   .success{
     display: none;

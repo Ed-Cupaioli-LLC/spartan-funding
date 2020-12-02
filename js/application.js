@@ -95,7 +95,7 @@ $(function() {
         'entry.105311915': { required:""},
         "entry.279358715": { required:""},
         "entry.784023676": { required:"Please fill out all fields " },
-        "entry.1694289332": { required:"" },
+        "entry.1694289332": { required:"Please make a selection" },
         "entry.1889879909":{ required:""},
         "entry.1499206232": { required:"Required field" },
         "entry.1525139678":{ required:"Required field" },
