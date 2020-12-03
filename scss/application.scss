@@ -11,7 +11,7 @@
      padding: 0 8.696vw;
   }
   .title{
-      padding-top: 25rem;
+      padding-top: 26rem;
       padding-bottom: 4rem;
       text-align: center;
       @include bp-large{
@@ -22,6 +22,7 @@
   .text{
     max-width: 108.8rem;
     margin: 0 auto;
+    padding-bottom:5rem;
     @include bp-large{
       text-align: center;
       padding-bottom: 4.2rem;
@@ -47,6 +48,7 @@
         max-width: 133.9rem;
         justify-content: space-between;
         position: relative;
+        padding-bottom:3.5rem;
         @include bp-medium{
           flex-direction: column;
           max-width: unset;
@@ -84,9 +86,12 @@
         #error.error{
           color:$red;
           position: absolute;
-          top: 3rem;
+          top: 7rem;
           @include bp-medium{
-            top:11rem;
+            top:14rem;
+          }
+          @include bp-small{
+            top:13rem;
           }
         }
         .option.error{
@@ -99,6 +104,7 @@
         max-width: 133.9rem;
         justify-content: space-between;
         position: relative;
+        margin-bottom:3.5rem;
         @include bp-medium{
           grid-template-columns: 1fr 1fr;
           grid-template-rows: 1fr 1fr 1fr;
@@ -145,9 +151,12 @@
         label.error{
           position: absolute;
           color: $red;
-          top: 3rem;
+          top: 7rem;
           @include bp-medium{
-            top:18rem;
+            top:21rem;
+          }
+          @include bp-small{
+            top:20rem;
           }
           
         }
@@ -159,6 +168,7 @@
         flex-direction: row;
         justify-content: space-between;
         max-width: 133.9rem;
+      
         @include bp-medium{
           flex-direction: column;
           padding-bottom: 3rem;
@@ -187,9 +197,12 @@
         label.error{
           color: $red;
           position: absolute;
-          top: 3rem;
+          top: 7rem;
           @include bp-medium{
-            top: 10rem;
+            top: 14rem;
+          }
+          @include bp-small{
+            top: 13rem;
           }
          }
 
@@ -200,10 +213,11 @@
         max-width: 133.9rem;
         justify-content: space-between;
         position: relative;
-        margin-bottom: 2rem;
+        margin-bottom: 3.5rem;
         @include bp-medium{
           grid-template-columns: 1fr 1fr;
           grid-template-rows: 1fr 1fr;
+          margin-bottom: 2rem;
           .one{
             width: 98%;
 
@@ -249,9 +263,12 @@
      #error.error{
       color: $red;
       position: absolute;
-      top: 3rem;
+      top: 7rem;
       @include bp-medium{
-        top: 11rem;
+        top: 14rem;
+      }
+      @include bp-small{
+        top: 13rem;
       }
      }
       }
@@ -268,6 +285,7 @@
         border-radius: .7rem;
         color: $aa-gray;
         padding-left: 1.250vw;
+        margin-bottom: 3.5rem;
         }
         input.error{
           border-color: $red;
@@ -275,7 +293,7 @@
         label.error{
           color: $red;
           position: absolute;
-          top: 12rem;
+          top: 10.5rem;
         }
 
      }
@@ -288,17 +306,33 @@
       background-color: $charcoal-blue;
       border-color: $charcoal-blue;
       color: $white;
-      @include bp-medium{
-        width: 34.197rem;
-      }
+     @include bp-small{
+      margin: 0 auto 4.834rem auto;
+      width: 82.609vw
+     }
      }
      .single-input{
        @include bp-medium{
          margin-bottom: 3rem;
+        
        }
      }
   }
   .success{
     display: none;
+    @include bp-small{
+      padding-bottom: 8.4rem;
+    }
+    img{
+      @include bp-small{
+        width: 1.816rem;
+      }
+    }
+    p{
+      @include bp-small{
+        padding-top: 1.1rem;
+        text-align: center;
+      }
+    }
 }
 }
