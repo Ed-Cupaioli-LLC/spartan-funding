@@ -89,7 +89,7 @@ $(function () {
   //   let previousSibling = question.previousElementSibling;
   //   previousSibling.classList.remove("thumbs-up-clicked");
   // }
-<<<<<<< HEAD
+
   
 
         
@@ -154,66 +154,6 @@ $(function () {
         "entry.1499206232": { required:"Please don’t leave this blank." },
         "entry.1525139678":{ required:"Please enter a valid email address." },
         "entry.670253592":{ required:"Please enter a valid phone number." },
-=======
->>>>>>> 9fa155b23251cb255621265097b51cbeab52d850
-
-  $("form[name='application-form']").validate({
-    ignore: [],
-    rules: {
-      "entry.1486781400": { required: true },
-      "entry.1004451045": { required: true },
-      "entry.1969835035": { required: true },
-      "entry.1613886317": { required: true },
-      "entry.860121282": { required: true },
-      "entry.152925055": { required: true },
-      "entry.758167786": { required: true },
-      "entry.105311915": { required: true },
-      "entry.279358715": {
-        required: true,
-        digits: true,
-        minlength: 5,
-        maxlength: 5,
-      },
-      "entry.784023676": { required: true },
-      "entry.1694289332": { required: true },
-      "entry.1889879909": { required: true },
-      "entry.1499206232": { required: true },
-      "entry.1525139678": { required: true, email: true },
-      "entry.670253592": {
-        required: true,
-        digits: true,
-        minlength: 10,
-        maxlength: 10,
-      },
-    },
-
-    // Specify validation error messages
-    messages: {
-      "entry.1486781400": {
-        required: "Please select Loan Type",
-      },
-      "entry.1004451045": {
-        required: "Please select Loan Type",
-      },
-      "entry.1969835035": {
-        required: "Please select Loan Type",
-      },
-      "entry.1613886317": {
-        required: "Please select Loan Type",
-      },
-      "entry.860121282": {
-        required: "Please select Loan Type",
-      },
-      "entry.152925055": { required: "Please fill out all fields " },
-      "entry.758167786": { required: "" },
-      "entry.105311915": { required: "" },
-      "entry.279358715": { required: "" },
-      "entry.784023676": { required: "Please fill out all fields " },
-      "entry.1694289332": { required: "" },
-      "entry.1889879909": { required: "Please make a selection" },
-      "entry.1499206232": { required: "Required field" },
-      "entry.1525139678": { required: "Required field" },
-      "entry.670253592": { required: "Required field" },
     },
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
