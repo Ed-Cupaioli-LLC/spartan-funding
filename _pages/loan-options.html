@@ -84,9 +84,8 @@ options:
         
   - title: Jumbo Loans
     list:
-    -
-        sub-title: Let Spartan Funding help you conquer your dream (or mortgage)!
-        text: >
+    - sub-title: Let Spartan Funding help you conquer your dream (or mortgage)!
+      text: >
             The Jumbo Loan is a great option for mortgages exceeding the conforming loan limit. It is available for financing up to $3 million, or more depending on the scenario. While rates are higher, borrowers maintain the convenience of only one loan for the total amount. 
 
             Spartan Funding is here to guide you through the home loan process efficiently and with ease. Our team is with you every step of the way to answer any questions you may have. We will strive to get you superior rates and take advantage of the best loan programs to help save you money. 
@@ -183,7 +182,9 @@ options:
             {% for item in option.list %}
             <div><p class='body bold sub-title'>{{item.sub-title}}</p></div>
             {% if item contains 'text' %}
-            <div><p class='body content'>{{item.text | newline_to_br}}</p></div>
+            {% assign item-text = item.text | newline_to_br | split: '<br>' %}
+            <div class="body content">{{ item-text[0] }}</div>
+            
             {% elsif item contains 'type' %}
             <div><ul>
                 {% for list in item.type %}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="icon-linkedin" width="58" height="58" viewBox="0 0 58 58">
+  <defs>
+    <style>
+      #icon-linkedin .a,
+      #icon-linkedin .d {
+        fill: none;
+      }
+
+      #icon-linkedin .a {
+        stroke: #fff;
+        stroke-width: 2px;
+      }
+
+      #icon-linkedin .b {
+        fill: #fff;
+      }
+
+      #icon-linkedin .c {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g class="a">
+    <circle class="c" cx="29" cy="29" r="29" />
+    <circle class="d" cx="29" cy="29" r="28" />
+  </g>
+  <path class="b"
+    d="M4.979,22.244H.367V7.393H4.979ZM2.671,5.368a2.683,2.683,0,1,1,2.671-2.7A2.693,2.693,0,0,1,2.671,5.368ZM22.239,22.244h-4.6V15.015c0-1.723-.035-3.932-2.4-3.932-2.4,0-2.765,1.872-2.765,3.808v7.353H7.868V7.393h4.423V9.419h.065a4.846,4.846,0,0,1,4.363-2.4c4.667,0,5.525,3.073,5.525,7.065v8.158Z"
+    transform="translate(19.551 17.462)" />
+</svg>

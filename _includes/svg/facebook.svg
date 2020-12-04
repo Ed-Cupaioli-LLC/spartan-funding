@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="icon-facebook" width="58" height="58" viewBox="0 0 58 58">
+  <defs>
+    <style>
+      #icon-facebook .a,
+      #icon-facebook .d {
+        fill: none;
+      }
+
+      #icon-facebook .a {
+        stroke: #fff;
+        stroke-width: 2px;
+      }
+
+      #icon-facebook .b {
+        fill: #fff;
+      }
+
+      #icon-facebook .c {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g class="a">
+    <circle class="c" cx="29" cy="29" r="29" />
+    <circle class="d" cx="29" cy="29" r="28" />
+  </g>
+  <path class="b"
+    d="M13.364,13.211l.652-4.25H9.938V6.2a2.125,2.125,0,0,1,2.4-2.3h1.854V.287A22.611,22.611,0,0,0,10.9,0C7.538,0,5.343,2.036,5.343,5.721V8.961H1.609v4.25H5.343V23.486H9.938V13.211Z"
+    transform="translate(20.742 17.257)" />
+</svg>
