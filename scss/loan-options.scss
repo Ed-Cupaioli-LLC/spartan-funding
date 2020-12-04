@@ -41,15 +41,24 @@
                 background-color: $charcoal-blue;
                 color: $white;
                 border: $charcoal-blue;
-                
+                text-align: center;
                 margin-top: 4.4rem;
             }
             .expand{
                 color: $charcoal-blue;
                 padding-top: 2.1rem;
                 padding-bottom: 4.4rem;
-                display: inline-block;
+                display: flex;
+                flex-direction: row;
+                max-width: 13rem;
                 font-weight: bold;
+                justify-content: space-between;
+                .text{
+
+                }
+                .img{
+                    max-width: 2rem;
+                }
             }
         }
        

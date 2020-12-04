@@ -13,6 +13,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {% endif %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Title and Meta Text -->
+{% if page.title %}
+{% capture title  %}
+{{page.title}} | {{site.title}}
+{% endcapture %}
+{% else %}
+{% assign title = site.title %}
+{% endif %}
+
+{% if page.description %}
+{% assign description = page.description%}
+{% else %}
+{% assign description = site.description %}
+{% endif %}
+
+{% if page.meta_img %}
+{% assign meta_img = page.meta_img %}
+{% else %}
+{% assign meta_img = site.meta_img %}
+{% endif %}
+<!-- Title and Meta Text -->
 <title>{{ site.title }}</title>
 <meta content="{{ site.description }}" name="description">
 <link rel="canonical" href="{{ site.url }}{{ page.url | remove: ".html" }}" />

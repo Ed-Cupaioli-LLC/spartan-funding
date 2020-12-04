@@ -7,18 +7,18 @@ favicon:
 url:
 gtm:
 schema:
-  name: 
-  type: 
+  name: Spartan Funding
+  type: Local Business
   image: 
-  logo:
-  phone: 
-  email: 
+  logo: img/spartan_fuding_logo-color.png 
+  phone: 916-835-6084
+  email: etengman11@gmail.com
   social:
   location: 
-    address: 
-    city: 
-    state: 
-    zip: 
+    address: 80 Blue Ravine Road, Suite 100
+    city: Folsom
+    state: CA
+    zip: 95630
   hours:
     days:
     opens:
