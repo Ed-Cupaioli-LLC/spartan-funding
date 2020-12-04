@@ -38,6 +38,9 @@ $(function() {
         }
          
         });
+
+
+     
     //     $("#application .image").click(function(){
     //       $("#application .image").removeClass('1').addClass('0');
     //       $(this).addClass('1').removeClass('0')

@@ -10,8 +10,8 @@
        padding-top: 15.67rem;
     }
     .title{
-        padding-top: 9rem;
-        padding-bottom: 11rem;
+        padding-top: 13rem;
+        padding-bottom: 10rem;
         text-align: center;
         @include bp-large{
             padding-top: 5.362rem;
@@ -76,7 +76,7 @@
                          }
                       }
                     label{
-                     margin-top: 4.2rem;
+                     margin-top: 4rem;
     
                      @include bp-large{
                          font-size: 1.8rem;
@@ -99,20 +99,11 @@
 
                         }
                     }
-                    // .loan-ammount{
-                    //     option{
-
-                    //     }
-                        
-                    // }
                     .error { 
                         color: $red;
                         margin-top: .8rem;
                         border-color: $red;
                      }
-                  
-                    
-
                 }
                 .submit-field{
                     .button{
