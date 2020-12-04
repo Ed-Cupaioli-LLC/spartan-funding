@@ -183,7 +183,9 @@ options:
             {% for item in option.list %}
             <div><p class='body bold sub-title'>{{item.sub-title}}</p></div>
             {% if item contains 'text' %}
-            <div><p class='body content'>{{item.text | newline_to_br}}</p></div>
+            {% assign item-text = item.text | newline_to_br | split: '<br>' %}
+            <div class="body content">{{ item-text[0] }}</div>
+            
             {% elsif item contains 'type' %}
             <div><ul>
                 {% for list in item.type %}

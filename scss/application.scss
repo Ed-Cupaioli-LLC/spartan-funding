@@ -60,15 +60,18 @@
           border: 2px solid $form;
           border-radius: .7rem;
           color: $aa-gray;
-          padding-left: 1.250vw;
           text-align: center;
           display: flex !important;
+          align-items: center;
           flex-direction: row;
           justify-content: center;
           margin-top: 0;
           @include bp-medium{
             width: unset;
             margin-bottom: 1rem;
+          }
+          i {
+            margin-right: 11px;
           }
             img{ 
               margin:auto 0;
