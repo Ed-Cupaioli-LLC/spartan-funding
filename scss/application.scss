@@ -168,10 +168,10 @@
         flex-direction: row;
         justify-content: space-between;
         max-width: 133.9rem;
-      
+        margin-bottom: 4rem;
         @include bp-medium{
           flex-direction: column;
-          padding-bottom: 3rem;
+          padding-bottom: 0rem;
         }
         input{
           width:49.4%;
