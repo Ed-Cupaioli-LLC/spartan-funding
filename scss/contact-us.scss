@@ -110,9 +110,8 @@
                         background-color: $charcoal-blue;
                         color: white;
                         border: 1px $charcoal-blue solid;
-
                         margin-top: 4.2rem;
-                        margin-bottom: 15.7rem;
+                        margin-bottom: 4.3rem;
                         @include bp-large{
                             margin-top: 5.878rem;
                             margin-bottom: 8.7rem;
@@ -125,6 +124,37 @@
     }
     .success{
         display: none;
+        .success-message{
+            display: flex;
+            margin: 0 auto;
+            margin-bottom: 15.7rem;
+        
+        flex-direction: row;
+        max-width: 56.5vw;
+        align-content: center;
+        align-items: center;
+        margin-left: 29vw;
+        @include bp-large{
+            flex-direction: column;
+            max-width: 77.536vw;
+            margin-left: unset;
+            p{
+                text-align: center;
+            }
+        }
+
+        img{
+            margin: 0;
+            padding-right: .7rem;
+            @include bp-large{
+                padding-right: unset;
+                padding-bottom: 2.141rem;
+            }
+            
+        }
+
+        }
+        
     }
    
 }
