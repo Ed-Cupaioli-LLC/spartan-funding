@@ -179,10 +179,33 @@
                padding-bottom: 7rem;
                justify-content: space-between;
            }
+        }
+            a {
+                &:hover {
+                    // #icon-insta {
+                    //     .d {
+                    //         fill: $white;
+                    //     }
+                    //     .b {
+                    //         fill: $charcoal-blue;
+                    //     }
+                    // }
+                    svg {
+                        circle {
+                            fill: $white;
+                        }
+                        path {
+                           fill: $charcoal-blue; 
+                        }
+                    }
+                }
             }
-            img{
-                margin:0;
-                padding-left: 3.6rem;
+            svg {
+                margin-left: 3.6rem;
+                path, circle {
+                    @include transition(fill);
+                }
+                
                 @include bp-large{
                     padding-right: 5.675vw;
                     padding-left: unset;
