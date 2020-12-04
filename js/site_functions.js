@@ -26,7 +26,7 @@ $(function(){
     var currentScroll = $(this).scrollTop();
     if (currentScroll > 90 && currentScroll < $(document).height() - $(window).height()){
       if (currentScroll > previousScroll){
-        window.setTimeout(hideNav, 500);
+        window.setTimeout(hideNav, 300);
       } else {
         window.setTimeout(showNav, 300);
       }
