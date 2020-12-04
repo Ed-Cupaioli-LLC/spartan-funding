@@ -62,44 +62,44 @@ $(function() {
     //   console.log($(this).css('background-color'))
     // });
 
-    $('.purchas-image').click(function() {
-      like_question(this);
-    });
+  //   $('.purchas-image').click(function() {
+  //     like_question(this);
+  //   });
   
-    $(".refinance-image").click(function() {
-      dislike_question(this);
-    });
+  //   $(".refinance-image").click(function() {
+  //     dislike_question(this);
+  //   });
   
     
-    function dislike_question(question) {
-      question.classList.add("thumbs-down-clicked");
+  //   function dislike_question(question) {
+  //     question.classList.add("thumbs-down-clicked");
       
-      let previousSibling = question.previousElementSibling;
-      previousSibling.classList.remove("thumbs-up-clicked");
-    }
-    $(".fa-thumbs-up").click(function() {
-      like_question(this);
-    });
+  //     let previousSibling = question.previousElementSibling;
+  //     previousSibling.classList.remove("thumbs-up-clicked");
+  //   }
+  //   $(".fa-thumbs-up").click(function() {
+  //     like_question(this);
+  //   });
   
-    $(".fa-thumbs-down").click(function() {
-      dislike_question(this);
-    });
+  //   $(".fa-thumbs-down").click(function() {
+  //     dislike_question(this);
+  //   });
 
   
   
   
-  function like_question(question) {
-    question.classList.add("thumbs-up-clicked");
-    let nextSibling = question.nextElementSibling;
-    nextSibling.classList.remove("thumbs-down-clicked");
-  }
+  // function like_question(question) {
+  //   question.classList.add("thumbs-up-clicked");
+  //   let nextSibling = question.nextElementSibling;
+  //   nextSibling.classList.remove("thumbs-down-clicked");
+  // }
   
-  function dislike_question(question) {
-    question.classList.add("thumbs-down-clicked");
+  // function dislike_question(question) {
+  //   question.classList.add("thumbs-down-clicked");
     
-    let previousSibling = question.previousElementSibling;
-    previousSibling.classList.remove("thumbs-up-clicked");
-  }
+  //   let previousSibling = question.previousElementSibling;
+  //   previousSibling.classList.remove("thumbs-up-clicked");
+  // }
   
 
         
