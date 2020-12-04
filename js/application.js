@@ -136,34 +136,34 @@ $(function() {
       messages: {
         'entry.1486781400':
         {
-          required:"Please select Loan Type"
+          required:"Please select an option. "
         },
         "entry.1004451045":
         {
-          required:"Please select Loan Type"
+          required:"Please select an option."
         },
         "entry.1969835035":
         {
-          required:"Please select Loan Type"
+          required:"Please select an option."
         },
         "entry.1613886317":
         {
-          required:"Please select Loan Type"
+          required:"Please select an option."
         },
         "entry.860121282":
         {
-          required:"Please select Loan Type"
+          required:"Please select an option."
         },
-        "entry.152925055":{ required:"Please fill out all fields " },
+        "entry.152925055":{ required:"Please enter a valid address." },
         "entry.758167786": { required:""},
         'entry.105311915': { required:""},
         "entry.279358715": { required:""},
-        "entry.784023676": { required:"Please fill out all fields " },
+        "entry.784023676": { required:"Please provide an estimated price." },
         "entry.1694289332": { required:"" },
-        "entry.1889879909":{ required:"Please make a selection"},
-        "entry.1499206232": { required:"Required field" },
-        "entry.1525139678":{ required:"Required field" },
-        "entry.670253592":{ required:"Required field" },
+        "entry.1889879909":{ required:"Please provide an estimated down payment."},
+        "entry.1499206232": { required:"Please don’t leave this blank." },
+        "entry.1525139678":{ required:"Please enter a valid email address." },
+        "entry.670253592":{ required:"Please enter a valid phone number." },
 
     },
       // Make sure the form is submitted to the destination defined
