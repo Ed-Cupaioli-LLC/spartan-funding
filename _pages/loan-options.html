@@ -15,7 +15,7 @@ options:
         text: The 30-year fixed-rate mortgage is the traditional approach, and has a consistent interest rate and monthly payments that never change throughout the life of the loan. If you plan to stay in your home for seven years or longer, this might be a good choice for you. For homeowners looking to move within seven years, adjustable-rate loans are potentially cheaper.
     - 
         sub-title: We also offer a 15-year fixed rate. 
-        text: >
+        text: |-
             This loan allows you to own your home twice as fast. The 15-year fixed rate mortgage has similar terms and conditions that you would expect with a 30-year loan, but with a lower interest rate. With a 15-year loan, you commit to a higher monthly payment over the course of fifteen years. Since forecasting future financial capabilities can be challenging, many borrowers opt out of a 30-year fixed-rate loan, and, instead, voluntarily make larger payments that will pay off their loan in 15 years.
 
             Spartan Funding is here to guide you through the home loan process efficiently and with ease. Our team is with you every step of the way to answer any questions you may have. We will strive to get you superior rates and take advantage of the best loan programs to help save you money. 
@@ -34,7 +34,7 @@ options:
     - 
         sub-title: Variable rates that will fit your current and future financial needs.
 
-        text: >
+        text: |-
             While fixed-rate mortgages have an interest rate that stays the same throughout the life of the loan, the interest rate of an adjustable-rate mortgage (ARM)  will change periodically. With an ARM, the initial interest rate is typically lower than that of a fixed-rate mortgage, therefore making it a good option to consider if you plan on moving, are expecting an increase in income, or if current interest rates are too high.
 
             Spartan Funding is here to guide you through the home loan process efficiently and with ease. Our team is with you every step of the way to answer any questions you may have. We will strive to get you superior rates and take advantage of the best loan programs to help save you money. 
@@ -52,7 +52,7 @@ options:
     list: 
     -
         sub-title: Not already Spartan? We can help.
-        text: > 
+        text: |-
             A Federal Housing Administration (FHA) loan can help make home buying possible, even if you are having trouble qualifying for a traditional mortgage. This loan is insured by the Federal Housing Administration and is backed by the federal government for FHA-approved lenders in order to reduce their risk of loss if a borrower can’t pay. 
 
             The FHA program was created to help stimulate the housing market by making loans accessible and affordable to people across the country. If you have less than stellar credit or can’t afford a traditional down payment, our team will work with you through the FHA home loan process. We will help you take advantage of the benefits offered through the FHA program and help save you money. 
@@ -67,7 +67,7 @@ options:
     list:
     -
         sub-title: A special service for all service men and women.
-        text: >
+        text: |-
             Guaranteed by the Department of Veterans Affairs (VA), the VA loan program assists service members and their spouses with long term financing. The VA loan program is a great benefit for both veterans and active duty military members. This loan requires no down payment and offers negotiable interest rates.
 
             Spartan Funding is here to guide you through the home loan process efficiently and with ease. Our team is with you every step of the way to answer any questions you may have. We will strive to get you superior rates and take advantage of the best loan programs to help save you money. 
@@ -85,7 +85,7 @@ options:
   - title: Jumbo Loans
     list:
     - sub-title: Let Spartan Funding help you conquer your dream (or mortgage)!
-      text: >
+      text: |-
             The Jumbo Loan is a great option for mortgages exceeding the conforming loan limit. It is available for financing up to $3 million, or more depending on the scenario. While rates are higher, borrowers maintain the convenience of only one loan for the total amount. 
 
             Spartan Funding is here to guide you through the home loan process efficiently and with ease. Our team is with you every step of the way to answer any questions you may have. We will strive to get you superior rates and take advantage of the best loan programs to help save you money. 
@@ -103,7 +103,7 @@ options:
     list: 
     -
         sub-title: Own a piece of land in Rural California.
-        text: >
+        text: |-
             The US Department of Agriculture provides loans to assist Californians looking to purchase or renovate a property in rural areas. A major benefit of the USDA loan is that there is no down payment required. Our Spartan team can help you through the process to choose the best USDA loan for you.
 
             Spartan Funding is here to guide you through the home loan process efficiently and with ease. Our team is with you every step of the way to answer any questions you may have. We will strive to get you superior rates and take advantage of the best loan programs to help save you money. 
@@ -121,7 +121,7 @@ options:
     list:
     -
         sub-title: We help seniors achieve their financial goals. 
-        text: >
+        text: |-
             You’ve worked hard to build equity in your home and a reverse mortgage is a great way to capitalize on this equity. The reverse mortgage allows you to use the equity you’ve built to pay off your existing mortgage. Those 62 years and older are eligible for a reverse mortgage, and any money left after paying off your existing mortgage is yours. 
     - 
         sub-title: The Reverse Mortgage Process 
@@ -135,7 +135,7 @@ options:
     list:
     -
         sub-title: Spartan Funding helps California public employees find a PATH to their new home.
-        text: >
+        text: |-
             CalPATH home loans, previously known as the CalPERS home loan program provides assistance for California public employees looking to purchase a home. Eligible teachers who are members of the California State Teachers Retirement System (CalSTRS) can receive assistance to purchase or refinance a home. 
     - 
         sub-title: CalPATH CalSTRS Max Loan Amount
@@ -166,7 +166,7 @@ options:
     list:
     - 
         sub-title: Owning your first home might be closer than you think. 
-        text: >
+        text: |-
             CalHFA comes from the California Housing Finance Agency (HFA) and allows homebuyers to buy their first home with almost no money out of pocket. The program provides assistance with down payments and closing costs to help low to moderate-income families make owning their own home a possibility.  
 ---
 
@@ -182,8 +182,8 @@ options:
             {% for item in option.list %}
             <div><p class='body bold sub-title'>{{item.sub-title}}</p></div>
             {% if item contains 'text' %}
-            {% assign item-text = item.text | newline_to_br | split: '<br>' %}
-            <div class="body content">{{ item-text[0] }}</div>
+            {% assign item-text = item.text | newline_to_br %}
+            <div class="body content">{{ item-text }}</div>
             
             {% elsif item contains 'type' %}
             <div><ul>

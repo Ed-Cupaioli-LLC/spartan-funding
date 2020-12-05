@@ -207,11 +207,12 @@
                 }
                 
                 @include bp-large{
-                    padding-right: 5.675vw;
+                    margin-right: 5.675vw;
                     padding-left: unset;
+                    margin-left:unset
                 }
                 @include bp-small{
-                    padding-right: unset;
+                    margin-right: unset;
                 }
             }
           
