@@ -24,7 +24,7 @@ $(function(){
   var previousScroll = 0;
   $(window).scroll(function(){
     var currentScroll = $(this).scrollTop();
-    if (currentScroll > 90 && currentScroll < $(document).height() - $(window).height()){
+    if (currentScroll > 110 && currentScroll < $(document).height() - $(window).height()){
       if (currentScroll > previousScroll){
         window.setTimeout(hideNav, 300);
       } else {
@@ -32,12 +32,20 @@ $(function(){
       }
       previousScroll = currentScroll;
     }
+    //remove scroll up when window is at the top
+    
+    console.log($(window).scrollTop());
   });
   function hideNav() {
     $("[data-nav-status='toggle']").removeClass("is-visible").addClass("is-hidden");
+    $('#nav').removeClass('scroll-up');
   }
   function showNav() {
     $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
+    $('#nav').addClass('scroll-up');
+    if ($(window).scrollTop() == 0) {
+      $('#nav').removeClass('scroll-up'); 
+    }
   }
 
   // function for underlining current links in the nav bar 
@@ -90,26 +98,27 @@ $(function(){
 
 
       //Navigation Logo resize with scrolling
-      $(window).scroll( function(){
-        if($(document.body).scrollTop()>200 || $(document.documentElement).scrollTop()>200){
-          $('#nav .logo').css({'width':'13.634vw', "min-width":'14.71rem'})
-          $('#nav .hamburger-logo').css('width','2.312rem')
-          $('#nav').css({'box-shadow':'0px 3px 6px #00000029','padding-top':"1.3rem","padding-bottom":".76rem"})
-        } else{
-          $('#nav .logo').css({'width': '20.05vw', "min-width":'21.63rem'})
-          $('#nav .hamburger-logo').css('width','3.4rem')
-          if($(window).width()>1000){
-            $('#nav').css({'box-shadow':'unset','padding-top':"3.02rem","padding-bottom":"unset" })
-
-          } 
-          else{
-            $('#nav').css({'box-shadow':'unset','padding-top':"1.714rem","padding-bottom":"unset" })
-
-          }
+      // $(window).scroll( function(){
+      //   if($(document.body).scrollTop()>110 || $(document.documentElement).scrollTop()>110){
+      //     $('#nav .logo').css({'width':'13.634vw', "min-width":'14.71rem'})
+      //     $('#nav .hamburger-logo').css('width','2.312rem')
+      //     $('#nav').css({'box-shadow':'0px 3px 6px #00000029','padding-top':"1.3rem","padding-bottom":".76rem"})
+              
+      //   } else{
+      //     $('#nav .logo').css({'width': '20.05vw', "min-width":'21.63rem'})
+      //     $('#nav .hamburger-logo').css('width','3.4rem')
+      //     if($(window).width()>1000){
+      //       $('#nav').css({'box-shadow':'unset','padding-top':"3.02rem","padding-bottom":"unset" })
+               
+      //     } 
+      //     else{
+      //       $('#nav').css({'box-shadow':'unset','padding-top':"1.714rem","padding-bottom":"unset" })
+               
+      //     }
           
-        }
+      //   }
 
-      })
+      // })
 //Loan Options acordion logic
  
 //       $("#loan-options .option").each(function(){
