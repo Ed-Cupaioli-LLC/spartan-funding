@@ -17,6 +17,8 @@
     right: calc(-50vw + 50%);
     margin-left: auto;
     margin-right: auto;
+    opacity: 1;
+    transform: translate(0,0);
     @include bp-small{
         width: 81.401vw;
     }
@@ -24,12 +26,20 @@
         opacity: 0;
         transform: translate(0,-60px);
         transition: transform .2s;
-      } 
-      &.is-visible {
-        opacity: 1;
-        transform: translate(0,0);
-        transition: transform .2s;
-      }
+    } 
+    &.scroll-up {
+        box-shadow:0px 3px 6px #00000029;
+        padding-top: 1.3rem;
+        padding-bottom: 0.76rem;
+        .logo {
+            width: 13.634vw;
+            min-width: 14.71rem;
+        }
+        .hamburger-logo {
+            width: 2.312rem;
+        }
+        
+    }
 
     @include bp-small{
         padding-top: 1.714rem;
@@ -44,6 +54,7 @@
     .logo{
         width: 20.05vw;
         min-width: 21.63rem;
+        
         img{
             width: 100%;
         }
