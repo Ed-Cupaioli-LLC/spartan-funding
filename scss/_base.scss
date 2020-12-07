@@ -164,13 +164,13 @@ h1, h2, h3, h4, h5 {
 	}
 	.body {
 	font-size: 2rem;
-	line-height: 3.5rem;
+	line-height: 3.4rem;
 	color: $charcoal-blue;
 	@include bp-large{
-		line-height:3.5rem;
+		line-height:3.4rem;
 		font-size: 1.8rem;
 		@include bp-small{
-			line-height: 3.1rem;
+			line-height: 3rem;
 			font-size: 1.6rem;
 		}
 

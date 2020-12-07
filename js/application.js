@@ -1,4 +1,9 @@
 $(function () {
+
+  $('#dollar').live('keypress', function(key) {
+    if(key.charCode < 48 || key.charCode > 57) return false;
+});
+  $('#cost').toLocaleString("en");
   //relations between total cost, % and downpayment
   $("#cost").on("keyup", function () {
     var cost = parseInt($(this).val().match(/\d+/), 10);
