@@ -1,9 +1,7 @@
 $(function () {
 
-  $('#dollar').live('keypress', function(key) {
-    if(key.charCode < 48 || key.charCode > 57) return false;
-});
-  $('#cost').toLocaleString("en");
+
+  // $('#cost').toLocaleString("en");
   //relations between total cost, % and downpayment
   $("#cost").on("keyup", function () {
     var cost = parseInt($(this).val().match(/\d+/), 10);
@@ -38,66 +36,7 @@ $(function () {
     } else {
       $("#percent").val(Math.ceil((val * 100) / num) + "%");
     }
-  });
-
-  //     $("#application .image").click(function(){
-  //       $("#application .image").removeClass('1').addClass('0');
-  //       $(this).addClass('1').removeClass('0')
-  //     })
-
-  // $("#application .image").click(function(){
-  //   if( $(this).children('.icons').attr('src') === '/img/apply/home.png' && $(this).hasClass('1')){
-  //     $(this).children('.icons').attr('src', '/img/apply/thumb.png')
-  //     console.log($(this).children('.icons').attr('src'))
-
-  //   }
-  //   if( $(this).children('.icons').attr('src') === '/img/apply/thumb.png' &&  $(this).hasClass('0')){
-  //     $(this).children('.icons').attr('src', '/img/apply/home.png')
-  //     console.log($(this).children('.icons').attr('src'))
-
-  //   }
-
-  //   console.log($(this).css('background-color'))
-  // });
-
-  //   $('.purchas-image').click(function() {
-  //     like_question(this);
-  //   });
-
-  //   $(".refinance-image").click(function() {
-  //     dislike_question(this);
-  //   });
-
-  //   function dislike_question(question) {
-  //     question.classList.add("thumbs-down-clicked");
-
-  //     let previousSibling = question.previousElementSibling;
-  //     previousSibling.classList.remove("thumbs-up-clicked");
-  //   }
-  //   $(".fa-thumbs-up").click(function() {
-  //     like_question(this);
-  //   });
-
-  //   $(".fa-thumbs-down").click(function() {
-  //     dislike_question(this);
-  //   });
-
-  // function like_question(question) {
-  //   question.classList.add("thumbs-up-clicked");
-  //   let nextSibling = question.nextElementSibling;
-  //   nextSibling.classList.remove("thumbs-down-clicked");
-  // }
-
-  // function dislike_question(question) {
-  //   question.classList.add("thumbs-down-clicked");
-
-  //   let previousSibling = question.previousElementSibling;
-  //   previousSibling.classList.remove("thumbs-up-clicked");
-  // }
-
-  
-
-        
+  });     
     $("form[name='application-form']").validate({
       ignore:[],
       rules: {

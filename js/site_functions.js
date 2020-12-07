@@ -24,7 +24,9 @@ $(function(){
   var previousScroll = 0;
   $(window).scroll(function(){
     var currentScroll = $(this).scrollTop();
-    if (currentScroll > 200 && currentScroll < $(document).height() - $(window).height()){
+
+    if (currentScroll > 110 && currentScroll < $(document).height() - $(window).height()){
+
       if (currentScroll > previousScroll){
         window.setTimeout(hideNav, 300);
       } else {
@@ -32,29 +34,24 @@ $(function(){
       }
       previousScroll = currentScroll;
     }
+    //remove scroll up when window is at the top
+    
+    console.log($(window).scrollTop());
   });
   function hideNav() {
     $("[data-nav-status='toggle']").removeClass("is-visible").addClass("is-hidden");
+    $('#nav').removeClass('scroll-up');
   }
   function showNav() {
     $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
+    $('#nav').addClass('scroll-up');
+    console.log($(window).scrollTop())
+    if ($(window).scrollTop() === 0) {
+      $('#nav').removeClass('scroll-up'); 
+    }
   }
 
   // function for underlining current links in the nav bar 
-  
-//     $('#nav .text-link').click(function() {
-//         $('.text-link').removeClass('currentlyActive');
-//         $(this).addClass('currentlyActive');
-//         localStorage.setItem('#nav .text-link', $activeLink.html())
-       
-//       });
-      // let url = window.location.href;
-      // $('#nav a').each(function() {
-      //   if (this.href === url) {
-      //     $(this).closest('p').addClass('currentlyActive');
-      //     localStorage.setItem('#nav .text-link', $activeLink.html())
-      //   }
-      // });
       $('#nav a').each(function() {
         //console.log($(this).attr('href'));
         if ((window.location.pathname.indexOf($(this).attr('href'))) > -1) {
@@ -67,9 +64,11 @@ $(function(){
       if($(this).hasClass('0')){
         $(" #nav .dropdown-mobile").attr("style", "display: flex")
         $(this).removeClass('0').addClass('1')
+        $('.img').addClass('swirl')
       } else {
         $(" #nav .dropdown-mobile").attr("style", "display: none")
         $(this).removeClass('1').addClass('0')
+        $('.img').removeClass('swirl')
       } 
     })
   
@@ -89,79 +88,28 @@ $(function(){
       })
 
 
-      //Navigation Logo resize with scrolling
-      $(window).scroll( function(){
-        if($(document.body).scrollTop()>100 || $(document.documentElement).scrollTop()>100){
-          $('#nav .logo').css({'width':'13.634vw', "min-width":'14.71rem'})
-          $('#nav .hamburger-logo').css('width','2.312rem')
-          $('#nav').css({'box-shadow':'0px 3px 6px #00000029','padding-top':"1.3rem","padding-bottom":".76rem"})
-        } else{
-          $('#nav .logo').css({'width': '20.05vw', "min-width":'21.63rem'})
-          $('#nav .hamburger-logo').css('width','3.4rem')
-          if($(window).width()>1000){
-            $('#nav').css({'box-shadow':'unset','padding-top':"3.02rem","padding-bottom":"unset" })
-
-          } 
-          else{
-            $('#nav').css({'box-shadow':'unset','padding-top':"1.714rem","padding-bottom":"unset" })
-
-          }
+      // Navigation Logo resize with scrolling
+      // $(window).scroll( function(){
+      //   if($(document.body).scrollTop()>110 || $(document.documentElement).scrollTop()>110){
+      //     $('#nav .logo').css({'width':'13.634vw', "min-width":'14.71rem'})
+      //     $('#nav .hamburger-logo').css('width','2.312rem')
+      //     $('#nav').css({'box-shadow':'0px 3px 6px #00000029','padding-top':"1.3rem","padding-bottom":".76rem"})
+              
+      //   } else{
+      //     $('#nav .logo').css({'width': '20.05vw', "min-width":'21.63rem'})
+      //     $('#nav .hamburger-logo').css('width','3.4rem')
+      //     if($(window).width()>1000){
+      //       $('#nav').css({'box-shadow':'unset','padding-top':"3.02rem","padding-bottom":"unset" })
+               
+      //     } 
+      //     else{
+      //       $('#nav').css({'box-shadow':'unset','padding-top':"1.714rem","padding-bottom":"unset" })
+               
+      //     }
           
-        }
+      //   }
 
-      })
-//Loan Options acordion logic
- 
-//       $("#loan-options .option").each(function(){
-       
-//         // $(this).children("div:gt(1)").hide();
-//         $(this).children("div").slice(2).hide();
-//         if( $(window).width()> 1000){
-//           $(this).children('div:eq(1)').attr('style', 'max-height: calc(3.5rem*3); overflow: hidden;')
-//         }
-//         if( $(window).width()<= 1000){
-//           $(this).children('div:eq(1)').attr('style', 'max-height: calc(3.5rem*6); overflow: hidden;')
-//         }
-//         if( $(window).width()<= 500){
-//           $(this).children('div:eq(1)').attr('style', 'max-height: calc(3.5rem*7); overflow: hidden; ')
-//         }
-       
-        
-//       })
-
-//       $("#loan-options .expand").on('click', (function(){
-//         // $(this).siblings("div:gt(1)").slideToggle()
-//         $(this).siblings("div").slice(2).slideToggle()
-//         if($(this).hasClass('0')){
-//           $(this).siblings('div:eq(1)').attr('style', 'height: unset; overflow: unset')
-//           $(this).removeClass('0').addClass('1')
-//         }if( $(window).height()<= 1024 && $(this).hasClass('1')){
-//           $(this).siblings('div:eq(1)').attr('style', 'max-height: calc(3.5rem*6); overflow: hidden; text-overflow: ellipsis;')
-//           $(this).removeClass('1').addClass('0')
-//         }if( $(window).height()<= 850 && $(this).hasClass('1')){
-//           $(this).siblings('div:eq(1)').attr('style', 'max-height: calc(3.5rem*9); overflow: hidden; text-overflow: ellipsis;')
-//           $(this).removeClass('1').addClass('0')
-//         } if( $(window).height()>1024 && $(this).hasClass('1')){
-//           $(this).siblings('div:eq(1)').attr('style', 'max-height: calc(3.5rem*3); overflow: hidden; text-overflow: ellipsis;')
-//           $(this).removeClass('1').addClass('0')
-//         }
-//       //   $(this).siblings("div").slice(2).slideToggle()
-//       //   // $(this).slideToggle()
-//       // if($(this).hasClass('0')){
-//       //   $(this).siblings('div:eq(1)').attr('style', 'height: unset; overflow: unset')
-//       //   $(this).removeClass('0').addClass('1')
-//       // } else {
-//       //   $(this).siblings('div:eq(1)').attr('style', 'max-height: calc(3.5rem*3); overflow: hidden; text-overflow: ellipsis;')
-//       //   $(this).removeClass('1').addClass('0')
-//       // }
-//       console.log($(this).text())
-//       $(this).text($(this).text() === "Read more" ? "Read less" : "Read more")
-    
-      
-// }));
-
-
-
+      // })
 });
 
 

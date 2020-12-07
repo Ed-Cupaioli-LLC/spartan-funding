@@ -20,11 +20,15 @@ h1, h2, h3, h4, h5 {
 	margin: 0;
 }
 /* Character Styles */
+button{
+	font-family: 'Open Sans', sans-serif;
+}
 .button{
 	border: $steel-blue 2px solid;
 	width: 21.1rem;
 	padding: 1.75rem 0;
 	background-color: unset;
+	color: $charcoal-blue;
 	&:hover{
 		background-color: $charcoal-blue;
 		border-color: $charcoal-blue;
