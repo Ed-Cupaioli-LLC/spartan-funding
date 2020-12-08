@@ -28,7 +28,7 @@
         transition: transform .2s;
     } 
     &.scroll-up {
-        box-shadow: 0px 3px 6px gray;
+        box-shadow: 0px 3px 6px $iron;
         padding-top: 1.3rem;
         padding-bottom: 0.76rem;
         .logo {
@@ -54,6 +54,7 @@
     .logo{
         width: 20.05vw;
         min-width: 21.63rem;
+        max-width: 38.486rem
         
         img{
             width: 100%;
@@ -193,9 +194,8 @@
             }
             
         }
-        .button{
+        .button-white{
             margin: 3rem;
-            border-color: $white;
             margin-left: 8.696vw;
             @include bp-large{
                 max-width: 34.2rem;

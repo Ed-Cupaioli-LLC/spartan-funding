@@ -9,11 +9,21 @@ html{
 }
 body {
 	overflow-x: hidden;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $body-font;
 	font-size: 16px;
 	color: $text_color;
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 //Default Fonts
 h1, h2, h3, h4, h5 {
 	font-family: $header-font;
@@ -22,6 +32,7 @@ h1, h2, h3, h4, h5 {
 /* Character Styles */
 button{
 	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
 }
 .button{
 	border: $steel-blue 2px solid;
@@ -64,6 +75,7 @@ button{
 		}
 	}
 }
+
 .round-button{
 	border-radius: 21px;
     padding: 0 1.5vw;
@@ -188,7 +200,8 @@ button{
 //Links
 a {
 	font-weight: bold;
-	text-decoration: none;
+	text-decoration: none !important;
+
 	color: $primary_color;
 	@include transition(color);
 	&:hover, &:active, &:focus {
