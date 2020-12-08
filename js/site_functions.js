@@ -10,7 +10,6 @@ $(function(){
   });
   // Function for navigation display between web and mobile views
   function switchCSS(windowsize) {
-    console.log(windowsize)
     if (windowsize < 1025) {
         $('#nav .menu').attr("style", "display: none")
         $('#nav .hamburger-menu').attr("style", "display: block")
@@ -36,7 +35,6 @@ $(function(){
     }
     //remove scroll up when window is at the top
     
-    console.log($(window).scrollTop());
   });
   function hideNav() {
     $("[data-nav-status='toggle']").removeClass("is-visible").addClass("is-hidden");
@@ -76,8 +74,6 @@ $(function(){
       $('#nav .hamburger-menu').click(function(){
           $('#nav .show').attr('style', 'display: flex');
           $('body,html').css('position','fixed');
-
-          console.log('im clicked')
       })
       
       $('#nav .exit').click(function(){
