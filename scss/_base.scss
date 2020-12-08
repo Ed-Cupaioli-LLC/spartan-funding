@@ -12,6 +12,7 @@ body {
 	font-family: $body-font;
 	font-size: 16px;
 	color: $text_color;
+	-webkit-overflow-scrolling : touch !important; 
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
