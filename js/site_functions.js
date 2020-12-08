@@ -43,7 +43,6 @@ $(function(){
   function showNav() {
     $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
     $('#nav').addClass('scroll-up');
-    console.log($(window).scrollTop())
     if ($(window).scrollTop() === 0) {
       $('#nav').removeClass('scroll-up'); 
     }
