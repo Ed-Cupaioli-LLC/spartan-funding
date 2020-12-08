@@ -92,15 +92,21 @@ text: The information provided in this application will allow us to help you att
 
 
             <div  id='form-field' class='form-field'>
-                <label class=' label body bold'>* Purchase Price</label>
-                <input class='body single-input' id='cost' type='text' name="entry.784023676" data-placeholder='$' placeholder='$300,000'>
+                <label class=' label body bold'for="currency-field">* Purchase Price</label> 
+                <!-- <i class='symbol'>$</i>
+                <input class='body single-input dollar' id='cost' type='number' pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="entry.784023676" placeholder='300,000'> -->
+               <input class='body single-input dollar' type="text" name="entry.784023676" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value=""  placeholder="$300,000.00">
             </div>
 
             <div class='form-field'>
                 <label class=' label body bold'>* Down Payment</label>
                 <div class="down-pay">
-                    <input class='body one' id='percent' type='text' name="entry.1694289332" placeholder='20%'>
-                    <input class='body two' id='dollar' type='text' name="entry.1889879909" placeholder='$60,000' >
+                    <div class='item'>
+                        <input class='body one' id='percent' type='text' name="entry.1694289332" placeholder='20%'>
+                     </div>
+                     <div class='item'>
+                        <input class='body two' id="dollar" type='text' name="entry.1889879909" placeholder='$60,000' >
+                    </div>
                 </div>
             </div>
             <div class="form-field radio-field">
@@ -159,7 +165,7 @@ text: The information provided in this application will allow us to help you att
                 <input class='body single-input' type='text' name="entry.670253592" placeholder='555-555-5555'>
             </div>
             
-            <button type='submit' class='button button-text'>Submit Application</button>
+            <button type='submit' class='button-dark button-text'>Submit Application</button>
     </form>
 </div>
 <div class='success'><div class='success-message'><img src='/img/apply/thumb.png'><p class='body'>Thank you for your application, we will be contacting you soon!</p></div></div>

@@ -9,22 +9,37 @@ html{
 }
 body {
 	overflow-x: hidden;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $body-font;
 	font-size: 16px;
 	color: $text_color;
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 //Default Fonts
 h1, h2, h3, h4, h5 {
 	font-family: $header-font;
 	margin: 0;
 }
 /* Character Styles */
+button{
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+}
 .button{
 	border: $steel-blue 2px solid;
 	width: 21.1rem;
 	padding: 1.75rem 0;
 	background-color: unset;
+	color: $charcoal-blue;
 	&:hover{
 		background-color: $charcoal-blue;
 		border-color: $charcoal-blue;
@@ -60,6 +75,7 @@ h1, h2, h3, h4, h5 {
 		}
 	}
 }
+
 .round-button{
 	border-radius: 21px;
     padding: 0 1.5vw;
@@ -164,13 +180,13 @@ h1, h2, h3, h4, h5 {
 	}
 	.body {
 	font-size: 2rem;
-	line-height: 3.5rem;
+	line-height: 3.4rem;
 	color: $charcoal-blue;
 	@include bp-large{
-		line-height:3.5rem;
+		line-height:3.4rem;
 		font-size: 1.8rem;
 		@include bp-small{
-			line-height: 3.1rem;
+			line-height: 3rem;
 			font-size: 1.6rem;
 		}
 
@@ -184,7 +200,8 @@ h1, h2, h3, h4, h5 {
 //Links
 a {
 	font-weight: bold;
-	text-decoration: none;
+	text-decoration: none !important;
+
 	color: $primary_color;
 	@include transition(color);
 	&:hover, &:active, &:focus {
