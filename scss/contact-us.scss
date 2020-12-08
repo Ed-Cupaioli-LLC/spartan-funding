@@ -127,34 +127,40 @@
         .success-message{
             display: flex;
             margin: 0 auto;
-            margin-bottom: 15.7rem;
-        
-        flex-direction: row;
-        max-width: 56.5vw;
-        align-content: center;
-        align-items: center;
-        margin-left: 29vw;
+            margin-bottom: 13.1rem;
+            flex-direction: row;
+            max-width: 56.5vw;
+            align-content: center;
+            align-items: center;
         @include bp-large{
             flex-direction: column;
             max-width: 77.536vw;
-            margin-left: unset;
+           
             p{
                 text-align: center;
             }
-        }
-
-        img{
-            margin: 0;
-            padding-right: .7rem;
-            @include bp-large{
-                padding-right: unset;
-                padding-bottom: 2.141rem;
+            @include bp-medium{
+              margin-bottom: 8.4rem;
             }
-            
         }
-
+        .background{
+          background-color: #E9E8E8;
+          width: 3.2rem;
+          height: 3.2rem;
+          border-radius: 50%;
+          display: flex;
+          margin-right: 1rem;
+          @include bp-large{
+            margin-right: unset;
+            margin-bottom: 2.141rem;
         }
         
-    }
+      
+        }
+      
+       
+        }
+        
+      }
    
 }

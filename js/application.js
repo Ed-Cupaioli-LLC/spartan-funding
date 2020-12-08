@@ -92,8 +92,8 @@ function formatPercentage(input) {
       $("#percent").val(0 + '%');
       $("#dollar").val('$' +0);
     } else if (isNaN(percent) === false && isNaN(dollar) === false) {
-      $("#percent").val(Math.ceil(dollar / cost));
-      $("#dollar").val(Math.ceil(cost * percent));
+      $("#percent").val(Math.ceil(dollar / cost)+'%');
+      $("#dollar").val('$' + Math.ceil(cost * percent));
     }
   });
 

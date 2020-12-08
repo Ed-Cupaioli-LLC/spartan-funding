@@ -179,24 +179,9 @@
           flex-direction: column;
           padding-bottom: 0rem;
         }
-        .item{
-          width: 49.5%;
-          @include bp-medium{
-            width: 100%;
-          }
-          .symbol{
-            position: absolute;
-            z-index: 1;
-            top: 17%;
-            font-size: 2rem;
-            font-style: normal;
-            margin-left: 2rem;
-            font-family: "Open Sans", sans-serif;
-            color: #5f5f5f;
-            line-height: 3.4rem;
-          }
+       
           input{
-            width:100%;
+            width:49.7%;
             padding: 1.2rem 0;
             border: 2px solid $form;
             border-radius: .7rem;
@@ -219,8 +204,8 @@
           }
           label.error{
             color: $red;
-            position: relative;
-            top: 1rem;
+            position: absolute;
+            top: 7rem;
             @include bp-medium{
               top: 1rem;
             }
@@ -229,7 +214,7 @@
             }
            }
 
-        }
+    
       
 
       }
@@ -353,23 +338,31 @@
      }
 
      button{
-      margin: 6.5rem auto 14.7rem auto;
+      margin: 3rem auto 5.6rem auto;
       display: flex;
       justify-content: center;
       width: 30.9rem;
       background-color: $charcoal-blue;
       border-color: $charcoal-blue;
       color: $white;
+      @include bp-medium{
+        margin: .5rem auto 4.8rem auto;
+      }
+      
      @include bp-small{
       margin: 0 auto 4.834rem auto;
       width: 82.609vw
      }
      &:hover{
       border: $steel-blue 2px solid;
-      width: 21.1rem;
-      padding: 1.75rem 0;
-      background-color: unset;
+      margin: 3rem auto 5.6rem auto;
+      width: 30.9rem; 
+      background-color: white;
       color: $charcoal-blue;
+      @include bp-small{
+        margin: 0 auto 4.834rem auto;
+        width: 82.609vw
+       }
     }
      }
      .single-input{
@@ -385,7 +378,7 @@
   .success-message{
       display: flex;
       margin: 0 auto;
-      margin-bottom: 15.7rem;
+      margin-bottom: 13.1rem;
       flex-direction: row;
       max-width: 56.5vw;
       align-content: center;
@@ -393,22 +386,30 @@
   @include bp-large{
       flex-direction: column;
       max-width: 77.536vw;
-      margin-left: unset;
+     
       p{
           text-align: center;
       }
-  }
-
-  img{
-      margin: 0;
-      padding-right: .7rem;
-      @include bp-large{
-          padding-right: unset;
-          padding-bottom: 2.141rem;
+      @include bp-medium{
+        margin-bottom: 8.4rem;
       }
-      
+  }
+  .background{
+    background-color: #E9E8E8;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    display: flex;
+    margin-right: 1rem;
+    @include bp-large{
+      margin-right: unset;
+      margin-bottom: 2.141rem;
+  }
+  
+
   }
 
+ 
   }
   
 }
