@@ -11,8 +11,9 @@ $(function() {
   
     $("#loan-options .expand").on('click', (function(){
       var items = $(this).siblings('div').find('.fun')
-      console.log('this is items' + items)
+      
       var myArr =  $("#loan-options .option").children('.content').html();
+      console.log('this is items' + myArr)
       var arr = myArr.split('<br>').shift();
       console.log(arr)
       items.append(arr)
