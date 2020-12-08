@@ -80,15 +80,17 @@ function formatPercentage(input) {
   // $('#cost').toLocaleString("en");
   //relations between total cost, % and downpayment
   $("#currency-field").on("keyup", function () {
-    var num=$(this).val()
-    var cost = parseInt(num.match(/\d+/), 10);
+    
+    var cost = $(this).val().split(',').join('')
+    cost = parseInt(cost.match(/\d+/), 10);
     console.log(cost);
 
     var percent = parseInt($("#percent").val().match(/\d+/), 10);
-    var dollar = parseInt($("#dollar").val().match(/\d+/), 10);
+    var dollar = $("#dollar").val().split(',').join('')
+    dollar = parseInt(dollar.match(/\d+/), 10);
     if (isNaN(cost) === true) {
-      $("#percent").val(0);
-      $("#dollar").val(0);
+      $("#percent").val(0 + '%');
+      $("#dollar").val('$' +0);
     } else if (isNaN(percent) === false && isNaN(dollar) === false) {
       $("#percent").val(Math.ceil(dollar / cost));
       $("#dollar").val(Math.ceil(cost * percent));
@@ -103,12 +105,17 @@ function formatPercentage(input) {
     if (isNaN(val) === true) {
       $("#dollar").val( '$'+ 0);
     } else {
-      $("#dollar").val('$'+ Math.ceil((num * val) / 100));
+      var dollar = (Math.ceil((num * val) / 100))
+      dollar = dollar.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+      $("#dollar").val('$'+ dollar);
     }
   });
 
   $("#dollar").on("keyup", function () {
-    var val = parseInt($(this).val().match(/\d+/), 10);
+    var val = $(this).val().split(',').join('')
+    val = parseInt(val.match(/\d+/), 10);
+    console.log(val)
+    // var val = parseInt($(this).val().match(/\d+/), 10);
     var item = $("#currency-field").val().split(',').join('')
     var num = parseInt(item.match(/\d+/), 10);
     if (isNaN(val) === true) {
