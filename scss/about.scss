@@ -3,19 +3,22 @@
 
 #about{
     position: relative;
-    padding: 0 15vw;
+    padding: 0 15vw 15.3rem 15vw;
     margin: 0 auto;
     max-width: 192rem;
     padding-top:13.921rem;
     @include bp-large{
-       padding: 0 8.696vw;
-       padding-top: 15.67rem;
+       padding: 0 8.696vw 9.53rem 8.696vw ;
+       padding-top: 13rem;
     }
     .spartan{
      position: absolute;
      padding-top: 8rem;
      overflow: hidden;
      right: 0;
+     @include bp-large{
+         padding-top: 0;
+     }
     
     img{
      position: relative;
@@ -28,7 +31,7 @@
         padding-top:8.6rem;
         text-align: center;
         @include bp-large{
-            padding-top: 6rem;
+            padding-top: 2rem;
         }
        
     }
@@ -90,11 +93,27 @@
     .pos{
         font-size: 3rem; 
         text-align: center;
+        @include bp-small{
+            font-size: 2.2rem; 
+        }
     }
-    .button{
-        
+    a{
         max-width: 21.1rem;
-        margin: 2.4rem auto 15.3rem;
+        margin: 0 auto;
+        
+    
+        @include bp-small{
+            max-width: unset;
+        }
+        .button{
+            max-width: 21.1rem;
+            margin: 2.4rem auto;
+            @include bp-small{
+                max-width: unset;
+            }
+        }
+
     }
+    
 }
 }
