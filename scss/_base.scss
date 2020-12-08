@@ -20,6 +20,22 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: $iron;
+	font-family: $body-font;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+	color: $iron;
+	font-family: $body-font;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+	color:  $iron;
+	font-family: $body-font;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+	color:  $iron;
+	font-family: $body-font;
+  }
 
 /* Firefox */
 input[type=number] {
