@@ -151,7 +151,7 @@ function formatPercentage(input) {
     var item = $("#currency-field").val().split(',').join('')
     var num = parseInt(item.match(/\d+/), 10);
     if (isNaN(val) === true) {
-      $("#dollar").val( '$'+0);
+      $("#dollar").val( '$'+ 0);
     } else {
       $("#dollar").val('$'+ Math.ceil((num * val) / 100));
     }
