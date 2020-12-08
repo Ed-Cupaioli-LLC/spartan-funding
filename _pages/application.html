@@ -1,5 +1,7 @@
 ---
 title: Preliminary Application
+description: Our online application helps us learn more about you and have a better understanding of your goals whether to purchase or refinance. 
+meta_img: /img/apply/spartan_funding_meta_image_apply.pnj
 layout: default
 permalink: /apply/
 css: application
@@ -86,23 +88,21 @@ text: The information provided in this application will allow us to help you att
                             <option value="WI">Wisconsin</option>
                             <option value="WY">Wyoming</option>
                         </select>	
-                    <input class='body four' type='text' name="entry.279358715" placeholder='Zip Code'>
+                    <input class='body four' type='number' name="entry.279358715" placeholder='Zip Code'>
                 </div>
             </div>
 
 
             <div  id='form-field' class='form-field'>
                 <label class=' label body bold'for="currency-field">* Purchase Price</label> 
-                <!-- <i class='symbol'>$</i>
-                <input class='body single-input dollar' id='cost' type='number' pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="entry.784023676" placeholder='300,000'> -->
-               <input class='body single-input dollar' type="text" name="entry.784023676" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value=""  placeholder="$300,000.00">
+               <input class='body single-input dollar' type="text" onfocus="this.value=''" name="entry.784023676" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value=""  placeholder="$300,000.00">
             </div>
 
             <div class='form-field'>
                 <label class=' label body bold'>* Down Payment</label>
                 <div class="down-pay">
-                        <input class='body one' id='percent' type='text' name="entry.1694289332" maxlength = "4"placeholder='20%'>
-                        <input class='body two' id="dollar" type='text' name="entry.1889879909" placeholder='$60,000' >
+                        <input class='body one' id='percent' type='text' onfocus="this.value=''" name="entry.1694289332" maxlength = "4"placeholder='20%'>
+                        <input class='body two' id="dollar" type='text'  onfocus="this.value=''"name="entry.1889879909" placeholder='$60,000' >
                 </div>
             </div>
             <div class="form-field radio-field">
