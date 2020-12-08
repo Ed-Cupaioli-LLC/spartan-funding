@@ -5,13 +5,13 @@ $(function() {
     var content = $(this).children('.content').html();
     var arr = content.split('<br>');
     var body = $("<p>").addClass('fun')
-    body.append(arr[0])
       $(this).children("div:gt(1)").hide();
      $(this).children('div').children('.sub-title').append(body)
     })
   
     $("#loan-options .expand").on('click', (function(){
       var items = $(this).siblings('div').find('.fun')
+      console.log('this is items' + items)
       var myArr =  $("#loan-options .option").children('.content').html();
       var arr = myArr.split('<br>').shift();
       console.log(arr)
