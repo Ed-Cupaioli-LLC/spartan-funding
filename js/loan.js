@@ -13,7 +13,7 @@ $(function() {
   
     $("#loan-options .expand").on('click', (function(){
       $(this).siblings('div').find('.fun').hide()
-      $(this).siblings("div:gt(0)").slideToggle()
+      $(this).siblings("div:gt(1)").slideToggle()
       if($(this).hasClass('0')){
         $(this).siblings('div').find('.fun').hide()
         $(this).addClass('1').removeClass('0')
