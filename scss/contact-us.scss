@@ -109,13 +109,18 @@
                     .button{
                         background-color: $charcoal-blue;
                         color: white;
-                        border: 1px $charcoal-blue solid;
+                        border: 2px $charcoal-blue solid;
                         margin-top: 4.2rem;
                         margin-bottom: 4.3rem;
                         @include bp-large{
                             margin-top: 5.878rem;
                             margin-bottom: 8.7rem;
                         }
+                        &:hover{
+                            border: $steel-blue 2px solid;
+                            background-color: white;
+                            color: $charcoal-blue;
+                        } 
                     }
                 }
                 

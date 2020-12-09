@@ -18,6 +18,7 @@
     margin-right: auto;
     opacity: 1;
     transform: translate(0,0);
+
     @include bp-small{
         width: 81.401vw;
     }
