@@ -19,7 +19,7 @@ $(function(){
       $('#nav .hamburger-menu').attr("style", "display: none")
     }
   }
-  //Navigation hide on scroll show on scroll up 
+  // Navigation hide on scroll show on scroll up 
   var previousScroll = 0;
   $(window).scroll(function(){
     var currentScroll = $(this).scrollTop();
@@ -43,7 +43,8 @@ $(function(){
   function showNav() {
     $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
     $('#nav').addClass('scroll-up');
-    if ($(window).scrollTop() === 0) {
+    console.log($(window).scrollTop())
+    if ($(window).scrollTop() < 100) {
       $('#nav').removeClass('scroll-up'); 
     }
   }

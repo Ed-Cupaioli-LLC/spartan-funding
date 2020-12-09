@@ -1,25 +1,82 @@
 $(function () {
+  $("input[name='entry.1486781400']").on("click", function () {
+    console.log($(this).val())
+    if($(this).val()==='purchase'){
+      $('.purchasing').show();
+      $('.refinancing').hide();
+      $('#percent').attr('placeholder', '20%');
+      $('#dollar').attr('placeholder', '$60,000');
+     
+    } else{
+     
+      $('.purchasing').hide();
+      $('.refinancing').show();
+      $('#percent').attr('placeholder', '80%');
+      $('#dollar').attr('placeholder', '$240,000');
+
+      
+    }
+  })
+
+
+//   $('select[name="t_rel"]').change(function(){
+//     var selectedVal = $(this).val();
+//     console.log(selectedVal);
+
+//     $('.t_val').html('').html('<input type="password" class="form-control" value="">');
+// });
+
+
+  $("input[name='entry.1525139678']").on({
+    keyup: function() {
+      formatCurrency($(this));
+      formatData($(this));
+    },  
+});
+//ammoun to take out 
+$("input[name='entry.327660014']").on({
+  keyup: function() {
+    formatCurrency($(this));
+    formatData($(this))  
+  },
   
+});
   $("input[name='entry.784023676']").on({
     keyup: function() {
       formatCurrency($(this));
+      formatData($(this))
     },
     
 });
+//$ dollar value of downpayment 
 $("input[name='entry.1889879909']").on({
   keyup: function() {
     formatCurrency($(this));
+    formatData($(this))  
   },
   
+})
+
+$("input[name='entry.2859881']").on({
+  keyup: function() {
+    formatPercentage($(this));
+    formatData($(this))
+  }
 })
 $("input[name='entry.1694289332']").on({
   keyup: function() {
     formatPercentage($(this));
+    formatData($(this))
   }
 })
 function formatNumber(n) {
   // format number 1000000 to 1,234,567
   return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+}
+function formatData(input){
+  var input_val = input.val().split(',').join('')
+  input_val = parseInt(input_val.match(/\d+/), 10);
+  console.log(input_val)
 }
 
 
@@ -73,12 +130,6 @@ function formatPercentage(input) {
   input[0].setSelectionRange(caret_pos, caret_pos);
 }
 
-
-
-  
-
-  // $('#cost').toLocaleString("en");
-  //relations between total cost, % and downpayment
   $("#currency-field").on("keyup", function () {
     
     var cost = $(this).val().split(',').join('')
@@ -123,7 +174,7 @@ function formatPercentage(input) {
     } else {
       $("#percent").val(Math.ceil((val * 100) / num)  + '%');
     }
-  });     
+  }); 
     $("form[name='application-form']").validate({
       ignore:[],
       rules: {
@@ -144,7 +195,7 @@ function formatPercentage(input) {
          "entry.1694289332":  {required: true},
          "entry.1889879909":  {required: true},
          "entry.1499206232": {required: true},
-         "entry.1525139678": {required: true,
+         "entry.1861675471": {required: true,
                               email: true
                             },
          "entry.670253592": {required: true,
@@ -183,7 +234,7 @@ function formatPercentage(input) {
         "entry.1694289332": { required:"" },
         "entry.1889879909":{ required:"Please provide an estimated down payment."},
         "entry.1499206232": { required:"Please don’t leave this blank." },
-        "entry.1525139678":{ required:"Please enter a valid email address." },
+        "entry.1861675471":{ required:"Please enter a valid email address." },
         "entry.670253592":{ required:"Please enter a valid phone number." },
     },
     // Make sure the form is submitted to the destination defined
@@ -214,3 +265,4 @@ function formatPercentage(input) {
     },
   });
 });
+
