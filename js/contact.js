@@ -34,8 +34,8 @@ $(function() {
         },
         'entry.1757091664': {
                 required: true,
-                minlength: 10,
-                maxlength: 10,
+                minlength: 12,
+                maxlength: 12,
         },
     },
       // Specify validation error messages
