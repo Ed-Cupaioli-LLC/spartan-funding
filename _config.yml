@@ -2,9 +2,9 @@
 title: Spartan Funding 
 description: Are you spartan? We are a no frills mortgage broker helping families, individuals, and investors make  the purchase of the next home or investment property. 
 meta_img:
-twitter:
+twitter: "@spartanfundingca"
 favicon: /img/favicon.png
-url:
+url: https://spartan-funding.netlify.app
 gtm:
 schema:
   name: Spartan Funding
