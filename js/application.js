@@ -69,9 +69,20 @@ $("input[name='entry.1694289332']").on({
     formatData($(this))
   }
 })
+$("input[name='entry.670253592']").on({
+  keyup: function() {
+    formatPhone($(this))
+  }
+})
+
 function formatNumber(n) {
   // format number 1000000 to 1,234,567
   return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+}
+function formatPhone(initial){
+    initial.replace("/([0-9]{3})/","\1 ");
+    initial.replace("/[0-9]{3} ([0-9]{3})/","\1 ");
+    return initial;
 }
 function formatData(input){
   var input_val = input.val().split(',').join('')
