@@ -1,7 +1,29 @@
 
 $(function() {
-    // Initialize form validation on the registration form.
-    console.log($( "#loan-ammount option:selected" ).text())
+  $("input[name='entry.1757091664']").on({
+    keyup: function() {
+      phone($(this))
+    }
+  })
+ 
+  function formatPhone(n){
+    return n.replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+  }
+
+  function phone(input){
+    var input_val = input.val();
+    if (input_val === "") {
+      return;
+   } else {
+      // join number by .
+      input_val = formatPhone(input_val);
+      input_val = input_val ; 
+   }
+   
+   // send updated string to input
+   input.val(input_val);
+  }
+
     $("form[name='contact']").validate({
       // Specify validation rules
       rules: {
@@ -12,7 +34,6 @@ $(function() {
         },
         'entry.1757091664': {
                 required: true,
-                digits: true,
                 minlength: 10,
                 maxlength: 10,
         },
@@ -21,7 +42,11 @@ $(function() {
       messages: {
         'entry.1833635029': "Please don’t leave this blank",
         'entry.2074440609': "Please enter a valid email address",
-        'entry.1757091664': "Please enter a valid phone number",
+        'entry.1757091664': {
+                            required: "Please enter a valid phone number",
+                            minlength: "Please enter a valid phone number.",
+                            maxlength: "Please enter a valid phone number."
+        }
         // submit: 'Please fill out all the missing items'
       },
       // Make sure the form is submitted to the destination defined
