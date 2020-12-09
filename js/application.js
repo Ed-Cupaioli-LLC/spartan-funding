@@ -239,17 +239,17 @@ function formatPercentage(input) {
         },
         "entry.152925055":{ required:"Please enter a valid address." },
         "entry.758167786": { required:""},
-        'entry.105311915': { required:"",
+        'entry.105311915': { required:""},
+        "entry.279358715": { required:"",
                              digits:"",
                              minlength: "",
                              maxlength: "",},
-        "entry.279358715": { required:""},
         "entry.784023676": { required:"Please provide an estimated price." },
         "entry.1694289332": { required:"" },
-        "entry.1889879909":{ required:"Please provide an estimated down payment."},
+        "entry.1889879909": { required:"Please provide an estimated down payment."},
         "entry.1499206232": { required:"Please don’t leave this blank." },
-        "entry.1861675471":{ required:"Please enter a valid email address." },
-        "entry.670253592":{ required:"Please enter a valid phone number.",
+        "entry.1861675471": { required:"Please enter a valid email address." },
+        "entry.670253592": { required:"Please enter a valid phone number.",
                             minlength: "Please enter a valid phone number.",
                             maxlength: "Please enter a valid phone number."
                           },
@@ -257,7 +257,7 @@ function formatPercentage(input) {
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     submitHandler: function (form) {
-      alert("valid form submission"); // for demo
+      // alert("valid form submission"); // for demo
       // $( "#loan-ammount option:selected" ).text()
       $.ajax({
         url:

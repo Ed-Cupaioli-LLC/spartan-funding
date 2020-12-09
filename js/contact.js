@@ -52,7 +52,7 @@ $(function() {
       // Make sure the form is submitted to the destination defined
       // in the "action" attribute of the form when valid
       submitHandler: function (form) {
-        alert('valid form submission'); // for demo
+        // alert('valid form submission'); // for demo
         $( "#loan-ammount option:selected" ).text()
         $.ajax({
             url: "https://docs.google.com/forms/d/e/1FAIpQLScM7ypLv4wen7UzFS1CN9YuFSFmaWrFO0XJHoAyfbS6jnye6A/formResponse",
