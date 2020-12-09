@@ -18,15 +18,6 @@ $(function () {
     }
   })
 
-
-//   $('select[name="t_rel"]').change(function(){
-//     var selectedVal = $(this).val();
-//     console.log(selectedVal);
-
-//     $('.t_val').html('').html('<input type="password" class="form-control" value="">');
-// });
-
-
   $("input[name='entry.1525139678']").on({
     keyup: function() {
       formatCurrency($(this));
@@ -69,16 +60,37 @@ $("input[name='entry.1694289332']").on({
     formatData($(this))
   }
 })
+$("input[name='entry.670253592']").on({
+  keyup: function() {
+    phone($(this))
+  }
+})
+
 function formatNumber(n) {
   // format number 1000000 to 1,234,567
   return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+}
+function formatPhone(n){
+  return n.replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
 }
 function formatData(input){
   var input_val = input.val().split(',').join('')
   input_val = parseInt(input_val.match(/\d+/), 10);
   console.log(input_val)
 }
-
+function phone(input){
+  var input_val = input.val();
+  if (input_val === "") {
+    return;
+ } else {
+    // join number by .
+    input_val = formatPhone(input_val);
+    input_val = input_val ; 
+ }
+ 
+ // send updated string to input
+ input.val(input_val);
+}
 
 function formatCurrency(input) {
   var input_val = input.val();
@@ -199,9 +211,8 @@ function formatPercentage(input) {
                               email: true
                             },
          "entry.670253592": {required: true,
-                            digits: true,
-                            minlength: 10,
-                            maxlength: 10 },
+                              minlength: 12,
+                              maxlength: 12 },
         },
 
       // Specify validation error messages
@@ -228,14 +239,20 @@ function formatPercentage(input) {
         },
         "entry.152925055":{ required:"Please enter a valid address." },
         "entry.758167786": { required:""},
-        'entry.105311915': { required:""},
+        'entry.105311915': { required:"",
+                             digits:"",
+                             minlength: "",
+                             maxlength: "",},
         "entry.279358715": { required:""},
         "entry.784023676": { required:"Please provide an estimated price." },
         "entry.1694289332": { required:"" },
         "entry.1889879909":{ required:"Please provide an estimated down payment."},
         "entry.1499206232": { required:"Please don’t leave this blank." },
         "entry.1861675471":{ required:"Please enter a valid email address." },
-        "entry.670253592":{ required:"Please enter a valid phone number." },
+        "entry.670253592":{ required:"Please enter a valid phone number.",
+                            minlength: "Please enter a valid phone number.",
+                            maxlength: "Please enter a valid phone number."
+                          },
     },
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
