@@ -33,12 +33,15 @@ text: The information provided in this application will allow us to help you att
               <label class=' label body bold'>* Property Location</label>
               <!-- <div  id='form-field' class='form-field'>
                 <input class='body single-input' id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text">
-            </div> -->
-              
+            </div> --> 
+            <div  id='form-field' class='form-field'>
+                <input class='body single-input dollar' type='text' id="address-autocomplete" placeholder="Please enter your address here." placeholder='Address'>
+            </div>
                 <div class="property-loc">
-                    <input class='body one' type='text' name="entry.152925055" placeholder='Address' >
-                    <input class='body two' type='text' name= "entry.758167786" placeholder='City' >
-                    <select class='body three' type='text' name= 'entry.105311915' placeholder='State'>
+     
+                    <input class='body one' type='text' id="street-field" name="entry.152925055" placeholder='Address' >
+                    <input class='body two' type='text' id="city-field" name= "entry.758167786" placeholder='City' >
+                    <select class='body three' type='text' id="state-field" name= 'entry.105311915' placeholder='State'>
                         <option class='disabled' selected disabled>State</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
@@ -92,7 +95,7 @@ text: The information provided in this application will allow us to help you att
                             <option value="WI">Wisconsin</option>
                             <option value="WY">Wyoming</option>
                         </select>	
-                    <input class='body four' type='number' name="entry.279358715" placeholder='Zip Code'>
+                    <input class='body four' id="zip-code-field" type='number' name="entry.279358715" placeholder='Zip Code'>
                 </div>
             </div>
             <div  id='form-field' class='form-field'>

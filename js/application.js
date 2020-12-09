@@ -283,3 +283,122 @@ function formatPercentage(input) {
   });
 });
 
+//This requires the Google Maps API with the Google Places library. Include the libraries=places parameter when you first load the Google Maps API. For example:
+//<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+var FormAddressAutocomplete = {
+	initAutocomplete : function (autocompleteField, streetField, cityField, stateField, zipCodeField, fullAddressField, callbackFunction) {
+		
+		//Set the object properties using the supplied parameters from the initAutocomplete method:
+		this.streetField = streetField;
+		this.cityField = cityField;
+		this.stateField = stateField;
+		this.zipCodeField = zipCodeField;
+		this.fullAddressField = fullAddressField;
+		this.callbackFunction = callbackFunction;
+		
+		//Create the autocomplete object, restricting the search to geographical location types within the United States:
+		var options = {
+			types: ["geocode"],
+			componentRestrictions: {country: "US"}
+		};
+		
+		//Create the autocomplete object and bind it to the supplied input field using the options set above:
+		this.autocomplete = new google.maps.places.Autocomplete(document.getElementById(autocompleteField), options);
+		
+		//When the user selects an address from the dropdown, populate the address fields in the form:
+		this.autocomplete.addListener('place_changed', this.populateAddress);
+	},
+	
+	populateAddress : function() {
+		//Define which of the components we'd like to use from the Google Place address that gets returned:
+		var addressComponentTypes = {
+			street_number: "short_name",
+			route: "long_name",
+			locality: "long_name",
+			administrative_area_level_1: "short_name",
+			postal_code: "short_name"
+		};
+		
+		//Get the Google Place details from the autocomplete object:
+		var place = FormAddressAutocomplete.autocomplete.getPlace();
+		
+		//If no address is returned by autcomplete, return false:
+		if(!place.address_components) {
+			return false;
+		}
+		
+		//Build the address components array:
+		var addressComponent = [];
+		
+		for (var i = 0; i < place.address_components.length; i++) {
+			var addressType = place.address_components[i].types[0];
+			
+			if (addressComponentTypes[addressType]) {
+				addressComponent[addressType] = place.address_components[i][addressComponentTypes[addressType]];
+			}
+		}
+		
+		//Assign the component array values to some local properties and create the full address property:
+		var number = addressComponent["street_number"] || "";
+		var route = addressComponent["route"] || "";
+		var streetAddress = (addressComponent["street_number"] ? addressComponent["street_number"] + " " : "") + route;
+		if (streetAddress == "" && (place.name != addressComponent["locality"] && place.name != addressComponent["postal_code"]) && addressComponent["postal_code"]) {
+			streetAddress = place.name || false;
+		}
+		var city = addressComponent["locality"] || "";
+		var state = addressComponent["administrative_area_level_1"] || "";
+		var zipCode = addressComponent["postal_code"] || "";
+		var fullAddress = streetAddress ? streetAddress + ", " : "";
+		fullAddress += addressComponent["locality"] ? addressComponent["locality"] + ", " : ""; 
+		fullAddress += addressComponent["administrative_area_level_1"] ? addressComponent["administrative_area_level_1"]  : ""; 
+		fullAddress += addressComponent["postal_code"] ? ", " + addressComponent["postal_code"] : "";
+				
+		//populate the input fields if they were supplied to the initAutocomplete method:
+		if (typeof FormAddressAutocomplete.streetField !== "undefined" && FormAddressAutocomplete.streetField !== "") {
+			document.getElementById(FormAddressAutocomplete.streetField).value = streetAddress;
+		}
+
+		if (typeof FormAddressAutocomplete.cityField !== "undefined" && FormAddressAutocomplete.cityField !== "") {
+			document.getElementById(FormAddressAutocomplete.cityField).value = city;
+		}
+
+		if (typeof FormAddressAutocomplete.stateField !== "undefined" && FormAddressAutocomplete.stateField !== "") {
+			document.getElementById(FormAddressAutocomplete.stateField).value = state;
+		}
+
+		if (typeof FormAddressAutocomplete.zipCodeField !== "undefined" && FormAddressAutocomplete.zipCodeField !== "") {
+			document.getElementById(FormAddressAutocomplete.zipCodeField).value = zipCode;
+		}
+		
+		if (typeof FormAddressAutocomplete.fullAddressField !== "undefined" && FormAddressAutocomplete.fullAddressField !== "") {
+			document.getElementById(FormAddressAutocomplete.fullAddressField).value = fullAddress;
+		}
+		
+		//If a callback function was supplied to the initAutocomplete method, call it:
+		if (typeof FormAddressAutocomplete.callbackFunction !== "undefined" && FormAddressAutocomplete.callbackFunction !== "") {
+			FormAddressAutocomplete.callbackFunction(fullAddress);
+		}
+	}
+};
+
+//// Class script above. Example of external setup scripts and usage below. ////
+
+//Example Google API callback function that is used to setup this address autocomplete class. (gets called by the Google library script referenced in the HTML body):
+function autocompleteStart () {
+	//Don't submit the form when a user selects an address with the enter key:
+	var input = document.getElementById('address-autocomplete');
+	google.maps.event.addDomListener(input, 'keydown', function (event) {
+		if (event.keyCode === 13) {
+			event.preventDefault();
+		}
+	});
+	
+	//Setup autocomplete:
+	return FormAddressAutocomplete.initAutocomplete("address-autocomplete", "street-field", "city-field", "state-field", "zip-code-field", "full-address-field", autocompleteFinished);
+}
+
+//Example of this address autocomplete class's callback function. If the callback function parameter is passed to the initAutocomplete method it will be called after user selects an address. The full address string is passed back to the callback function:
+function autocompleteFinished(data) {
+	alert("Callback Function | Full Address String: " + data);
+}
