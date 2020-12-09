@@ -47,7 +47,7 @@ contact: Are you ready to talk to a Spartan?
     <div class='type'>
       <h2 class='item'>{{ item.what }}</h2>
       <h1 class='title'>{{ item.type }}</h1>
-      <a href='{{item.href }}'><button class='button-text button-white'>Learn More</button></a>
+      <button class='button-text button-white' onclick="location.href='{{item.href }}'" >Learn More</button>
     </div>
     {% endfor %}
   </div>
