@@ -18,15 +18,6 @@ $(function () {
     }
   })
 
-
-//   $('select[name="t_rel"]').change(function(){
-//     var selectedVal = $(this).val();
-//     console.log(selectedVal);
-
-//     $('.t_val').html('').html('<input type="password" class="form-control" value="">');
-// });
-
-
   $("input[name='entry.1525139678']").on({
     keyup: function() {
       formatCurrency($(this));
@@ -71,7 +62,7 @@ $("input[name='entry.1694289332']").on({
 })
 $("input[name='entry.670253592']").on({
   keyup: function() {
-    formatPhone($(this))
+    formatNumber($(this))
   }
 })
 
@@ -209,10 +200,7 @@ function formatPercentage(input) {
          "entry.1861675471": {required: true,
                               email: true
                             },
-         "entry.670253592": {required: true,
-                            digits: true,
-                            minlength: 10,
-                            maxlength: 10 },
+         "entry.670253592": {required: true},
         },
 
       // Specify validation error messages
