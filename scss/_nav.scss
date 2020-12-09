@@ -72,11 +72,15 @@
         
         .round-button{        
             border: 2px solid #5387A2;
+            p{
+                text-decoration: none !important;
+            }
             &:hover{
                 background-color: $charcoal-blue;
                 border-color: $charcoal-blue;
                 p{
                     color: $white;
+                   
                 }
                 
             }
@@ -195,8 +199,13 @@
             
         }
         .button-white{
+            color: $white !important;
             margin: 3rem;
             margin-left: 8.696vw;
+            text-decoration: none !important;
+            &:hover{
+                color: $charcoal-blue !important;
+            }
             @include bp-large{
                 max-width: 34.2rem;
             }
