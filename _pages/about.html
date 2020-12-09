@@ -32,14 +32,14 @@ talk: Are you ready to talk to a Spartan?
 ---
 <div id='about'>
     <div class='spartan'>
-        <img src='/img/about/spartan-blue.svg'>
+        <img alt='' src='/img/about/spartan-blue.svg'>
     </div>
     <h1 class='title'>{{ page.header }}</h1>
     <div class='content'>
     {% for person in page.people.list %}
     <div class='person'>
         <div class='img'>
-            <img src='{{ person.img }}'>
+            <img alt='person-image' src='{{ person.img }}'>
         </div>
         <h2>{{ person.name }}</h2>
         <h3>{{ person.title }}</h3>
