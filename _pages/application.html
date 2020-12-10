@@ -32,13 +32,9 @@ text: The information provided in this application will allow us to help you att
             <div class="form-field">
               <label class=' label body bold'>* Property Location</label>
               
-            <div  id='form-field' class='form-field'>
-                <input class='body single-input dollar' type='text' id="address-autocomplete" placeholder="Please enter your address here." placeholder='Address'>
-                
-            </div>
-                <div class="property-loc" style='visibility: hidden; height:0; margin:unset'>
+                <div class="property-loc">
      
-                    <input class='body one' type='text'  id="street-field" name="entry.152925055" placeholder='Address' >
+                    <input class='body one' type='text'  id="address-autocomplete"  name="entry.152925055" placeholder="Address" >
                     <input class='body two' type='text'  id="city-field" name= "entry.758167786" placeholder='City' >
                     <select class='body three' type='text'  id="state-field" name= 'entry.105311915' placeholder='State'>
                         <option class='disabled' selected disabled>State</option>
@@ -94,7 +90,7 @@ text: The information provided in this application will allow us to help you att
                             <option value="WI">Wisconsin</option>
                             <option value="WY">Wyoming</option>
                         </select>	
-                    <input class='body four' id="zip-code-field"  type='text' name="entry.279358715" placeholder='Zip Code'>
+                    <input class='body four' id="zip-code-field"  type='number' name="entry.279358715" onKeyPress="if(this.value.length==5) return false;"placeholder='Zip Code'>
                 </div>
             </div>
          

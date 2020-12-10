@@ -198,16 +198,17 @@ function formatPercentage(input) {
         "entry.152925055": { required: true },
         "entry.758167786":  { required: true },
         "entry.105311915": { required: true },
-         "entry.279358715": {required: true},
-         "entry.784023676":  {required: true,
+        "entry.105311915": { required: true },
+        "entry.279358715": {required: true},
+        "entry.784023676": {required: true,
                             },
-         "entry.1694289332":  {required: true},
-         "entry.1889879909":  {required: true},
-         "entry.1499206232": {required: true},
-         "entry.1861675471": {required: true,
+        "entry.1694289332": {required: true},
+        "entry.1889879909":  {required: true},
+        "entry.1499206232": {required: true},
+        "entry.1861675471": {required: true,
                               email: true
                             },
-         "entry.670253592": {required: true,
+        "entry.670253592": {required: true,
                               minlength: 12,
                               maxlength: 12 },
         },
@@ -236,7 +237,6 @@ function formatPercentage(input) {
         },
         "entry.152925055":{ required:"Please enter a valid address." },
         "entry.758167786": { required:""},
-        'entry.105311915': { required:""},
         "entry.279358715": { required:""},
         "entry.784023676": { required:"Please provide an estimated price." },
         "entry.1694289332": { required:"" },
@@ -276,15 +276,14 @@ function formatPercentage(input) {
     },
   });
 });
-
 //This requires the Google Maps API with the Google Places library. Include the libraries=places parameter when you first load the Google Maps API. For example:
 //<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
 var FormAddressAutocomplete = {
-	initAutocomplete : function (autocompleteField, streetField, cityField, stateField, zipCodeField, fullAddressField, callbackFunction) {
+	initAutocomplete : function (autocompleteField, cityField, stateField, zipCodeField, fullAddressField, callbackFunction) {
 		
 		//Set the object properties using the supplied parameters from the initAutocomplete method:
-		this.streetField = streetField;
+		this.autocompleteField= autocompleteField;
 		this.cityField = cityField;
 		this.stateField = stateField;
 		this.zipCodeField = zipCodeField;
@@ -293,12 +292,15 @@ var FormAddressAutocomplete = {
 		
 		//Create the autocomplete object, restricting the search to geographical location types within the United States:
 		var options = {
-			types: ["geocode"],
-			componentRestrictions: {country: "US"}
+			types: ["address"],
+			componentRestrictions: {country: "US"},
+		
 		};
 		
 		//Create the autocomplete object and bind it to the supplied input field using the options set above:
 		this.autocomplete = new google.maps.places.Autocomplete(document.getElementById(autocompleteField), options);
+		console.log(this.autocomplete)
+		
 		
 		//When the user selects an address from the dropdown, populate the address fields in the form:
 		this.autocomplete.addListener('place_changed', this.populateAddress);
@@ -349,10 +351,9 @@ var FormAddressAutocomplete = {
 		fullAddress += addressComponent["postal_code"] ? ", " + addressComponent["postal_code"] : "";
 				
 		//populate the input fields if they were supplied to the initAutocomplete method:
-		if (typeof FormAddressAutocomplete.streetField !== "undefined" && FormAddressAutocomplete.streetField !== "") {
-			document.getElementById(FormAddressAutocomplete.streetField).value = streetAddress;
+		if (typeof FormAddressAutocomplete.autocompleteField !== "undefined" && FormAddressAutocomplete.autocompleteField !== "") {
+			document.getElementById(FormAddressAutocomplete.autocompleteField).value = streetAddress;
 		}
-
 		if (typeof FormAddressAutocomplete.cityField !== "undefined" && FormAddressAutocomplete.cityField !== "") {
 			document.getElementById(FormAddressAutocomplete.cityField).value = city;
 		}
@@ -366,12 +367,12 @@ var FormAddressAutocomplete = {
 		}
 		
 		if (typeof FormAddressAutocomplete.fullAddressField !== "undefined" && FormAddressAutocomplete.fullAddressField !== "") {
-			document.getElementById(FormAddressAutocomplete.fullAddressField).value = fullAddress;
+			document.getElementById(FormAddressAutocomplete.fullAddressField).value = streetAddress;
 		}
 		
 		//If a callback function was supplied to the initAutocomplete method, call it:
 		if (typeof FormAddressAutocomplete.callbackFunction !== "undefined" && FormAddressAutocomplete.callbackFunction !== "") {
-			FormAddressAutocomplete.callbackFunction(fullAddress);
+			FormAddressAutocomplete.callbackFunction(streetAddress);
 		}
 	}
 };
@@ -389,7 +390,7 @@ function autocompleteStart () {
 	});
 	
 	//Setup autocomplete:
-	return FormAddressAutocomplete.initAutocomplete("address-autocomplete", "street-field", "city-field", "state-field", "zip-code-field", "full-address-field", autocompleteFinished);
+	return FormAddressAutocomplete.initAutocomplete("address-autocomplete", "city-field", "state-field", "zip-code-field", "full-address-field", autocompleteFinished);
 }
 
 //Example of this address autocomplete class's callback function. If the callback function parameter is passed to the initAutocomplete method it will be called after user selects an address. The full address string is passed back to the callback function:
