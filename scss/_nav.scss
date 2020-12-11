@@ -65,7 +65,7 @@
         }
     }
     .menu{
-        display: none;
+        display: flex;
         flex-direction: row;
         position: relative;
         width: 64rem;
@@ -166,15 +166,20 @@
            
     
        }
+       
     .hide{
         display: none;
+       
     }
     .display{
         display: flex;
+      
     }
     .display-mobile{
         display:block;
+        
     }
+    
     .show {
         display: flex;
         width: 70vw;
@@ -187,6 +192,7 @@
         z-index: 3;
         flex-direction: column;
         padding-top: 10.5rem;
+        
         @include bp-small{
             width: 100vw;
         }
@@ -203,16 +209,7 @@
             }
             
         }
-        // .pop{
-        //     padding-left: 4vw;
-        //     padding-bottom: .3rem;
-        // }
-        // .exit{
-        //     position: absolute;
-        //     width:6.234rem;
-        //     top: 2.5rem;
-        //     right: 2.5rem;
-        // }
+     
 
         .mobile{
             .arrow{

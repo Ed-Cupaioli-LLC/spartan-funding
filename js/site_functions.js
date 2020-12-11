@@ -85,7 +85,7 @@ $(function(){
             $(this).removeClass('active')
             $('.slide').addClass('hide').removeClass('show')
             $('body,html').css('position','unset');
-            $('#nav .menu').attr("style", "display: none")
+           
             }
     })
 

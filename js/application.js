@@ -1,7 +1,11 @@
 $(function () {
-  $('input[id="city-field"]').on('change', function() {
-    $(this).valid();  // trigger validation test
-});
+  $('#state-field').change (function() {
+   console.log($(this).val())
+
+    }
+    // trigger validation test
+    
+);
   $("input[name='entry.1486781400']").on("click", function () {
     console.log($(this).val())
     if($(this).val()==='purchase'){
@@ -150,17 +154,19 @@ function formatPercentage(input) {
     var cost = $(this).val().split(',').join('')
     cost = parseInt(cost.match(/\d+/), 10);
     console.log(cost);
+    $("#percent").val('');
+    $("#dollar").val('');
 
-    var percent = parseInt($("#percent").val().match(/\d+/), 10);
-    var dollar = $("#dollar").val().split(',').join('')
-    dollar = parseInt(dollar.match(/\d+/), 10);
-    if (isNaN(cost) === true) {
-      $("#percent").val(0 + '%');
-      $("#dollar").val('$' +0);
-    } else if (isNaN(percent) === false && isNaN(dollar) === false) {
-      $("#percent").val(Math.ceil(dollar / cost)+'%');
-      $("#dollar").val('$' + Math.ceil(cost * percent));
-    }
+    // var percent = parseInt($("#percent").val().match(/\d+/), 10);
+    // var dollar = $("#dollar").val().split(',').join('')
+    // dollar = parseInt(dollar.match(/\d+/), 10);
+    // if (isNaN(cost) === true) {
+    //   $("#percent").val(0 + '%');
+    //   $("#dollar").val('$' +0);
+    // } else if (isNaN(percent) === false && isNaN(dollar) === false) {
+    //   $("#percent").val(Math.ceil(dollar / cost)+'%');
+    //   $("#dollar").val('$' + Math.ceil(cost * percent));
+    // }
   });
 
   $("#percent").on("keyup", function () {
@@ -244,7 +250,7 @@ function formatPercentage(input) {
         "entry.279358715": { required:""},
         "entry.784023676": { required:"Please provide estimated home value." },
         "entry.1694289332": { required:"" },
-        "entry.1889879909": { required:"Please provide estimated ammount."},
+        "entry.1889879909": { required:"Please provide estimated amount."},
         "entry.1499206232": { required:"Please don’t leave this blank." },
         "entry.1861675471": { required:"Please enter a valid email address." },
         "entry.670253592": { required:"Please enter a valid phone number.",
