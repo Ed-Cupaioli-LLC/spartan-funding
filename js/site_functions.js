@@ -1,22 +1,24 @@
 $(function(){
 
-  //getting current width of user screen size 
+  // getting current width of user screen size 
   $(window).ready(function() {
     switchCSS($(this).width());
     
     $(window).resize(function() {
       switchCSS($(this).width());
     });
+
+
   });
   // Function for navigation display between web and mobile views
   function switchCSS(windowsize) {
-    if (windowsize < 1025) {
-        $('#nav .menu').attr("style", "display: none")
-        $('#nav .hamburger-menu').attr("style", "display: block")
+    if (windowsize < 1025 || $(document).width()<1025 ) {
+        $('#nav .menu').addClass('hide').removeClass('display')
+        $('#nav .hamburger-menu').addClass('display-mobile').removeClass('hide')
     } 
     else{
-      $('#nav .menu').attr("style", "display: flex")
-      $('#nav .hamburger-menu').attr("style", "display: none")
+      $('#nav .menu').addClass('display').removeClass('hide')
+      $('#nav .hamburger-menu').addClass('hide').removeClass('display-mobile')
     }
   }
   // Navigation hide on scroll show on scroll up 
@@ -83,6 +85,7 @@ $(function(){
             $(this).removeClass('active')
             $('.slide').addClass('hide').removeClass('show')
             $('body,html').css('position','unset');
+            $('#nav .menu').attr("style", "display: none")
             }
     })
 

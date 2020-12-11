@@ -65,7 +65,7 @@
         }
     }
     .menu{
-        display: flex;
+        display: none;
         flex-direction: row;
         position: relative;
         width: 64rem;
@@ -138,6 +138,7 @@
         
     }
     .hamburger-menu{
+            display:none;
             z-index:10;
             margin: auto 0;
             cursor: pointer;
@@ -168,6 +169,12 @@
     .hide{
         display: none;
     }
+    .display{
+        display: flex;
+    }
+    .display-mobile{
+        display:block;
+    }
     .show {
         display: flex;
         width: 70vw;
@@ -196,16 +203,16 @@
             }
             
         }
-        .pop{
-            padding-left: 4vw;
-            padding-bottom: .3rem;
-        }
-        .exit{
-            position: absolute;
-            width:6.234rem;
-            top: 2.5rem;
-            right: 2.5rem;
-        }
+        // .pop{
+        //     padding-left: 4vw;
+        //     padding-bottom: .3rem;
+        // }
+        // .exit{
+        //     position: absolute;
+        //     width:6.234rem;
+        //     top: 2.5rem;
+        //     right: 2.5rem;
+        // }
 
         .mobile{
             .arrow{
