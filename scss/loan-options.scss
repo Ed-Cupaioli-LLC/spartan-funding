@@ -43,6 +43,9 @@
                     font-weight: 500;
                 }
             }
+            .fun{
+                color: $charcoal-blue;
+            }
             .content{
                 padding-bottom: 3.2rem;
                 max-width: 81.823vw;
@@ -50,13 +53,19 @@
             }
             ul{
                 padding-left:3rem;
+                padding-bottom: 3.2rem;
             }
             .button{
                 background-color: $charcoal-blue;
                 color: $white;
                 border: $charcoal-blue;
                 text-align: center;
-                margin-top: 4.4rem;
+                border: $charcoal-blue solid 2px;
+                &:hover{
+                    border: $steel-blue 2px solid;
+                    background-color: white;
+                    color: $charcoal-blue;
+                }
             }
             .expand{
                 color: $charcoal-blue;
