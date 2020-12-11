@@ -5,6 +5,7 @@ layout: compress
 <html lang="en">
 <head>
     {% include head.html %}
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdf3k_Rz12piuqEQ3hr8b1z-cOKwhdPqY&&libraries=places&callback=autocompleteStart"  defer></script>
 </head>
 <body>
     {% if site.gtm %}
@@ -18,10 +19,12 @@ layout: compress
     {{ content }}
     {% include footer.html %}
     <!-- Scripts -->
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdf3k_Rz12piuqEQ3hr8b1z-cOKwhdPqY&libraries=places"></script> -->
+   
+  
     <!-- Sitewide scripts  -->
 	<script src="{{ '/js/min/site_functions.min.js' | relative_url }}"></script>
     <!-- Layout -->

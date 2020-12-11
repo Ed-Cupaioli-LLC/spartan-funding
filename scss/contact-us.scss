@@ -66,6 +66,7 @@
                 .form-field{
                     display: flex;
                     flex-direction: column;
+                    
                     &:first-child {
                         label{
                             margin-top: 0;
@@ -92,6 +93,7 @@
                         color: $aa-gray;
                         padding-left: 1.250vw;
                         background-color: unset;
+                        font-family: $body-font;
                         @include bp-large{
                             width: 82.609vw;
                             margin: 0 auto;

@@ -23,22 +23,20 @@ text: The information provided in this application will allow us to help you att
             <div class="form-field radio-field">
                 <label class=' label body bold'>* Loan Purpose</label>
                     <div class="radio-options loan-type">
-                        <input style='display: none'class="loan-type" type="radio" name='entry.1486781400' id="purchase" value="purchase"><label id='image' class='option image bold body' name='entry.1486781400' for="purchase"><i class="fa fa-home"></i> Purchase</label> <label id='error' for="entry.1486781400" class="error" style="display: none;">Please select Loan Type</label>
-                        <input style='display: none' class="loan-type"type="radio" name='entry.1486781400' id="refinance" value="refinance"><label id='image' class='option image bold body' name='entry.1486781400' for="refinance"><i class="fa fa-dollar-sign"></i>Refinance</label>
+                        <input style='display: none'class="loan-type" type="radio" name='entry.1486781400' id="purchase" value="Purchase"><label id='image' class='option image bold body' name='entry.1486781400' for="purchase"><i class="fa fa-home"></i> Purchase</label> <label id='error' for="entry.1486781400" class="error" style="display: none;">Please select Loan Type</label>
+                        <input style='display: none' class="loan-type"type="radio" name='entry.1486781400' id="refinance" value="Refinance"><label id='image' class='option image bold body' name='entry.1486781400' for="refinance"><i class="fa fa-dollar-sign"></i>Refinance</label>
                     </div>
             </div>
 
 
             <div class="form-field">
               <label class=' label body bold'>* Property Location</label>
-              <!-- <div  id='form-field' class='form-field'>
-                <input class='body single-input' id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text">
-            </div> -->
               
                 <div class="property-loc">
-                    <input class='body one' type='text' name="entry.152925055" placeholder='Address' >
-                    <input class='body two' type='text' name= "entry.758167786" placeholder='City' >
-                    <select class='body three' type='text' name= 'entry.105311915' placeholder='State'>
+     
+                    <input class='body one' type='text'  id="address-autocomplete"  name="entry.152925055" placeholder="Address" >
+                    <input class='body two' type='text'  id="city-field" name= "entry.758167786" placeholder='City' >
+                    <select class='body three' type='text'  id="state-field" name= 'entry.105311915' placeholder='State'>
                         <option class='disabled' selected disabled>State</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
@@ -92,9 +90,10 @@ text: The information provided in this application will allow us to help you att
                             <option value="WI">Wisconsin</option>
                             <option value="WY">Wyoming</option>
                         </select>	
-                    <input class='body four' type='number' name="entry.279358715" placeholder='Zip Code'>
+                    <input class='body four' id="zip-code-field"  type='number' name="entry.279358715" onKeyPress="if(this.value.length==5) return false;"placeholder='Zip Code'>
                 </div>
             </div>
+         
             <div  id='form-field' class='form-field'>
                 <label class=' label body bold purchasing'for="currency-field">* Purchase Price</label> 
                 <label class='label body bold refinancing' for="currency-field" style='display:none'>* Refinancing</label> 
@@ -164,7 +163,7 @@ text: The information provided in this application will allow us to help you att
             </div>
             <div  id='form-field' class='form-field'>
                 <label class='label body bold'>* Phone Number</label>
-                <input class='body single-input' type='text' maxlength="12" name="entry.670253592" placeholder='555-555-5555'>
+                <input class='body single-input' type='text' maxlength="14" name="entry.670253592" placeholder='(555) 555-5555'>
             </div>
             
             <button type='submit' class='button button-text'>Submit Application</button>

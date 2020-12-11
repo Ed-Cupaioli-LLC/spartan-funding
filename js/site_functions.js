@@ -1,22 +1,24 @@
 $(function(){
 
-  //getting current width of user screen size 
+  // getting current width of user screen size 
   $(window).ready(function() {
     switchCSS($(this).width());
     
     $(window).resize(function() {
       switchCSS($(this).width());
     });
+
+
   });
   // Function for navigation display between web and mobile views
   function switchCSS(windowsize) {
-    if (windowsize < 1025) {
-        $('#nav .menu').attr("style", "display: none")
-        $('#nav .hamburger-menu').attr("style", "display: block")
+    if (windowsize < 1025 || $(document).width()<1025 ) {
+        $('#nav .menu').addClass('hide').removeClass('display')
+        $('#nav .hamburger-menu').addClass('display-mobile').removeClass('hide')
     } 
     else{
-      $('#nav .menu').attr("style", "display: flex")
-      $('#nav .hamburger-menu').attr("style", "display: none")
+      $('#nav .menu').addClass('display').removeClass('hide')
+      $('#nav .hamburger-menu').addClass('hide').removeClass('display-mobile')
     }
   }
   // Navigation hide on scroll show on scroll up 
@@ -69,19 +71,23 @@ $(function(){
         $('.img').removeClass('swirl')
       } 
     })
-  
-      //open close navigation for mobile and tablet views
-      $('#nav .hamburger-menu').click(function(){
-          $('#nav .show').attr('style', 'display: flex');
-          $('body,html').css('position','fixed');
-      })
-      
-      $('#nav .exit').click(function(){
-          $('#nav .show').attr('style', 'display: none');
-          $(" #nav .dropdown-mobile").attr("style", "display: none")
-          $('#nav .arrow').removeClass('1').addClass('0')
-          $('body,html').css('position','unset');
-      })
+  //hamburger menu
+
+      $('.hamburger-menu').click(function(){
+        if ($(this).children('div').hasClass('change') !== true){
+            $(this).addClass('active')
+            $(this).children('div').addClass('change')
+            $('.slide').addClass('show').removeClass('hide')
+            $('body,html').css('position','fixed');
+        }
+        else if ($(this).children('div').hasClass('change') === true){
+            $(this).children('div').removeClass('change')
+            $(this).removeClass('active')
+            $('.slide').addClass('hide').removeClass('show')
+            $('body,html').css('position','unset');
+           
+            }
+    })
 
 });
 

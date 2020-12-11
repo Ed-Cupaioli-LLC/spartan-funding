@@ -103,11 +103,15 @@
             display: flex;
             flex-direction: row;
             padding-top: 14rem;
+            width: 50vw;
+            justify-content: flex-end;
             @include bp-large{
                 padding-top: 0;
                 flex-direction: column;
-                width: 7rem;
+                
+              
             }
+           
 
             .body{
                 color: $white;
@@ -120,7 +124,9 @@
                     padding-left: unset;
                     font-size: 1.8rem;
                     padding-bottom: 3rem;
+                    
                 }
+                
                
             }
         }
@@ -138,6 +144,7 @@
             
             p{
                 color: $white;
+                font-weight: normal;
                 font-size: 2.3rem;
                 text-align: right;
                 line-height: 3.6rem;
@@ -166,9 +173,11 @@
                     font-size: 1.8rem;
                     padding-top: 4.7rem;
                 }
+               b{
                 @include bp-small{
                     text-decoration: underline;
                 }
+               }
                 .text-link{
                     color: $white;
 
