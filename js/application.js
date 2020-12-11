@@ -74,7 +74,7 @@ function formatNumber(n) {
   return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 }
 function formatPhone(n){
-  return n.replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+  return n.replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
 }
 function formatData(input){
   var input_val = input.val().split(',').join('')
@@ -212,8 +212,8 @@ function formatPercentage(input) {
                               email: true
                             },
         "entry.670253592": {required: true,
-                              minlength: 12,
-                              maxlength: 12 },
+                              minlength: 14,
+                              maxlength: 14 },
         },
 
       // Specify validation error messages

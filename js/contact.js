@@ -7,7 +7,7 @@ $(function() {
   })
  
   function formatPhone(n){
-    return n.replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+    return n.replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
   }
 
   function phone(input){
@@ -34,8 +34,8 @@ $(function() {
         },
         'entry.1757091664': {
                 required: true,
-                minlength: 12,
-                maxlength: 12,
+                minlength: 14,
+                maxlength: 14,
         },
     },
       // Specify validation error messages
