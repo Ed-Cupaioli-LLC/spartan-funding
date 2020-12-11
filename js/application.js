@@ -1,4 +1,7 @@
 $(function () {
+  $('input[id="city-field"]').on('change', function() {
+    $(this).valid();  // trigger validation test
+});
   $("input[name='entry.1486781400']").on("click", function () {
     console.log($(this).val())
     if($(this).val()==='purchase'){
@@ -237,10 +240,11 @@ function formatPercentage(input) {
         },
         "entry.152925055":{ required:"Please enter a valid address." },
         "entry.758167786": { required:""},
+        "entry.105311915": { required:""},
         "entry.279358715": { required:""},
-        "entry.784023676": { required:"Please provide an estimated price." },
+        "entry.784023676": { required:"Please provide estimated home value." },
         "entry.1694289332": { required:"" },
-        "entry.1889879909": { required:"Please provide an estimated down payment."},
+        "entry.1889879909": { required:"Please provide estimated ammount."},
         "entry.1499206232": { required:"Please don’t leave this blank." },
         "entry.1861675471": { required:"Please enter a valid email address." },
         "entry.670253592": { required:"Please enter a valid phone number.",
@@ -303,7 +307,9 @@ var FormAddressAutocomplete = {
 		
 		
 		//When the user selects an address from the dropdown, populate the address fields in the form:
-		this.autocomplete.addListener('place_changed', this.populateAddress);
+		this.autocomplete.addListener('place_changed', this.populateAddress, function() {
+      this.autocomplete.valid();
+  });
 	},
 	
 	populateAddress : function() {
@@ -352,7 +358,8 @@ var FormAddressAutocomplete = {
 				
 		//populate the input fields if they were supplied to the initAutocomplete method:
 		if (typeof FormAddressAutocomplete.autocompleteField !== "undefined" && FormAddressAutocomplete.autocompleteField !== "") {
-			document.getElementById(FormAddressAutocomplete.autocompleteField).value = streetAddress;
+      document.getElementById(FormAddressAutocomplete.autocompleteField).value = streetAddress;
+      
 		}
 		if (typeof FormAddressAutocomplete.cityField !== "undefined" && FormAddressAutocomplete.cityField !== "") {
 			document.getElementById(FormAddressAutocomplete.cityField).value = city;
@@ -390,10 +397,10 @@ function autocompleteStart () {
 	});
 	
 	//Setup autocomplete:
-	return FormAddressAutocomplete.initAutocomplete("address-autocomplete", "city-field", "state-field", "zip-code-field", "full-address-field", autocompleteFinished);
+	return FormAddressAutocomplete.initAutocomplete("address-autocomplete", "city-field", "state-field", "zip-code-field", "full-address-field");
 }
 
 //Example of this address autocomplete class's callback function. If the callback function parameter is passed to the initAutocomplete method it will be called after user selects an address. The full address string is passed back to the callback function:
-function autocompleteFinished(data) {
-	alert("Callback Function | Full Address String: " + data);
-}
+// function autocompleteFinished(data) {
+// 	alert("Callback Function | Full Address String: " + data);
+// }

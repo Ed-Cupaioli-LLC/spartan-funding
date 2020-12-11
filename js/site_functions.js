@@ -69,19 +69,22 @@ $(function(){
         $('.img').removeClass('swirl')
       } 
     })
-  
-      //open close navigation for mobile and tablet views
-      $('#nav .hamburger-menu').click(function(){
-          $('#nav .show').attr('style', 'display: flex');
-          $('body,html').css('position','fixed');
-      })
-      
-      $('#nav .exit').click(function(){
-          $('#nav .show').attr('style', 'display: none');
-          $(" #nav .dropdown-mobile").attr("style", "display: none")
-          $('#nav .arrow').removeClass('1').addClass('0')
-          $('body,html').css('position','unset');
-      })
+  //hamburger menu
+
+      $('.hamburger-menu').click(function(){
+        if ($(this).children('div').hasClass('change') !== true){
+            $(this).addClass('active')
+            $(this).children('div').addClass('change')
+            $('.slide').addClass('show').removeClass('hide')
+            $('body,html').css('position','fixed');
+        }
+        else if ($(this).children('div').hasClass('change') === true){
+            $(this).children('div').removeClass('change')
+            $(this).removeClass('active')
+            $('.slide').addClass('hide').removeClass('show')
+            $('body,html').css('position','unset');
+            }
+    })
 
 });
 
