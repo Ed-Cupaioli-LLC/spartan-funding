@@ -45,7 +45,7 @@ $(function(){
   function showNav() {
     $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
     $('#nav').addClass('scroll-up');
-    console.log($(window).scrollTop())
+  
     if ($(window).scrollTop() < 100) {
       $('#nav').removeClass('scroll-up'); 
     }
@@ -53,7 +53,7 @@ $(function(){
 
   // function for underlining current links in the nav bar 
       $('#nav a').each(function() {
-        //console.log($(this).attr('href'));
+       
         if ((window.location.pathname.indexOf($(this).attr('href'))) > -1) {
             $(this).children().addClass('currentlyActive');
         }
