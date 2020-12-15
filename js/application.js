@@ -15,7 +15,8 @@ $(function () {
   // })
 
   $("input[name='entry.1486781400']").on("click", function () {
-    if($(this).val()==='purchase'){
+    console.log($(this).val())
+    if($(this).val()==='Purchase'){
       $('.purchasing').show();
       $('.refinancing').hide();
       $('#percent').attr('placeholder', '20%');

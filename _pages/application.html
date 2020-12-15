@@ -30,7 +30,7 @@ text: The information provided in this application will allow us to help you att
 
 
             <div class="form-field">
-              <label class=' label body bold' for='address-autocomplete city-field state-field zip-code-field'>* Property Location</label>
+              <label class=' label body bold'>* Property Location</label>
               
                 <div class="property-loc">
      
@@ -90,7 +90,7 @@ text: The information provided in this application will allow us to help you att
                             <option value="WI">Wisconsin</option>
                             <option value="WY">Wyoming</option>
                         </select>	
-                    <input class='body four' id="zip-code-field"  type='number' name="entry.279358715" onKeyPress="if(this.value.length==5) return false;"placeholder='Zip Code'>
+                    <input class='body four' id="zip-code-field"  type='number' name="entry.279358715" onKeyPress="if(this.value.length==5) return false;"placeholder='Zip Code' >
                 </div>
             </div>
          
@@ -101,8 +101,8 @@ text: The information provided in this application will allow us to help you att
                 
             </div>
             <div class='form-field'>
-                <label class=' label body bold purchasing' for='percent dollar'>* Down Payment</label>
-                <label class=' label body bold refinancing' style='display:none' for='percent dollar'>* Loan Amount</label>
+                <label class=' label body bold purchasing'>* Down Payment</label>
+                <label class=' label body bold refinancing' style='display:none'>* Loan Amount</label>
                 <div class="down-pay">
                     <input class='body one ' id='percent' type='text' onfocus="this.value=''" name="entry.1694289332"  maxlength = "4" placeholder='20%'>
                     <input class='body two ' id="dollar" type='text'  onfocus="this.value=''"name="entry.1889879909"   placeholder='$60,000' >
@@ -154,21 +154,20 @@ text: The information provided in this application will allow us to help you att
         </div>
 
             <div id='form-field' class='form-field'>
-                <label class=' label body bold' for='name'>* Your Name</label>
-                <input class='body single-input' type='text' name="entry.1499206232" id='name' placeholder='Jane Doe' >
+                <label class=' label body bold'>* Your Name</label>
+                <input class='body single-input' type='text' name="entry.1499206232" placeholder='Jane Doe' >
             </div>
             <div  id='form-field' class='form-field'>
-                <label class=' label body bold' for='e-mail'>* Your Email</label>
-                <input class='body single-input' type='text' name="entry.1861675471" id='e-mail' placeholder='janedoe@test.com' >
+                <label class=' label body bold'>* Your Email</label>
+                <input class='body single-input' type='text' name="entry.1861675471" placeholder='janedoe@test.com' >
             </div>
             <div  id='form-field' class='form-field'>
-                <label class='label body bold' for='phone-number'>* Phone Number</label>
-                <input class='body single-input' type='text' maxlength="14" id='phone-number' name="entry.670253592" placeholder='(555) 555-5555'>
+                <label class='label body bold'>* Phone Number</label>
+                <input class='body single-input' type='text' maxlength="14" name="entry.670253592" placeholder='(555) 555-5555'>
             </div>
             
             <button type='submit' class='button button-text'>Submit Application</button>
     </form>
 </div>
 <div class='success'><div class='success-message'><div class='background'><img  alt='' src='/img/apply/thumbs-up.svg'></div><p class='body'>Thank you for your application, we will be contacting you soon!</p></div></div>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdf3k_Rz12piuqEQ3hr8b1z-cOKwhdPqY&&libraries=places&callback=autocompleteStart"  defer></script>
 </div>
