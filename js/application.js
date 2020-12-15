@@ -15,6 +15,8 @@ $(function () {
   // })
 
   $("input[name='entry.1486781400']").on("click", function () {
+    console.log($(this).val())
+
     if($(this).val()==='Purchase'){
       $('.purchasing').show();
       $('.refinancing').hide();
