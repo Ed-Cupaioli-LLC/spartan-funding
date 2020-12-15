@@ -50,6 +50,9 @@
                 font-size: 2rem;
                 line-height: 2.5rem;
                 padding-top: 3.2rem;
+                a{
+                    color: $charcoal-blue;
+                }
                 @include bp-large{
                     padding-top: 2.5rem;
                     padding-bottom: 4.2rem;
