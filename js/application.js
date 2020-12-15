@@ -154,6 +154,7 @@ function formatPercentage(input) {
       dollar = dollar.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
       $("#dollar").val('$'+ dollar);
       $('#dollar').removeClass('error')
+      $('.down-pay').find('label').remove()
     }
   });
 
@@ -167,6 +168,7 @@ function formatPercentage(input) {
     } else {
       $("#percent").val(Math.ceil((val * 100) / num)  + '%');
       $('#percent').removeClass('error')
+      $('.down-pay').find('label').remove()
     }
   }); 
     $("form[name='application-form']").validate({
