@@ -1,13 +1,20 @@
 $(function () {
-  $('#state-field').change (function() {
-   console.log($(this).val())
+  // $('#address-autocomplete').on('focusout', function(){
+  //   if($(this).val() !== ''){
+  //     console.log($('#city-field').val())
+  //     if($('#city-field').hasClass('error')){
+  //       $("#city-field").removeClass('error')
+  //     }
+  //     if($('#state-field').hasClass('error')){
+  //       $("#state-field").removeClass('error')
+  //     }
+  //     if($('#zip-code-field').hasClass('error')){
+  //       $("#zip-code-field").removeClass('error')
+  //     }
+  //   }
+  // })
 
-    }
-    // trigger validation test
-    
-);
   $("input[name='entry.1486781400']").on("click", function () {
-    console.log($(this).val())
     if($(this).val()==='purchase'){
       $('.purchasing').show();
       $('.refinancing').hide();
@@ -24,21 +31,6 @@ $(function () {
       
     }
   })
-
-  $("input[name='entry.1525139678']").on({
-    keyup: function() {
-      formatCurrency($(this));
-      formatData($(this));
-    },  
-});
-//ammoun to take out 
-$("input[name='entry.327660014']").on({
-  keyup: function() {
-    formatCurrency($(this));
-    formatData($(this))  
-  },
-  
-});
   $("input[name='entry.784023676']").on({
     keyup: function() {
       formatCurrency($(this));
@@ -46,7 +38,7 @@ $("input[name='entry.327660014']").on({
     },
     
 });
-//$ dollar value of downpayment 
+// $ dollar value of downpayment 
 $("input[name='entry.1889879909']").on({
   keyup: function() {
     formatCurrency($(this));
@@ -55,12 +47,6 @@ $("input[name='entry.1889879909']").on({
   
 })
 
-$("input[name='entry.2859881']").on({
-  keyup: function() {
-    formatPercentage($(this));
-    formatData($(this))
-  }
-})
 $("input[name='entry.1694289332']").on({
   keyup: function() {
     formatPercentage($(this));
@@ -83,7 +69,6 @@ function formatPhone(n){
 function formatData(input){
   var input_val = input.val().split(',').join('')
   input_val = parseInt(input_val.match(/\d+/), 10);
-  console.log(input_val)
 }
 function phone(input){
   var input_val = input.val();
@@ -153,25 +138,13 @@ function formatPercentage(input) {
     
     var cost = $(this).val().split(',').join('')
     cost = parseInt(cost.match(/\d+/), 10);
-    console.log(cost);
+
     $("#percent").val('');
     $("#dollar").val('');
-
-    // var percent = parseInt($("#percent").val().match(/\d+/), 10);
-    // var dollar = $("#dollar").val().split(',').join('')
-    // dollar = parseInt(dollar.match(/\d+/), 10);
-    // if (isNaN(cost) === true) {
-    //   $("#percent").val(0 + '%');
-    //   $("#dollar").val('$' +0);
-    // } else if (isNaN(percent) === false && isNaN(dollar) === false) {
-    //   $("#percent").val(Math.ceil(dollar / cost)+'%');
-    //   $("#dollar").val('$' + Math.ceil(cost * percent));
-    // }
   });
 
   $("#percent").on("keyup", function () {
     var val = parseInt($(this).val().match(/\d+/), 10);
-
     var item = $("#currency-field").val().split(',').join('')
     var num = parseInt(item.match(/\d+/), 10);
     if (isNaN(val) === true) {
@@ -180,20 +153,20 @@ function formatPercentage(input) {
       var dollar = (Math.ceil((num * val) / 100))
       dollar = dollar.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
       $("#dollar").val('$'+ dollar);
+      $('#dollar').removeClass('error')
     }
   });
 
   $("#dollar").on("keyup", function () {
     var val = $(this).val().split(',').join('')
     val = parseInt(val.match(/\d+/), 10);
-    console.log(val)
-    // var val = parseInt($(this).val().match(/\d+/), 10);
     var item = $("#currency-field").val().split(',').join('')
     var num = parseInt(item.match(/\d+/), 10);
     if (isNaN(val) === true) {
       $("#percent").val(0  + '%');
     } else {
       $("#percent").val(Math.ceil((val * 100) / num)  + '%');
+      $('#percent').removeClass('error')
     }
   }); 
     $("form[name='application-form']").validate({
@@ -258,11 +231,8 @@ function formatPercentage(input) {
                             maxlength: "Please enter a valid phone number."
                           },
     },
-    // Make sure the form is submitted to the destination defined
-    // in the "action" attribute of the form when valid
+    
     submitHandler: function (form) {
-      // alert("valid form submission"); // for demo
-      // $( "#loan-ammount option:selected" ).text()
       $.ajax({
         url:
           "https://docs.google.com/forms/d/e/1FAIpQLSd1dng2c1vB31_CaTMhEdIk9YK2RhjxFFVnfcvrPeGqC7o7qA/formResponse",
@@ -270,24 +240,16 @@ function formatPercentage(input) {
         type: "GET",
         dataType: "json",
         crossorigin: true,
-
-        //     success: function(){
-        //       $("#success").show();
-        //     },
-        //     error: function() {
-        //       alert('Error submitting your request');
-        //   }
       }).always(function () {
         form.reset();
         $(".success").show();
       });
-
-      return false; // required to block normal submit since you used ajax
+      return false; 
     },
   });
 });
-//This requires the Google Maps API with the Google Places library. Include the libraries=places parameter when you first load the Google Maps API. For example:
-//<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+///GOOGLE API places 
 
 var FormAddressAutocomplete = {
 	initAutocomplete : function (autocompleteField, cityField, stateField, zipCodeField, fullAddressField, callbackFunction) {
@@ -309,7 +271,7 @@ var FormAddressAutocomplete = {
 		
 		//Create the autocomplete object and bind it to the supplied input field using the options set above:
 		this.autocomplete = new google.maps.places.Autocomplete(document.getElementById(autocompleteField), options);
-		console.log(this.autocomplete)
+
 		
 		
 		//When the user selects an address from the dropdown, populate the address fields in the form:
@@ -365,37 +327,35 @@ var FormAddressAutocomplete = {
 		//populate the input fields if they were supplied to the initAutocomplete method:
 		if (typeof FormAddressAutocomplete.autocompleteField !== "undefined" && FormAddressAutocomplete.autocompleteField !== "") {
       document.getElementById(FormAddressAutocomplete.autocompleteField).value = streetAddress;
+
+      
       
 		}
 		if (typeof FormAddressAutocomplete.cityField !== "undefined" && FormAddressAutocomplete.cityField !== "") {
-			document.getElementById(FormAddressAutocomplete.cityField).value = city;
+      document.getElementById(FormAddressAutocomplete.cityField).value = city;
+      document.getElementById(FormAddressAutocomplete.cityField).classList.remove("error");
 		}
 
 		if (typeof FormAddressAutocomplete.stateField !== "undefined" && FormAddressAutocomplete.stateField !== "") {
-			document.getElementById(FormAddressAutocomplete.stateField).value = state;
+      document.getElementById(FormAddressAutocomplete.stateField).value = state;
+      document.getElementById(FormAddressAutocomplete.stateField).classList.remove("error");
+      
 		}
 
 		if (typeof FormAddressAutocomplete.zipCodeField !== "undefined" && FormAddressAutocomplete.zipCodeField !== "") {
-			document.getElementById(FormAddressAutocomplete.zipCodeField).value = zipCode;
+      document.getElementById(FormAddressAutocomplete.zipCodeField).value = zipCode;
+      document.getElementById(FormAddressAutocomplete.zipCodeField).classList.remove("error");
 		}
 		
-		if (typeof FormAddressAutocomplete.fullAddressField !== "undefined" && FormAddressAutocomplete.fullAddressField !== "") {
-			document.getElementById(FormAddressAutocomplete.fullAddressField).value = streetAddress;
-		}
-		
-		//If a callback function was supplied to the initAutocomplete method, call it:
-		if (typeof FormAddressAutocomplete.callbackFunction !== "undefined" && FormAddressAutocomplete.callbackFunction !== "") {
-			FormAddressAutocomplete.callbackFunction(streetAddress);
-		}
 	}
 };
 
-//// Class script above. Example of external setup scripts and usage below. ////
 
 //Example Google API callback function that is used to setup this address autocomplete class. (gets called by the Google library script referenced in the HTML body):
 function autocompleteStart () {
 	//Don't submit the form when a user selects an address with the enter key:
-	var input = document.getElementById('address-autocomplete');
+  var input = document.getElementById('address-autocomplete');
+
 	google.maps.event.addDomListener(input, 'keydown', function (event) {
 		if (event.keyCode === 13) {
 			event.preventDefault();
@@ -406,7 +366,3 @@ function autocompleteStart () {
 	return FormAddressAutocomplete.initAutocomplete("address-autocomplete", "city-field", "state-field", "zip-code-field", "full-address-field");
 }
 
-//Example of this address autocomplete class's callback function. If the callback function parameter is passed to the initAutocomplete method it will be called after user selects an address. The full address string is passed back to the callback function:
-// function autocompleteFinished(data) {
-// 	alert("Callback Function | Full Address String: " + data);
-// }
