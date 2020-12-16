@@ -52,6 +52,9 @@
                 padding-top: 3.2rem;
                 a{
                     color: $charcoal-blue;
+                    &:hover{
+                        color: $aa-gray;
+                    }
                 }
                 @include bp-large{
                     padding-top: 2.5rem;
