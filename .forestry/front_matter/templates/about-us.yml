@@ -1,6 +1,6 @@
 ---
 label: About Us
-hide_body: false
+hide_body: true
 fields:
 - type: field_group
   name: people
