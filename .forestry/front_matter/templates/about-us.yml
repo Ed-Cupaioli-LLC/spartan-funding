@@ -1,0 +1,54 @@
+---
+label: About Us
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: description
+  label: description
+- type: file
+  name: meta_img
+  label: meta_img
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: css
+  label: css
+- type: list
+  name: scripts
+  label: scripts
+- type: text
+  name: header
+  label: header
+- type: field_group
+  name: people
+  label: people
+  fields:
+  - type: field_group_list
+    name: list
+    label: list
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: file
+      name: img
+      label: img
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: license
+      label: license
+    - type: textarea
+      name: text
+      label: text
+- type: text
+  name: talk
+  label: talk
