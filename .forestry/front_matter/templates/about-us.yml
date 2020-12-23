@@ -2,30 +2,6 @@
 label: About Us
 hide_body: false
 fields:
-- type: text
-  name: title
-  label: title
-- type: textarea
-  name: description
-  label: description
-- type: file
-  name: meta_img
-  label: meta_img
-- type: text
-  name: layout
-  label: layout
-- type: text
-  name: permalink
-  label: permalink
-- type: text
-  name: css
-  label: css
-- type: list
-  name: scripts
-  label: scripts
-- type: text
-  name: header
-  label: header
 - type: field_group
   name: people
   label: people
@@ -49,6 +25,3 @@ fields:
     - type: textarea
       name: text
       label: text
-- type: text
-  name: talk
-  label: talk
