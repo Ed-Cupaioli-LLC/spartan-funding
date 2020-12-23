@@ -26,3 +26,5 @@ fields:
       label: Professional Bio
     label: Profiles
   label: Group List
+pages:
+- _pages/about.html
