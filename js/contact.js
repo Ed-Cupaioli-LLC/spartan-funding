@@ -59,6 +59,10 @@ $(function() {
         }).always(function(){
           form.reset();
           $('.success').show();
+          dataLayer.push({
+            'event': 'gtm.formSubmit'
+  
+          })
         })
         
         return false; 
