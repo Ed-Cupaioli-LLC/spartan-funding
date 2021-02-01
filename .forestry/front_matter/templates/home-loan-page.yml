@@ -25,3 +25,5 @@ fields:
     - type: text
       name: blurb
       label: blurb
+pages:
+- _pages/purchase.html
