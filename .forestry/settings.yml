@@ -6,13 +6,13 @@ webhook_url:
 sections:
 - type: document
   path: _pages/refinance.html
-  label: refinance
+  label: Refinance Page
 - type: document
   path: _pages/purchase.html
-  label: Purchase
+  label: Purchase Home Page
 - type: document
   path: _pages/about.html
-  label: About Us
+  label: About Us Page
 upload_dir: img
 public_path: "/img"
 front_matter_path: ''
