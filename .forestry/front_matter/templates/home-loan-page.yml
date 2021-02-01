@@ -9,9 +9,6 @@ fields:
   name: description
   label: description
 - type: text
-  name: layout
-  label: layout
-- type: text
   name: header
   label: header
 - type: textarea
