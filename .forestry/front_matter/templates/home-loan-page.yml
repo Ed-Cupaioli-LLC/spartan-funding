@@ -3,12 +3,6 @@ label: Home Loan Page
 hide_body: true
 fields:
 - type: text
-  name: title
-  label: title
-- type: textarea
-  name: description
-  label: description
-- type: text
   name: header
   label: header
 - type: textarea
