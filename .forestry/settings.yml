@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: _pages
+  path: _pages/home.html
   label: Home Page
 - type: document
   path: _pages/refinance.html
