@@ -5,17 +5,8 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: _pages/home.html
-  label: Home Page
-- type: document
-  path: _pages/refinance.html
-  label: Refinance Page
-- type: document
-  path: _pages/purchase.html
-  label: Purchase Home Page
-- type: document
   path: _pages/about.html
-  label: About Us Page
+  label: About Us
 upload_dir: img
 public_path: "/img"
 front_matter_path: ''
