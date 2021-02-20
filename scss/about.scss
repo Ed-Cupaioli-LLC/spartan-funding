@@ -53,11 +53,17 @@
         }
         .img{
             max-width: 48rem;
+            max-height: 48rem;
             width: 25vw;
+            height: 25vw;
             z-index: 1;
             align-self: center;
+            background-size: cover;
+            background-position: 50%;
+            border-radius: 50% 50% 50% 50%;
             @include bp-large{
-                width: 61.594vw;
+                width: 61vw;
+                height: 61vw;   
             }
         }
         h2{
