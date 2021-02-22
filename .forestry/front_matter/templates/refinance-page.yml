@@ -10,7 +10,6 @@ fields:
   label: Text
 - type: field_group
   name: type
-  label: type
   fields:
   - type: field_group_list
     name: list
@@ -22,3 +21,4 @@ fields:
       name: content
       label: content
     label: Refinance Options/ Benefits
+  label: Refinance Benefits
