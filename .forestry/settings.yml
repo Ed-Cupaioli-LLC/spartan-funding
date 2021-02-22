@@ -5,6 +5,10 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
+  path: _pages/purchase.html
+  label: Purchase
+  match: "**/*"
+- type: document
   path: _pages/refinance.html
   label: Refinance
 - type: document
