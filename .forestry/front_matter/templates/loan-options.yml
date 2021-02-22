@@ -1,0 +1,45 @@
+---
+label: Loan Options
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: descriptions
+  label: descriptions
+- type: file
+  name: meta_img
+  label: meta_img
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: css
+  label: css
+- type: list
+  name: scripts
+  label: scripts
+- type: text
+  name: header
+  label: header
+- type: field_group_list
+  name: options
+  label: options
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: field_group_list
+    name: list
+    label: list
+    fields:
+    - type: text
+      name: sub-title
+      label: sub-title
+    - type: textarea
+      name: text
+      label: text
