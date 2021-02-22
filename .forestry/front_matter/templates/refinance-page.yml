@@ -22,3 +22,5 @@ fields:
       label: content
     label: Refinance Options/ Benefits
   label: Refinance Benefits
+pages:
+- _pages/refinance.html
