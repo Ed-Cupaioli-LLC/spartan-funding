@@ -13,11 +13,9 @@ fields:
   label: options
 - type: field_group
   name: type
-  label: type
   fields:
   - type: field_group_list
     name: list
-    label: list
     fields:
     - type: file
       name: img
@@ -25,5 +23,7 @@ fields:
     - type: text
       name: blurb
       label: blurb
+    label: List of Options
+  label: Purchase Options
 pages:
 - _pages/purchase.html
