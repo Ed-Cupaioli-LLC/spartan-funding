@@ -23,7 +23,6 @@ fields:
     label: loan
   - type: field_group_list
     name: list
-    label: list
     fields:
     - type: text
       name: what
@@ -37,6 +36,7 @@ fields:
     - type: text
       name: href
       label: href
+    label: 'Button Display '
   label: Refinance/ Purchase Buttons
 - type: textarea
   name: review
