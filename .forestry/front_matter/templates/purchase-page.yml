@@ -1,0 +1,45 @@
+---
+label: Purchase Page
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: description
+  label: description
+- type: file
+  name: meta_img
+  label: meta_img
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: css
+  label: css
+- type: text
+  name: header
+  label: header
+- type: textarea
+  name: text
+  label: text
+- type: text
+  name: options
+  label: options
+- type: field_group
+  name: type
+  label: type
+  fields:
+  - type: field_group_list
+    name: list
+    label: list
+    fields:
+    - type: file
+      name: img
+      label: img
+    - type: text
+      name: blurb
+      label: blurb
