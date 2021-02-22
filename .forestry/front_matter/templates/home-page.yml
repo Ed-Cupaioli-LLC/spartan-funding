@@ -4,7 +4,6 @@ hide_body: true
 fields:
 - type: field_group
   name: hero
-  label: hero
   fields:
   - type: text
     name: heading1
@@ -15,9 +14,9 @@ fields:
   - type: textarea
     name: text
     label: text
+  label: Header top of the page
 - type: field_group
   name: options
-  label: options
   fields:
   - type: text
     name: loan
@@ -38,6 +37,7 @@ fields:
     - type: text
       name: href
       label: href
+  label: Refinance/ Purchase Buttons
 - type: textarea
   name: review
   label: review
