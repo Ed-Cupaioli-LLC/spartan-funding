@@ -4,17 +4,16 @@ hide_body: true
 fields:
 - type: text
   name: header
-  label: header
+  label: Header
 - type: textarea
   name: text
-  label: text
+  label: Text
 - type: field_group
   name: type
   label: type
   fields:
   - type: field_group_list
     name: list
-    label: list
     fields:
     - type: file
       name: img
@@ -22,3 +21,4 @@ fields:
     - type: textarea
       name: content
       label: content
+    label: Refinance Options/ Benefits
