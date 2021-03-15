@@ -2,6 +2,12 @@
 @import "mixins.scss";
 
 #about{
+    *[x-apple-data-detectors] {
+        border-bottom: 0 !important;
+        cursor: default !important;
+        color: inherit !important;
+        text-decoration: none !important;
+    }
     position: relative;
     padding: 0 15vw 15.3rem 15vw;
     margin: 0 auto;
