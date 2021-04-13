@@ -88,7 +88,20 @@ $(function(){
            
             }
     })
-
+  $('.open-calc').click(function(e) {
+    e.preventDefault();
+    if (window.location.pathname == "/") {
+      $('.calc-overlay').addClass('active');
+    } else {
+      window.location = "/#calc-open"
+    }
+  });
+  if (window.location.href.indexOf('/#calc-open') > -1) {
+    console.log(window.location.search);
+    $('.calc-overlay').addClass('active');
+  }  else {
+    console.log(window.location.search);
+  }
 });
 
 
