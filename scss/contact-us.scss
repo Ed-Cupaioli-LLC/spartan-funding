@@ -50,6 +50,12 @@
                 font-size: 2rem;
                 line-height: 2.5rem;
                 padding-top: 3.2rem;
+                a{
+                    color: $charcoal-blue;
+                    &:hover{
+                        color: $aa-gray;
+                    }
+                }
                 @include bp-large{
                     padding-top: 2.5rem;
                     padding-bottom: 4.2rem;
@@ -66,6 +72,7 @@
                 .form-field{
                     display: flex;
                     flex-direction: column;
+                    
                     &:first-child {
                         label{
                             margin-top: 0;
@@ -92,6 +99,7 @@
                         color: $aa-gray;
                         padding-left: 1.250vw;
                         background-color: unset;
+                        font-family: $body-font;
                         @include bp-large{
                             width: 82.609vw;
                             margin: 0 auto;
@@ -130,6 +138,7 @@
     .success{
         display: none;
         .success-message{
+            padding-left: 14vw;
             display: flex;
             margin: 0 auto;
             margin-bottom: 13.1rem;
@@ -138,6 +147,7 @@
             align-content: center;
             align-items: center;
         @include bp-large{
+            padding-left: 0;
             flex-direction: column;
             max-width: 77.536vw;
            

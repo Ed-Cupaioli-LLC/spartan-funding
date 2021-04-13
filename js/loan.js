@@ -21,11 +21,11 @@ $(function() {
         $(this).siblings('div').find('.fun').show()
         $(this).addClass('0').removeClass('1')
       }
-    console.log($(this).text())
+  
     $(this).children('span').text($(this).children('span').text() === "Read more" ? "Read less" : "Read more");
     var src = $(this).children('img').attr('src') === '/img/options/more.png' ? '/img/options/less.png' : '/img/options/more.png';
     $(this).children('img').attr('src', src)
-    console.log($(this).children('img').attr('src'))
+   
     
   }));
   

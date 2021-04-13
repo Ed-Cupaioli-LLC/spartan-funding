@@ -1,34 +1,53 @@
 ---
 title: About
-description: Spartan Funding was founded by Eric Engman who has been in the business for over 17 years and has made memorable relationships with his clients. 
-meta_img: /img/about/spartan_funding_meta_image_about.jpg
+description: Spartan Funding was founded by Eric Engman who has been in the business
+  for over 17 years and has made memorable relationships with his clients.
+meta_img: "/img/about/spartan_funding_meta_image_about.jpg"
 layout: default
-permalink: /about/
+permalink: "/about/"
 css: about
-scripts: 
+scripts:
 - resize
 header: Who are the Spartans?
-people: 
- list:
+people:
+  list:
   - name: Eric Engman
-    img: /img/about/EricEngman.png
+    img: "/img/about/EricEngman.png"
     title: Senior Loan Originator
-    license: 'NMLS# 251886 | DRE# 01432925'
-    text: |-
-      Eric has spent the last two decades helping Californians attack their home buying and financial goals. He started Spartan Funding to help make the home buying process easier and more efficient. As a broker, he has found a passion for helping his clients save as much money as possible and connecting them to loan options and incentive programs that fit their financial goals.
-      
-      Eric loves working with clients interested in purchasing another home or investment properties. He embodies the Spartan ethos of preparedness, experience, and is ready to do what is necessary for his clients. Eric knows that is on the line for his clients and is ready to compete and succeed in a competitive housing market. Second time home buying or expanding in investment properties is a milestone that Eric is honored to be a part of. For those clients who are Spartan, the FastTrack technology will expedite the approval process and ensure that the property of your dreams can be yours.
-  - name: Eric Engman
-    img: /img/about/EricEngman.png
-    title: Senior Loan Originator
-    license: 'NMLS# 251886 | DRE# 01432925'
-    text: "Eric has spent the last two decades helping Californians attack their home buying and financial goals. He started Spartan Funding to help make the home buying process easier and more efficient. As a broker, he has found a passion for helping his clients save as much money as possible and connecting them to loan options and incentive programs that fit their financial goals."
-  - name: Eric Engman
-    img: /img/about/EricEngman.png
-    title: Senior Loan Originator
-    license: 'NMLS# 251886 | DRE# 01432925'
-    text: "Eric has spent the last two decades helping Californians attack their home buying and financial goals. He started Spartan Funding to help make the home buying process easier and more efficient. As a broker, he has found a passion for helping his clients save as much money as possible and connecting them to loan options and incentive programs that fit their financial goals."
+    license: NMLS# 251886 | DRE# 01432925
+    text: "Eric Engman has spent the last two decades helping Californians attack
+      their home buying and financial goals. He started Spartan Funding to help make
+      the home buying process easier and more efficient. As a broker, he has found
+      a passion for helping his clients save as much money as possible and connecting
+      them to loan options and incentive programs that fit their financial goals.\n\nEric
+      loves working with clients interested in purchasing another home or investment
+      properties. He embodies the Spartan ethos of preparedness, experience, and is
+      ready to do what is necessary for his clients. \n\nEric knows what is on the
+      line for his clients and is ready to compete and succeed in a competitive housing
+      market.\n\nSecond time home buying or expanding in investment properties is
+      a milestone that Eric is honored to be a part of. For those clients who are
+      Spartan, the FastTrack technology will expedite the approval process and ensure
+      that the property of your dreams can be yours."
+  - name: Kindra Miller
+    img: "/img/kindra-1.jpg"
+    title: " Production Manager "
+    text: Kindra Miller has over two decades of experience managing, mentoring, and
+      developing investments, mortgages, and portfolios. Adored by clients for her
+      high energy, Kindra attacks each project with passion, efficiency, and industry
+      know-how. When she's not in the office, Kindra likes to sit back and relax with
+      a bottle of red wine.
+    license: ''
+  - name: Kati Lenzi
+    title: Production Assistant
+    img: "/img/about/kati.jpg"
+    text: Kati Lenzi is a mortgage professional with over 12 years of industry experience.
+      As a problem solver with robust financial expertise, she has managed a variety
+      of complex loans, including origination, processing, and closing throughout
+      her career. When she's not implementing solutions for potential home buyers,
+      Kati can be found enjoying all things Disney, travel, and wine.
+    license: ''
 talk: Are you ready to talk to a Spartan?
+
 ---
 <div id='about'>
     <div class='spartan'>
@@ -38,8 +57,8 @@ talk: Are you ready to talk to a Spartan?
     <div class='content'>
     {% for person in page.people.list %}
     <div class='person'>
-        <div class='img'>
-            <img alt='person-image' src='{{ person.img }}'>
+        <div class='img' style="background-image:url('{{person.img }}')">
+   
         </div>
         <h2>{{ person.name }}</h2>
         <h3>{{ person.title }}</h3>

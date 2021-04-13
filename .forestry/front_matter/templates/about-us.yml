@@ -1,0 +1,30 @@
+---
+label: About Us
+hide_body: true
+fields:
+- type: field_group
+  name: people
+  fields:
+  - type: field_group_list
+    name: list
+    fields:
+    - type: text
+      name: name
+      label: Name (first and last)
+    - type: file
+      name: img
+      label: Image
+    - type: text
+      name: title
+      label: Job Title
+    - type: text
+      name: license
+      label: 'License Number '
+      description: 'Format to follow: <br><br>NMLS# 251886 | DRE# 01432925'
+    - type: textarea
+      name: text
+      label: Professional Bio
+    label: Profiles
+  label: Group List
+pages:
+- _pages/about.html

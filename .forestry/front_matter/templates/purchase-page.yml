@@ -1,0 +1,29 @@
+---
+label: Purchase Page
+hide_body: true
+fields:
+- type: text
+  name: header
+  label: header
+- type: textarea
+  name: text
+  label: text
+- type: text
+  name: options
+  label: options
+- type: field_group
+  name: type
+  fields:
+  - type: field_group_list
+    name: list
+    fields:
+    - type: file
+      name: img
+      label: img
+    - type: text
+      name: blurb
+      label: blurb
+    label: List of Options
+  label: Purchase Options
+pages:
+- _pages/purchase.html

@@ -7,7 +7,7 @@ $(function() {
   })
  
   function formatPhone(n){
-    return n.replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+    return n.replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
   }
 
   function phone(input){
@@ -23,9 +23,9 @@ $(function() {
    // send updated string to input
    input.val(input_val);
   }
-
+//validation rules and messages 
     $("form[name='contact']").validate({
-      // Specify validation rules
+      
       rules: {
         'entry.1833635029': "required",
         'entry.2074440609': {
@@ -34,11 +34,11 @@ $(function() {
         },
         'entry.1757091664': {
                 required: true,
-                minlength: 12,
-                maxlength: 12,
+                minlength: 14,
+                maxlength: 14,
         },
     },
-      // Specify validation error messages
+     
       messages: {
         'entry.1833635029': "Please don’t leave this blank",
         'entry.2074440609': "Please enter a valid email address",
@@ -47,12 +47,8 @@ $(function() {
                             minlength: "Please enter a valid phone number.",
                             maxlength: "Please enter a valid phone number."
         }
-        // submit: 'Please fill out all the missing items'
       },
-      // Make sure the form is submitted to the destination defined
-      // in the "action" attribute of the form when valid
       submitHandler: function (form) {
-        // alert('valid form submission'); // for demo
         $( "#loan-ammount option:selected" ).text()
         $.ajax({
             url: "https://docs.google.com/forms/d/e/1FAIpQLScM7ypLv4wen7UzFS1CN9YuFSFmaWrFO0XJHoAyfbS6jnye6A/formResponse",
@@ -60,19 +56,16 @@ $(function() {
             type: 'GET',
             dataType: 'json',
             crossorigin: true,
-
-          //   success: function(){  
-          //     $("#success").show();  
-          //   },
-          //   error: function() { 
-          //     alert('Error submitting your request'); 
-          // }     
         }).always(function(){
           form.reset();
           $('.success').show();
+          dataLayer.push({
+            'event': 'gtm.formSubmit'
+  
+          })
         })
         
-        return false; // required to block normal submit since you used ajax
+        return false; 
     }
 
 });

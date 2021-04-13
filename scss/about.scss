@@ -2,6 +2,7 @@
 @import "mixins.scss";
 
 #about{
+    a[href^=tel] { color: inherit; text-decoration: none; }
     position: relative;
     padding: 0 15vw 15.3rem 15vw;
     margin: 0 auto;
@@ -53,11 +54,17 @@
         }
         .img{
             max-width: 48rem;
+            max-height: 48rem;
             width: 25vw;
+            height: 25vw;
             z-index: 1;
             align-self: center;
+            background-size: cover;
+            background-position: 50%;
+            border-radius: 50% 50% 50% 50%;
             @include bp-large{
-                width: 61.594vw;
+                width: 61vw;
+                height: 61vw;   
             }
         }
         h2{

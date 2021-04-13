@@ -1,0 +1,48 @@
+---
+label: Home Page
+hide_body: true
+fields:
+- type: field_group
+  name: hero
+  fields:
+  - type: text
+    name: heading1
+    label: heading1
+  - type: text
+    name: heading2
+    label: heading2
+  - type: textarea
+    name: text
+    label: text
+  label: Header top of the page
+- type: field_group
+  name: options
+  fields:
+  - type: text
+    name: loan
+    label: loan
+  - type: field_group_list
+    name: list
+    fields:
+    - type: text
+      name: what
+      label: what
+    - type: text
+      name: type
+      label: type
+    - type: file
+      name: img
+      label: img
+    - type: text
+      name: href
+      label: href
+    label: 'Button Display '
+  label: Refinance/ Purchase Buttons
+- type: textarea
+  name: review
+  label: review
+- type: text
+  name: contact
+  label: contact
+pages:
+- _pages/home.html

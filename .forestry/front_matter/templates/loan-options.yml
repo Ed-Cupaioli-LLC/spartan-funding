@@ -1,0 +1,26 @@
+---
+label: Loan Options
+hide_body: true
+fields:
+- type: text
+  name: header
+  label: header
+- type: field_group_list
+  name: options
+  label: options
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: field_group_list
+    name: list
+    label: list
+    fields:
+    - type: text
+      name: sub-title
+      label: sub-title
+    - type: textarea
+      name: text
+      label: text
+pages:
+- _pages/loan-options.html
