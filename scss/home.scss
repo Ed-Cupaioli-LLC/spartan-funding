@@ -6,7 +6,7 @@
     width: 100%;
     display: block;
     z-index: -1;
-    background-color: rbga(#000,0.8);
+    background-color: rgba(#000,0.8);
     transform: translateY(-100%);
     @include transition(transform);
     &.active {
