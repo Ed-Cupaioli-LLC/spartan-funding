@@ -41,10 +41,27 @@ fields:
 - type: text
   name: contact
   label: contact
-- name: review
-  type: text
+- name: reviews
+  type: field_group_list
+  fields:
+  - name: rating
+    type: file
+    config:
+      maxSize: 64
+    label: rating
+  - name: review
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: review
   config:
-    required: false
-  label: review
+    min: 
+    max: 
+    labelField: 
+  label: reviews
 pages:
 - _pages/home.html
