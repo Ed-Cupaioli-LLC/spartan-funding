@@ -42,14 +42,9 @@ fields:
   name: contact
   label: contact
 - name: review
-  type: field_group
-  config: {}
-  fields:
-  - name: review
-    type: text
-    config:
-      required: false
-    label: review
+  type: text
+  config:
+    required: false
   label: review
 pages:
 - _pages/home.html
