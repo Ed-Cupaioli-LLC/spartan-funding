@@ -1,19 +1,6 @@
 @import "vars.scss";
 @import "mixins.scss";
-.calc-overlay {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    display: block;
-    z-index: -1;
-    background-color: rgba(#000,0.8);
-    transform: translateY(-100%);
-    @include transition(transform);
-    &.active {
-        z-index: 11;
-        transform: translateY(0%);
-    }
-}
+
 #home{
     max-width: 164.5rem;
     margin: 0 auto;
@@ -186,11 +173,7 @@
                     align-self: center;
                 }
             }
-            
-        
         }
-        
-
     }
     .loan{
         background-color: $charcoal-blue;
@@ -212,7 +195,6 @@
                 letter-spacing: .1rem;
                 line-height: 1.9;
             }
-
         }
         .arrow{
             margin: 0;
@@ -230,14 +212,47 @@
     }
 }
 .rating{
-    .stars{
-        padding-top:12.4rem;
+    display: flex;
+    padding-top: 12.4rem;
+    height: fit-content;
+    @include bp-large{
+        padding-top: 7.2rem;
+    }
+    @include bp-small{
+        padding-top: 5.2rem;
+    }
+    
+    .slick-arrow{
+        background-color: unset;
+        border: none;
+    }
+    .slick-prev{
+        align-self: center;
+        font-size: 30px;
+        color: $charcoal-blue;
         @include bp-large{
-            padding-top: 7.2rem;
+            padding-left: 20px 
         }
-        @include bp-small{
-            padding-top: 5.2rem;
+        @include bp-medium{
+            font-size: 20px;
+            
         }
+    }
+    .slick-next{
+        align-self: center;
+        
+        font-size: 30px;
+        color: $charcoal-blue;
+        @include bp-large{
+            padding-right: 20px 
+        }
+        @include bp-medium{
+            font-size: 20px;
+        }
+    }
+    .review{
+
+    .stars{
         img{
             @include bp-small{
                 height: 2.9rem;
@@ -246,7 +261,7 @@
     }
     .reviews{
         max-width: 129.5rem;
-        padding: 3.124rem 0 10.1rem 0;
+        padding: 3.124rem;
         text-align: center;
         margin: 0 auto;
         @include bp-large{
@@ -268,6 +283,7 @@
             }
         }
     }
+}
    
 }
     #contact{
@@ -277,6 +293,7 @@
         padding-bottom: 9.2rem;
         width: 116.75%;
         margin-left: -8.4%;
+        margin-top: 10.1rem;
         @include bp-large{
          width: 100vw;
          margin: unset;
