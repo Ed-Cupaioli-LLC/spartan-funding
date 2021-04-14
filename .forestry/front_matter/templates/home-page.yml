@@ -50,6 +50,6 @@ fields:
     config:
       required: false
     label: review
-  label: Reviews
+  label: review
 pages:
 - _pages/home.html
