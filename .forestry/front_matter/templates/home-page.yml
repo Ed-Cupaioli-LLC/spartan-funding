@@ -38,11 +38,15 @@ fields:
       label: href
     label: 'Button Display '
   label: Refinance/ Purchase Buttons
-- type: textarea
-  name: review
-  label: review
 - type: text
   name: contact
   label: contact
+- name: reviews
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: reviews
 pages:
 - _pages/home.html
