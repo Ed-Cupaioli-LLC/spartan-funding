@@ -359,6 +359,9 @@ button {
 		right: 4vw;
 		font-size: 60px;
 		color: white;
+		@include bp-large{
+			font-size: 45px;
+		}
 		@include bp-small{
 			font-size: 35px;
 		}
