@@ -89,6 +89,12 @@ $(function(){
       $('.exit-calc').addClass('show-exit-calc')
       $('.slide').addClass('hide').removeClass('show')
       $('body,html').css('position','unset');
+      $('.show-exit-calc').on('click', function(){
+        console.log('clicked')
+        $('#widgetData').removeClass('show');
+        $('.calc-overlay').removeClass('active');
+        $('.hamburger-menu').children('div').removeClass('change')
+      })
     } else {
       window.location = "/#calc-open"
     }
@@ -103,6 +109,11 @@ $(function(){
   }  else {
     console.log(window.location.search);
   }
+  $('.show-exit-calc').on('click', function(){
+    console.log('clicked')
+    $('#widgetData').removeClass('show');
+    $('.calc-overlay').removeClass('active');
+  })
   $('.rating').slick({
     infinite: true,
     adaptiveHeight: true,

@@ -256,10 +256,12 @@ button {
 }
 //calc overlay
 .calc-overlay {
+	display: flex;
+	justify-content: center;
+	align-items: center;
     position: fixed;
     height: 100%;
     width: 100%;
-    display: block;
     z-index: -1;
     background-color: rgba(#000,0.8);
     transform: translateY(-100%);
@@ -268,13 +270,86 @@ button {
         z-index: 11;
         transform: translateY(0%);
     }
+	@include bp-small{
+		align-items: unset;
+	}
     #widgetData{
         display: none;
+		height: fit-content;
+		@include bp-small{
+			margin-top: 55px;
+		}
+		#divMBSWidget{
+			width: 550px !important;
+			@include bp-large{
+				width: 400px !important;
+			}
+			@include bp-small{
+				width: 270px !important;
+			}
+		#widgetDetails{
+			img{
+				margin: unset !important;
+				margin:  33px auto 22px !important;
+				
+				@include bp-small{
+					height: 100px !important;
+					width: 100px !important;
+					margin:  22px auto 22px !important;
+				}
+			}
+			h2{
+				font-family: $header-font !important;
+				color: $charcoal-blue;
+				@include bp-small{
+					font-size: 1.5rem;
+					
+
+				}
+			}
+			p{
+				font-family: $body-font;
+				font-size: 22px;
+				@include bp-large{
+					font-size: 18px;
+				}
+				@include bp-small{
+					font-size: 14px;
+				}
+			}
+		}
+			#widgetCaption{
+				font-family: $body-font;
+					font-size: 22px;
+					@include bp-large{
+						font-size: 18px;
+					}
+					@include bp-small{
+						font-size: 14px;
+					}
+			}
+			#widgetRequestInputs{
+				#btnRequest{
+					background-color: $charcoal-blue;
+					color:white;
+					font-family: $body-font;
+					font-weight: 700;
+					font-size: 22px;
+					@include bp-large{
+						font-size: 16px;
+					}
+					@include bp-small{
+						font-size: 14px;
+					}
+
+				}
+			}
+		}
+		
     }
     .show{
         display: flex !important;
 		justify-content: center;
-		padding-top: 4vw;
     }
     .show-exit-calc{
         display: flex !important;
@@ -282,8 +357,11 @@ button {
 		position: absolute;
 		top: 4vw;
 		right: 4vw;
-		font-size: 30px;
+		font-size: 60px;
 		color: white;
+		@include bp-small{
+			font-size: 35px;
+		}
     }
     .exit-calc{
         display: none ;
