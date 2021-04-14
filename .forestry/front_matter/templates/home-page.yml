@@ -41,12 +41,15 @@ fields:
 - type: text
   name: contact
   label: contact
-- name: reviews
-  type: list
-  config:
-    use_select: false
-    min: 
-    max: 
-  label: reviews
+- name: review
+  type: field_group
+  config: {}
+  fields:
+  - name: review
+    type: text
+    config:
+      required: false
+    label: review
+  label: Reviews
 pages:
 - _pages/home.html
