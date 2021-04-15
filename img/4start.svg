@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="206.351" height="34.551" viewBox="0 0 206.351 34.551">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="206.351" height="34.551" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Repeat_Grid_1" data-name="Repeat Grid 1" clip-path="url(#clip-path)">
+    <g transform="translate(-864 -1597)">
+      <g id="Star" transform="translate(864 1597)">
+        <path id="Icon_ionic-md-star" data-name="Icon ionic-md-star" d="M21.972,32.275,33.2,39.051,30.233,26.269l9.915-8.6L27.077,16.551,21.972,4.5,16.867,16.551,3.8,17.673l9.915,8.6L10.74,39.051Z" transform="translate(-3.797 -4.5)" fill="#5387a2"/>
+      </g>
+    </g>
+    <g transform="translate(-808 -1597)">
+      <g id="Star-2" data-name="Star" transform="translate(864 1597)">
+        <path id="Icon_ionic-md-star-2" data-name="Icon ionic-md-star" d="M21.972,32.275,33.2,39.051,30.233,26.269l9.915-8.6L27.077,16.551,21.972,4.5,16.867,16.551,3.8,17.673l9.915,8.6L10.74,39.051Z" transform="translate(-3.797 -4.5)" fill="#5387a2"/>
+      </g>
+    </g>
+    <g transform="translate(-752 -1597)">
+      <g id="Star-3" data-name="Star" transform="translate(864 1597)">
+        <path id="Icon_ionic-md-star-3" data-name="Icon ionic-md-star" d="M21.972,32.275,33.2,39.051,30.233,26.269l9.915-8.6L27.077,16.551,21.972,4.5,16.867,16.551,3.8,17.673l9.915,8.6L10.74,39.051Z" transform="translate(-3.797 -4.5)" fill="#5387a2"/>
+      </g>
+    </g>
+    <g transform="translate(-696 -1597)">
+      <g id="Star-4" data-name="Star" transform="translate(864 1597)">
+        <path id="Icon_ionic-md-star-4" data-name="Icon ionic-md-star" d="M21.972,32.275,33.2,39.051,30.233,26.269l9.915-8.6L27.077,16.551,21.972,4.5,16.867,16.551,3.8,17.673l9.915,8.6L10.74,39.051Z" transform="translate(-3.797 -4.5)" fill="#5387a2"/>
+      </g>
+    </g>
+  </g>
+</svg>
