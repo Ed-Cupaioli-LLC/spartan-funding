@@ -59,5 +59,3 @@ fields:
     max: 
     labelField: 
   label: reviews
-pages:
-- _pages/home.html

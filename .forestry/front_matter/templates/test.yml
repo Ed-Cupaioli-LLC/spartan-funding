@@ -53,3 +53,5 @@ fields:
 - type: text
   name: contact
   label: contact
+pages:
+- _pages/home.html
