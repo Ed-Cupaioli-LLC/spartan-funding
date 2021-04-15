@@ -42,12 +42,14 @@ fields:
   name: reviews
   label: reviews
   fields:
-  - type: text
-    name: rating
-    label: rating
   - type: textarea
     name: review
     label: review
+  - name: rating
+    type: file
+    config:
+      maxSize: 64
+    label: rating
 - type: text
   name: contact
   label: contact
