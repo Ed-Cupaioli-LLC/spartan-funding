@@ -41,23 +41,28 @@ fields:
 - type: text
   name: contact
   label: contact
-- name: review
-  type: field_group_list
+- name: rating
+  type: field_group
+  config: {}
   fields:
-  - name: reviews
-    type: text
+  - name: review
+    type: field_group_list
+    fields:
+    - name: stars
+      type: file
+      config:
+        maxSize: 64
+      label: stars
+    - name: reviews
+      type: text
+      config:
+        required: false
+      label: reviews
     config:
-      required: false
-    label: reviews
-  - name: stars
-    type: file
-    config:
-      maxSize: 64
-    label: stars
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: review
+      min: 
+      max: 
+      labelField: 
+    label: review
+  label: rating
 pages:
 - _pages/home.html
