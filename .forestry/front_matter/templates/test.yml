@@ -2,42 +2,6 @@
 label: Test
 hide_body: true
 fields:
-- type: field_group
-  name: hero
-  label: hero
-  fields:
-  - type: text
-    name: heading1
-    label: heading1
-  - type: text
-    name: heading2
-    label: heading2
-  - type: textarea
-    name: text
-    label: text
-- type: field_group
-  name: options
-  label: options
-  fields:
-  - type: text
-    name: loan
-    label: loan
-  - type: field_group_list
-    name: list
-    label: list
-    fields:
-    - type: text
-      name: what
-      label: what
-    - type: text
-      name: type
-      label: type
-    - type: file
-      name: img
-      label: img
-    - type: text
-      name: href
-      label: href
 - type: field_group_list
   name: reviews
   label: reviews
@@ -50,8 +14,5 @@ fields:
     config:
       maxSize: 64
     label: rating
-- type: text
-  name: contact
-  label: contact
 pages:
 - _pages/home.html
