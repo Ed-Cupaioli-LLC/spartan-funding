@@ -44,11 +44,11 @@ fields:
 - name: reviews
   type: field_group_list
   fields:
-  - name: rating
+  - name: start
     type: file
     config:
       maxSize: 64
-    label: rating
+    label: stars
   - name: review
     type: textarea
     default: ''
