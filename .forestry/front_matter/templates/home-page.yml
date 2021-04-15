@@ -62,6 +62,6 @@ fields:
     min: 
     max: 
     labelField: 
-  label: reviews
+  label: review
 pages:
 - _pages/home.html
