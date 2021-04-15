@@ -30,9 +30,11 @@ reviews:
   review: "“Eric did a fantastic job on our recent home purchase. Closed faster than
   the contract date and he also fixed an item on our credit that we had been trying
   to remedy for months. Highly recommend!”"
+ 
 contact: Are you ready to talk to a Spartan?
 
 ---
+
 <div id="home">
   <div class='hero'>
     <div class='text'>
@@ -61,16 +63,17 @@ contact: Are you ready to talk to a Spartan?
       
     </div>
   </div>
- <div class='rating'>
+  <div class='rating'>
     {% for review in page.reviews %}
+    <div class='review'>
       <div class='stars'>
         <img alt='rating' src='{{review.rating}}'>
-
       </div>
       <div class='reviews'>
         <p class='body'>{{ review.review}}</p>
-    
       </div>
+    </div>
+
     {% endfor %}
   </div>
   <div id='contact'>

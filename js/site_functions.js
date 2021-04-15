@@ -1,14 +1,10 @@
 $(function(){
-
   // getting current width of user screen size 
   $(window).ready(function() {
     switchCSS($(this).width());
-    
     $(window).resize(function() {
       switchCSS($(this).width());
     });
-
-
   });
   // Function for navigation display between web and mobile views
   function switchCSS(windowsize) {
@@ -25,9 +21,7 @@ $(function(){
   var previousScroll = 0;
   $(window).scroll(function(){
     var currentScroll = $(this).scrollTop();
-
     if (currentScroll > 110 && currentScroll < $(document).height() - $(window).height()){
-
       if (currentScroll > previousScroll){
         window.setTimeout(hideNav, 300);
       } else {
@@ -73,22 +67,59 @@ $(function(){
     })
   //hamburger menu
 
-      $('.hamburger-menu').click(function(){
-        if ($(this).children('div').hasClass('change') !== true){
-            $(this).addClass('active')
-            $(this).children('div').addClass('change')
-            $('.slide').addClass('show').removeClass('hide')
-            $('body,html').css('position','fixed');
-        }
-        else if ($(this).children('div').hasClass('change') === true){
-            $(this).children('div').removeClass('change')
-            $(this).removeClass('active')
-            $('.slide').addClass('hide').removeClass('show')
-            $('body,html').css('position','unset');
-           
-            }
-    })
-
+  $('.hamburger-menu').click(function(){
+    if ($(this).children('div').hasClass('change') !== true){
+        $(this).addClass('active')
+        $(this).children('div').addClass('change')
+        $('.slide').addClass('show').removeClass('hide')
+        $('body,html').css('position','fixed');
+    }
+    else if ($(this).children('div').hasClass('change') === true){
+        $(this).children('div').removeClass('change')
+        $(this).removeClass('active')
+        $('.slide').addClass('hide').removeClass('show')
+        $('body,html').css('position','unset');
+    }  
+  })
+  $('.open-calc').click(function(e) {
+    e.preventDefault();
+    if (window.location.pathname == "/") {
+      $('.calc-overlay').addClass('active');
+      $('#widgetData').addClass('show');
+      $('.exit-calc').addClass('show-exit-calc')
+      $('.slide').addClass('hide').removeClass('show')
+      $('body,html').css('position','unset');
+      $('.show-exit-calc').on('click', function(){
+        console.log('clicked')
+        $('#widgetData').removeClass('show');
+        $('.calc-overlay').removeClass('active');
+        $('.hamburger-menu').children('div').removeClass('change')
+      })
+    } else {
+      window.location = "/#calc-open"
+    }
+  });
+  if (window.location.href.indexOf('/#calc-open') > -1) {
+    console.log(window.location.search);
+    $('.calc-overlay').addClass('active');
+    $('#widgetData').addClass('show');
+    $('.exit-calc').addClass('show-exit-calc')
+    $('.slide').addClass('hide').removeClass('show')
+      $('body,html').css('position','unset');
+  }  else {
+    console.log(window.location.search);
+  }
+  $('.show-exit-calc').on('click', function(){
+    console.log('clicked')
+    $('#widgetData').removeClass('show');
+    $('.calc-overlay').removeClass('active');
+  })
+  $('.rating').slick({
+    infinite: true,
+    adaptiveHeight: true,
+  });
+  $('.slick-prev')[0].innerHTML= '<i class="fas fa-angle-left"></i>'
+  $('.slick-next')[0].innerHTML= '<i class="fas fa-angle-right"></i>'
 });
 
 

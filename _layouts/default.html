@@ -14,18 +14,29 @@ layout: compress
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     {% endif %}
+    <!-- mortgage calc -->
+    <div class="calc-overlay">
+        <!-- Copy & Paste the HTML Below for your page where you would like your widget: -->    
+        <i class="far fa-times-circle exit-calc"></i>
+       <!-- Copy & Paste the HTML Below for your page where you would like your widget: --> 
+        <div id='widgetData' data-encoded="eyJzcmMiOiJodHRwczovL21ic2hpZ2h3YXkuY29tL2ltYWdlcy9mcm9udGVuZC91c2VyRGF0YS8yNGM1OTY0MS1kODEzLTRlZDktYTRlYi01OTNhYzc5NzQ5Y2QvaGVhZGVyL2hlYWRzaG90LnBuZz92PTYxOCIsIkxPZW1haWwiOiJldGVuZ21hbkBjb21jYXN0Lm5ldCIsImhlYWRlckRldGFpbHMiOnsibmFtZSI6IkVyaWMgRW5nbWFuIiwiZW1haWwiOiJldGVuZ21hbkBjb21jYXN0Lm5ldCIsIm51bWJlciI6IjkxNjgzNTYwODQiLCJjb21wYW55IjoiQW5zd2VyIEhvbWUgTG9hbnMiLCJjb2JyYW5kQ29kZSI6bnVsbCwiY29icmFuZEVtYWlsIjoiIiwicmVxdWVzdENvZGUiOiJlNDc5NTNlYS0yMmVmLTQxOGQtOGM2MS1kZTI5YTI3YzYyN2UifSwic2V0dGluZ3MiOnsiY29ycCI6dHJ1ZSwiZW1haWwiOnRydWUsIm5hbWUiOnRydWUsInBob3RvIjp0cnVlLCJhdm0iOnRydWUsInVybCI6Imh0dHBzOi8vc3BhcnRhbmZ1bmRpbmcuY28ifX0="></div>  
+    </div> 
+        <!-- Place the content below above the </body> tag on your page: --> 
+    </div>
      <!---nav --->
      {% include nav.html %}
     {{ content }}
     {% include footer.html %}
     <!-- Scripts -->
-
+    
     <!-- jQuery -->
     <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdf3k_Rz12piuqEQ3hr8b1z-cOKwhdPqY&&libraries=places&callback=autocompleteStart"  defer></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-   
-   
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    {% if page.url == "/" %}
+    <script src='https://mbshighway.com/scripts/plugins/widgetRender.js'></script>
+    {% endif %}
   
     <!-- Sitewide scripts  -->
 	<script src="{{ '/js/min/site_functions.min.js' | relative_url }}"></script>
@@ -44,5 +55,6 @@ layout: compress
     {% endfor %}
     {% endif %}
     <!-- End Scripts -->
+
 </body>
 </html>
