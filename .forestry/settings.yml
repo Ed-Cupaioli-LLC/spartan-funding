@@ -5,15 +5,6 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: _pages/loan-options.html
-  label: Loan Options
-- type: document
-  path: _pages/purchase.html
-  label: Purchase
-- type: document
-  path: _pages/refinance.html
-  label: Refinance
-- type: document
   path: _pages/home.html
   label: Home Page
 - type: document
