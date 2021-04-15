@@ -215,6 +215,7 @@
     display: flex;
     padding-top: 12.4rem;
     height: fit-content;
+    kustify-content: center;
     @include bp-large{
         padding-top: 7.2rem;
     }
